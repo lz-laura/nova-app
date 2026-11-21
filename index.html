@@ -67,7 +67,7 @@ body.donker .w-van{background:#4d3a33}
 .taak.af .c{background:#f6c79a}.taak.af span{color:#b9a08c}
 .seizoen{position:absolute;right:12px;top:-18px;font-size:34px}
 .leeg{color:#b9a08c;font-weight:700;margin-top:10px}
-.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:18px;margin-top:34px;justify-items:center}
+.grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:18px;margin-top:34px;justify-items:center}
 .appbtn{display:flex;flex-direction:column;align-items:center;width:100%;max-width:132px}
 .icon{width:108px;height:108px;border-radius:32px;display:flex;align-items:center;justify-content:center;background:#fff;border:2.5px solid #f3dcea;box-shadow:0 5px 0 rgba(200,150,175,.15);position:relative;transition:transform .15s}
 .appbtn:active .icon{transform:scale(.94)}
@@ -225,6 +225,104 @@ body.vol.paneelOpen .paneel #lagen{flex-direction:column}
 .mkaart.gevonden{background:#fffaf0;border-color:#fbd96b}
 .mkaart .rug{font-size:44px}
 
+/* rekenverhaal */
+.rvkop{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;width:100%}
+.rvrol{font-weight:800;color:#a2405f;font-size:calc(17px*var(--s))}
+.rvbol{display:flex;gap:6px}
+.rvbol span{width:18px;height:18px;border-radius:50%;background:#fff;border:2.5px solid #efc3e0}
+.rvbol span.vol{background:#fbd96b;border-color:#e8b93a}
+.rvbol span.nu{background:#c9b3ea;border-color:#a991d6}
+.rvstappen{display:flex;gap:8px}
+.rvstappen span{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;border:2.5px solid #efc3e0;font-size:19px;opacity:.55}
+.rvstappen span.nu{opacity:1;border-color:#a991d6;background:#f3edfc;transform:scale(1.12)}
+.rvstappen span.af{opacity:1;background:#fffaf0;border-color:#fbd96b}
+.rvtekst{background:var(--card);border:2.5px solid var(--line);border-radius:26px;padding:18px 22px;font-size:calc(28px*var(--s));font-weight:700;line-height:1.7;max-width:900px;width:100%}
+.rvtekst.klein{font-size:calc(21px*var(--s));line-height:1.55;padding:12px 16px}
+.rvtekst .wd{border-radius:8px;padding:0 2px;transition:background .15s}
+.rvtekst .wd.nu{background:#fff1a8;box-shadow:0 0 0 3px #fff1a8}
+.rvtekst .wd.vraag{background:#f3edfc;box-shadow:0 0 0 3px #f3edfc}
+.getal{font:inherit;font-weight:800;color:#4b3878;background:#f3edfc;border:2.5px dashed #a991d6;border-radius:12px;padding:0 10px;margin:0 2px;min-height:44px}
+.getal.gepakt{background:#fff;border-style:solid;border-color:#efc3e0;color:#d7bfd0}
+.rvweet{font-size:calc(26px*var(--s));font-weight:800;color:#4b3878;text-align:center;line-height:1.4}
+.rvweet b{color:#a2405f;border-bottom:3px dotted #f4b9cf}
+.rvkeus{display:flex;flex-direction:column;gap:12px;width:min(620px,100%)}
+.rvkeus .regel{display:flex;gap:10px;align-items:stretch}
+.rvkeus .groot{flex:1;justify-content:flex-start;text-align:left;line-height:1.25;padding:10px 22px}
+.rvkeus .groot.weg{opacity:.35;box-shadow:none}
+.rvhoor{width:64px;flex:none;border-radius:22px;background:#eef4fc;border:2.5px solid #c9dbf1;font-size:24px}
+.tasje{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;min-height:92px;min-width:min(420px,100%);background:#fff6ec;border:3px solid #f6d9bd;border-radius:30px 30px 40px 40px;padding:12px 18px;position:relative}
+.tasje::before{content:"";position:absolute;left:50%;top:-22px;transform:translateX(-50%);width:90px;height:34px;border:4px solid #f6d9bd;border-bottom:none;border-radius:40px 40px 0 0}
+.tasje .leegtekst{color:#c9a98a;font-weight:700}
+.tasje .getal{background:#fff;border-style:solid;font-size:calc(28px*var(--s))}
+.rvmodellen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;width:min(720px,100%)}
+.rvmodel{position:relative;background:#fff;border:3px solid #efc3e0;border-radius:24px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:4px;font-weight:800;font-size:calc(17px*var(--s))}
+.rvmodel.tip{border-color:#fbd96b;background:#fffaf0}
+.rvmodel.aan{border-color:#a991d6;background:#f3edfc;border-width:4px}
+.rvmodel .tiplabel{position:absolute;top:-14px;background:#fbd96b;color:#6a4b00;border-radius:12px;padding:1px 10px;font-size:14px}
+.rvplaatjes{display:flex;flex-direction:column;gap:14px;align-items:center;width:100%;max-width:820px}
+.rvplaatje{background:var(--card);border:2.5px solid var(--line);border-radius:24px;padding:12px 16px;width:100%;display:flex;flex-direction:column;align-items:center;gap:8px}
+.rvplaatje h4{align-self:flex-start;color:#a2405f;font-size:calc(18px*var(--s))}
+.vk{display:inline-flex;align-items:center;justify-content:center;min-width:46px;padding:0 8px;height:40px;border-radius:12px;background:#f3edfc;color:#4b3878;font-weight:800;font-size:calc(22px*var(--s))}
+.vk.vraag{background:#fde4ee;color:#a2405f}
+.strook{width:100%;max-width:640px;display:flex;flex-direction:column;gap:6px}
+.strook .boven{display:flex;flex-direction:column;align-items:center}
+.strook .boog{width:100%;height:14px;border:3px solid #b98aa8;border-bottom:none;border-radius:12px 12px 0 0}
+.strook .balk{display:flex;height:66px;border:3px solid #5a4a4a;border-radius:14px;overflow:hidden}
+.strook .deel{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:calc(24px*var(--s));min-width:64px;background:#fde4ee;border-right:3px solid #5a4a4a}
+.strook .deel:last-child{border-right:none}
+.strook .deel.b{background:#e3f5ee}
+.strook .deel.weg{background:repeating-linear-gradient(45deg,#fff 0 8px,#f3dcea 8px 14px);color:#a2405f}
+.rvlijn{width:100%;max-width:680px;height:auto}
+.rvgroepen{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center}
+.rvgroep{min-width:70px;min-height:70px;border-radius:50%;border:3px solid #efc3e0;background:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;padding:8px;gap:3px;max-width:96px;font-weight:800;font-size:calc(22px*var(--s));color:#4b3878}
+.rvgroep i{width:11px;height:11px;border-radius:50%;background:#f08fa8;display:block}
+.rvsamen{font-weight:800;font-size:calc(20px*var(--s));display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
+.rvtabel{border-collapse:separate;border-spacing:0;width:auto;font-size:calc(22px*var(--s));font-weight:800}
+.rvtabel td{border:2.5px solid #c9b3ea;padding:8px 18px;text-align:center;background:#fff}
+.rvtabel td:first-child{background:#f3edfc;color:#4b3878;text-align:left}
+.rvsom{font-size:calc(44px*var(--s));font-weight:800;color:#4b3878;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
+.rvvak{min-width:150px;height:78px;border-radius:22px;border:3px solid #c9b3ea;background:#fff;display:inline-flex;align-items:center;justify-content:center;padding:0 12px}
+.rvvak.goed{background:#e3f5ee;border-color:#8fd3b6}
+.numpad{display:grid;grid-template-columns:repeat(3,92px);gap:10px}
+.numpad button{height:74px;border-radius:22px;background:#fff;border:3px solid #efc3e0;font-size:34px;font-weight:800;color:#4b3878;box-shadow:0 4px 0 #efc3e0}
+.numpad .ok{background:#c9b3ea;border-color:#a991d6;color:#3f2f63;box-shadow:0 4px 0 #a991d6;font-size:24px}
+.numpad .wis{font-size:26px}
+.rvreken{display:flex;gap:22px;align-items:flex-start;justify-content:center;flex-wrap:wrap;width:100%}
+.rvlinks{display:flex;flex-direction:column;align-items:center;gap:14px;flex:1;min-width:280px;max-width:640px}
+.kralen{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;background:#fffaf0;border:2.5px dashed #f3dc9c;border-radius:22px;padding:12px}
+.kralenGetal{display:flex;flex-direction:column;align-items:center;gap:6px}
+.kralenGetal .rijk{display:flex;gap:4px;align-items:flex-end;flex-wrap:wrap;justify-content:center;max-width:360px}
+.k1{width:12px;height:12px;border-radius:50%;background:#e8b93a;border:1.5px solid #a87c12}
+.k1s{display:grid;grid-template-columns:repeat(3,12px);gap:3px}
+.k10{width:12px;height:118px;border-radius:6px;background:repeating-linear-gradient(#e8b93a 0 10px,#a87c12 10px 12px);border:1.5px solid #a87c12}
+.k100{width:72px;height:72px;border-radius:6px;background:repeating-linear-gradient(90deg,transparent 0 6px,#a87c12 6px 7.2px),repeating-linear-gradient(#e8b93a 0 6px,#a87c12 6px 7.2px);border:2px solid #a87c12}
+.k1000{width:72px;height:72px;border-radius:8px;background:#e8b93a;border:3px solid #a87c12;box-shadow:6px -6px 0 #d4a017,6px -6px 0 3px #a87c12;display:flex;align-items:center;justify-content:center;font-weight:800;color:#6a4b00;font-size:16px}
+.rvdus{font-size:calc(32px*var(--s));font-weight:800;color:#4b3878;text-align:center;line-height:1.4;max-width:820px}
+/* de trap */
+.trap{display:flex;flex-direction:column-reverse;gap:8px;width:min(720px,100%)}
+.trede{display:flex;align-items:center;gap:10px;min-height:62px;border-radius:20px;background:#fff;border:3px solid #efc3e0;padding:6px 14px;font-weight:800;font-size:calc(19px*var(--s));box-shadow:0 4px 0 rgba(200,150,175,.2);position:relative}
+.trede .sterren{margin-left:auto;font-size:24px}
+.trede.ster{background:#fffaf0;border-color:#fbd96b}
+.trede.nu{border-color:#a991d6;background:#f3edfc;border-width:4px}
+.trede.dicht{opacity:.5;border-style:dashed;box-shadow:none}
+.trede .lilytje{width:58px;margin:-16px 0 -8px -6px}
+.trede .nr{width:34px;height:34px;flex:none;border-radius:50%;background:#fde4ee;color:#a2405f;display:flex;align-items:center;justify-content:center;font-size:17px}
+@media (max-width:700px){
+ .rvtekst{font-size:calc(22px*var(--s));padding:12px 14px}
+ .rvtekst.klein{font-size:calc(18px*var(--s))}
+ .rvweet{font-size:calc(21px*var(--s))}
+ .rvmodellen{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rvsom{font-size:calc(34px*var(--s))}
+ .rvvak{min-width:110px;height:64px}
+ .numpad{grid-template-columns:repeat(3,minmax(0,1fr));width:100%;max-width:330px}
+ .numpad button{height:62px;font-size:28px}
+ .rvstappen span{width:34px;height:34px;font-size:16px}
+ .trede{min-height:54px;font-size:calc(17px*var(--s))}
+ .rvdus{font-size:calc(25px*var(--s))}
+ .k10{height:90px;background:repeating-linear-gradient(#e8b93a 0 7px,#a87c12 7px 9px)}
+ .k100,.k1000{width:56px;height:56px}
+}
+
 /* mama */
 table{border-collapse:collapse;width:100%;font-size:calc(16px*var(--s))}
 th,td{border-bottom:1.5px solid #f3dcea;padding:7px 8px;text-align:left}
@@ -328,6 +426,7 @@ th,td{border-bottom:1.5px solid #f3dcea;padding:7px 8px;text-align:left}
     <button class="appbtn" data-open="stickers"><div class="icon" style="background:#fde4ee;border-color:#f4b9cf"><svg width="60" height="54" viewBox="0 0 64 54"><path d="M8 8h22q2 0 2 3v38q0-3-3-3H8z" fill="#fff" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><path d="M56 8H34q-2 0-2 3v38q0-3 3-3h21z" fill="#fff" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><path d="M19 20c-3-3-8 0-4 5l4 4 4-4c4-5-1-8-4-5z" fill="#f08fa8"/><path d="M45 18l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z" fill="#fbd96b" stroke="#5a4a4a" stroke-width="1.2"/></svg><div class="badge" id="stickerBadge" style="display:none">+1</div></div><div class="lbl">Mijn stickerboek</div></button>
     <button class="appbtn" data-open="bubbel"><div class="icon" style="background:#fff4d6;border-color:#f3dc9c"><svg width="60" height="54" viewBox="0 0 64 54"><path d="M14 32V26a18 18 0 0 1 36 0v6" fill="none" stroke="#5a4a4a" stroke-width="2.6"/><rect x="8" y="30" width="12" height="18" rx="5" fill="#f4b9cf" stroke="#5a4a4a" stroke-width="2.4"/><rect x="44" y="30" width="12" height="18" rx="5" fill="#f4b9cf" stroke="#5a4a4a" stroke-width="2.4"/><path d="M30 38V24l8-2v12" fill="none" stroke="#5a4a4a" stroke-width="2.2"/><circle cx="27.5" cy="38" r="3" fill="#5a4a4a"/><circle cx="35.5" cy="34" r="3" fill="#5a4a4a"/></svg></div><div class="lbl">Mijn bubbel</div></button>
     <button class="appbtn" data-open="tafels"><div class="icon" style="background:#fdeef8;border-color:#efc3e0"><svg width="64" height="54" viewBox="0 0 64 54"><rect x="6" y="6" width="52" height="42" rx="8" fill="#fff" stroke="#5a4a4a" stroke-width="2.4"/><g font-family="Nunito" font-weight="800" fill="#7a5fae" text-anchor="middle"><text x="32" y="25" font-size="15">3×4</text><text x="32" y="41" font-size="13" fill="#f08fa8">= 12</text></g><path d="M52 4l1.5 3.5L57 9l-3.5 1.5L52 14l-1.5-3.5L47 9l3.5-1.5z" fill="#fbd96b"/></svg><div class="badge" id="tafelBadge" style="display:none"></div></div><div class="lbl">Tafels</div></button>
+    <button class="appbtn" data-open="verhaal"><div class="icon" style="background:#f3edfc;border-color:#e2d5f6"><svg width="64" height="54" viewBox="0 0 64 54"><path d="M6 10q12-4 26 2v38q-14-6-26-2z" fill="#fff" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><path d="M58 10q-12-4-26 2v38q14-6 26-2z" fill="#fff" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 20h15M11 27h12M11 34h15" stroke="#c9b3ea" stroke-width="2.6" stroke-linecap="round"/><g font-family="Nunito" font-weight="800" text-anchor="middle"><text x="45" y="28" font-size="13" fill="#7a5fae">3+4</text><text x="45" y="42" font-size="12" fill="#f08fa8">= ?</text></g><path d="M54 2l1.5 3.5L59 7l-3.5 1.5L54 12l-1.5-3.5L49 7l3.5-1.5z" fill="#fbd96b"/></svg></div><div class="lbl">Rekenverhaal</div></button>
     <button class="appbtn" data-open="snoep"><div class="icon" style="background:#fff0e4;border-color:#f6cfae"><svg width="60" height="54" viewBox="0 0 64 54"><ellipse cx="32" cy="40" rx="24" ry="9" fill="#f6cfae" stroke="#5a4a4a" stroke-width="2.4"/><path d="M8 38q0-10 24-10t24 10" fill="#fff" stroke="#5a4a4a" stroke-width="2.4"/><circle cx="24" cy="32" r="5" fill="#d9a066" stroke="#5a4a4a" stroke-width="1.6"/><circle cx="36" cy="31" r="5" fill="#d9a066" stroke="#5a4a4a" stroke-width="1.6"/><circle cx="30" cy="27" r="5" fill="#d9a066" stroke="#5a4a4a" stroke-width="1.6"/></svg><div class="badge" id="snoepBadge" style="display:none">0</div></div><div class="lbl">Snoepjes voor Lily</div></button>
   </div>
   <div class="dockwrap"><div class="dock">
@@ -436,6 +535,11 @@ th,td{border-bottom:1.5px solid #f3dcea;padding:7px 8px;text-align:left}
   <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg id="tafelZeg">Kijk wat je al kunt!</div></div>
   <div class="inhoud" id="tafelInhoud" style="justify-content:flex-start"></div>
 </section>
+<section class="sheet" id="s-verhaal">
+  <div class="kop"><button class="terug" id="rvTerug">← Terug</button><h2 id="rvTitel">Rekenverhaal</h2></div>
+  <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg id="rvZeg" role="button" title="Tik om het nog eens te horen">Hoi!</div></div>
+  <div class="inhoud" id="rvInhoud" style="justify-content:flex-start"></div>
+</section>
 <section class="sheet" id="s-mama">
   <div class="kop"><button class="terug" data-terug>← Terug</button><h2>Mama kijkt mee</h2></div>
   <div class="inhoud" style="justify-content:flex-start">
@@ -448,6 +552,7 @@ th,td{border-bottom:1.5px solid #f3dcea;padding:7px 8px;text-align:left}
       <button class="groot g-geel" id="kopieer" style="margin-top:10px">Kopieer tabel</button>
     </div>
     <div class="mamakaart"><h3>Tafels</h3><div id="mamaTafels"></div></div>
+    <div class="mamakaart"><h3>Rekenverhaal</h3><div id="mamaRv"></div></div>
     <div class="mamakaart"><h3>Werkjes en tekeningen</h3><div style="font-size:15px;color:#9a8db0;margin-bottom:6px">Gaan vanzelf naar Drive › Nova › Werkjes (als de koppeling aan staat). Hier zie je de laatste 12.</div><div class="werkjes" id="werkjes"></div></div>
   </div>
 </section>
@@ -535,9 +640,9 @@ function zegHome(t,knop){const b=$("#homeBubbel");b.style.display="block";b.inne
 let huidig="home";
 function open(naam){if(naam==="topo"){window.location.href=TOPO_URL;return}
   $$(".sheet").forEach(s=>s.classList.remove("open"));const s=$("#s-"+naam);if(!s)return;s.classList.add("open");huidig=naam;S.scherm=naam;bewaar();
-  if(naam==="tafels")tafelsOverzicht();if(naam==="blokjes")startBlokjes();if(naam==="teken")startTeken();if(naam==="stickers")toonStickers();if(naam==="snoep")toonSnoep();if(naam==="mama")toonMama();
+  if(naam==="tafels")tafelsOverzicht();if(naam==="verhaal")rvOverzicht();if(naam==="blokjes")startBlokjes();if(naam==="teken")startTeken();if(naam==="stickers")toonStickers();if(naam==="snoep")toonSnoep();if(naam==="mama")toonMama();
   if(naam==="stickers"){$("#stickerBadge").style.display="none";S.nieuweSticker=false;bewaar()}}
-function sluit(){if(document.body.classList.contains("vol"))zetVol(false);$$(".sheet").forEach(s=>s.classList.remove("open"));huidig="home";S.scherm="home";bewaar()}
+function sluit(){try{stopLees()}catch(e){}if(document.body.classList.contains("vol"))zetVol(false);$$(".sheet").forEach(s=>s.classList.remove("open"));huidig="home";S.scherm="home";bewaar()}
 $$("[data-open]").forEach(b=>b.onclick=()=>open(b.dataset.open));
 $$("[data-terug]").forEach(b=>b.onclick=sluit);
 $("#mamaKnop").onclick=()=>open("mama");
@@ -699,7 +804,7 @@ async function toonMama(){zetOpslagInfo();let rijen=S.stemming.slice();
   const ico={blij:"😊 blij",gewoon:"😐 gewoon",moe:"😴 moe"};
   $("#stemRijen").innerHTML=rijen.map(r=>`<tr><td>${esc(r.dag||"")} ${esc(r.datum)}</td><td>${esc(r.tijd)}</td><td>${ico[r.gevoel]||esc(r.gevoel)}</td><td>${esc(r.waar)}</td></tr>`).join("")||"<tr><td colspan=4>Nog geen gezichtjes aangetikt.</td></tr>";
   $("#werkjes").innerHTML=S.werkjes.slice().reverse().map(w=>`<img src="${w.beeld}" alt="${w.soort}" title="${w.soort} ${new Date(w.tijd).toLocaleString("nl-NL")}">`).join("")||"<div style='color:#9a8db0'>Nog geen werkjes.</div>";
-  toonMamaTaken();toonMamaTafels()}
+  toonMamaTaken();toonMamaTafels();toonMamaRv()}
 let mamaRijen=[];
 $("#kopieer").onclick=async()=>{const tsv=["Datum\tTijd\tDag\tGevoel\tWaar",...mamaRijen.map(r=>[r.datum,r.tijd,r.dag,r.gevoel,r.waar].join("\t"))].join("\n");
   try{await navigator.clipboard.writeText(tsv);meld("Gekopieerd! Plak het in een spreadsheet.")}catch(e){meld("Kopiëren lukt hier niet")}};
@@ -804,9 +909,259 @@ function volgendeSom(){T.nr++;if(T.nr<T.rondje.length){toonSom();return}
 $("#tafelTerug").onclick=()=>{if(T.tafel)tafelsOverzicht();else sluit()};
 function toonMamaTafels(){const el=$("#mamaTafels");if(!el)return;el.innerHTML=[3,4,6,7,8,9].map(t=>`<div>Tafel van ${t}: ${tafelTel(t)} van de 10 ${tafelKlaar(t)?"⭐":""}</div>`).join("")+`<div style="color:#9a8db0;margin-top:4px">1, 2, 5 en 10 kent ze al. Een som telt als geleerd na 2 keer goed achter elkaar.</div>`}
 (async()=>{for(let n=0;n<20&&!DB;n++)await new Promise(r=>setTimeout(r,500));if(!DB)return;try{const d=await DB.doc("app/tafels").get();const v=d&&(d.data?d.data():d);if(v&&v.feiten){const f=S_t();for(const k in v.feiten)f[k]=Math.max(f[k]||0,v.feiten[k]);bewaar()}}catch(e){}})();
+// ---------- rekenverhaal (fase 1) ----------
+// Trap met treden. Gebouwd in fase 1: trede 1 (tafels in een verhaal), 2 (instap: twee stappen), 3 (grote getallen).
+const RV_TREDEN=[
+  {naam:"Plussen en minnen",mama:"Vangnet: optellen en aftrekken tot 100",groep:"groep 4",klaar:false},
+  {naam:"Tafels in een verhaal",mama:"Vangnet: tafels in een verhaal",groep:"groep 4–5",klaar:true},
+  {naam:"Twee stappen",mama:"Instap: twee stappen",groep:"midden groep 5",klaar:true},
+  {naam:"Grote getallen",mama:"Grote getallen",groep:"groep 6",klaar:true},
+  {naam:"Geld, tijd en meten",mama:"Geld, tijd en meten",groep:"groep 6–7",klaar:false},
+  {naam:"Breuken in een verhaal",mama:"Breuken en procenten in een verhaal",groep:"groep 7",klaar:false},
+  {naam:"Tabellen lezen",mama:"Tabellen en grafieken lezen",groep:"groep 7–8",klaar:false}];
+const RV_LAAG=1,RV_HOOG=3,RV_INSTAP=2;
+const RV_ROL={opwarm:"Even opwarmen",werk:"Jouw trede",herhaal:"Nog eentje van vroeger",extra:"Nog eentje"};
+const RV_ICOON=["👂","❓","👆","🖼️","✏️"];
+const MODELNAAM={strook:"een strook",groepjes:"groepjes",lijn:"een getallenlijn",tabel:"een tabel"};
+function RV(){if(!S.rv)S.rv={trede:RV_INSTAP,instap:RV_INSTAP,goed:0,mis:0,sterren:[],reeks:{},kralen:{},terug:{},dag:"",plan:[],stuk:0,klaarDag:"",nu:null,log:[]};return S.rv}
+function rvBewaar(){bewaar();dbZet("app/oefenen",{rekenverhaal:{trede:RV().trede,instap:RV().instap,terug:RV().terug,log:RV().log.slice(-60)},bijgewerkt:new Date().toISOString()})}
+const rr=(a,b)=>a+Math.floor(Math.random()*(b-a+1)), kies=a=>a[Math.floor(Math.random()*a.length)];
+function rvTafels(){const t=[2,5,10];[3,4,6,7,8,9].forEach(x=>{if(tafelKlaar(x))t.push(x)});return t}
+function anders(waarde,vermijd,min,max){let x,n=0;do{x=rr(min,max);n++}while(vermijd.includes(x)&&n<50);return x}
+// ---- verhaaltjes: vaste sjablonen, wisselende getallen ----
+// stap: {a,op,b} ; "V" = de uitkomst van de vorige stap
+const RV_SJABLONEN={
+ 1:[
+  ()=>{const a=rr(2,9),b=kies(rvTafels());return{zinnen:[`Lily heeft ${a} zakjes met snoepjes.`,`In elk zakje zitten ${b} snoepjes.`,`Hoeveel snoepjes heeft Lily samen?`],weten:["snoepjes Lily samen heeft","zakjes Lily heeft","snoepjes er in één zakje zitten"],stappen:[{a,op:"×",b}],model:"groepjes",eenheid:{groep:"zakjes",stuk:"snoepjes"},dus:r=>`Dus Lily heeft ${r} snoepjes.`}},
+  ()=>{const a=rr(2,9),b=kies(rvTafels());return{zinnen:[`Nova plakt stickers in haar stickerboek.`,`Op elke bladzijde passen ${b} stickers.`,`Ze maakt ${a} bladzijden vol.`,`Hoeveel stickers plakt Nova?`],weten:["stickers Nova plakt","bladzijden Nova volmaakt","stickers er op één bladzijde passen"],stappen:[{a,op:"×",b}],model:"groepjes",eenheid:{groep:"bladzijden",stuk:"stickers"},dus:r=>`Dus Nova plakt ${r} stickers.`}},
+  ()=>{const a=rr(2,9),b=kies(rvTafels()),x=anders(0,[a,b,a*b],11,24);return{zinnen:[`Het is ${x} graden en de zon schijnt.`,`Nova tekent ${a} bloemen.`,`Elke bloem krijgt ${b} hartjes.`,`Hoeveel hartjes tekent Nova?`],weten:["hartjes Nova tekent","graden het is","bloemen Nova tekent"],stappen:[{a,op:"×",b}],model:"groepjes",eenheid:{groep:"bloemen",stuk:"hartjes"},dus:r=>`Dus Nova tekent ${r} hartjes.`}},
+  ()=>{const a=rr(3,8),b=kies(rvTafels());return{zinnen:[`Lily speelt in het park met ${a} vriendjes.`,`Elk vriendje krijgt ${b} koekjes.`,`Hoeveel koekjes krijgen de vriendjes samen?`],weten:["koekjes de vriendjes samen krijgen","vriendjes Lily heeft"],stappen:[{a,op:"×",b}],model:"tabel",eenheid:{groep:"vriendjes",stuk:"koekjes"},dus:r=>`Dus de vriendjes krijgen samen ${r} koekjes.`}}],
+ 2:[
+  ()=>{const a=rr(18,55),b=rr(6,30),c=rr(5,a+b-6);return{zinnen:[`Nova heeft ${a} stickers.`,`Oma geeft haar er nog ${b}.`,`Daarna geeft Nova er ${c} aan haar vriendin.`,`Hoeveel stickers heeft Nova nu?`],weten:["stickers Nova nu heeft","stickers oma geeft","stickers de vriendin krijgt"],stappen:[{a,op:"+",b},{a:"V",op:"−",b:c}],model:"strook",eenheid:{groep:"",stuk:"stickers"},dus:r=>`Dus Nova heeft nu ${r} stickers.`}},
+  ()=>{const a=rr(2,6),b=kies(rvTafels()),c=rr(3,19);return{zinnen:[`Nova koopt ${a} pakjes stiften.`,`In elk pakje zitten ${b} stiften.`,`Thuis had ze al ${c} stiften.`,`Hoeveel stiften heeft Nova nu?`],weten:["stiften Nova nu heeft","pakjes Nova koopt","stiften er in één pakje zitten"],stappen:[{a,op:"×",b},{a:"V",op:"+",b:c}],model:"groepjes",eenheid:{groep:"pakjes",stuk:"stiften"},dus:r=>`Dus Nova heeft nu ${r} stiften.`}},
+  ()=>{const a=rr(3,12),b=rr(2,9),c=rr(1,a+b-1);return{zinnen:[`'s Ochtends is het ${a} graden.`,`'s Middags wordt het ${b} graden warmer.`,`'s Avonds is het ${c} graden kouder dan 's middags.`,`Hoe warm is het 's avonds?`],weten:["graden het 's avonds is","graden het 's ochtends is","graden het warmer wordt"],stappen:[{a,op:"+",b},{a:"V",op:"−",b:c}],model:"lijn",eenheid:{groep:"",stuk:"graden"},dus:r=>`Dus het is 's avonds ${r} graden.`}},
+  ()=>{const b=rr(2,5),c=kies(rvTafels().filter(x=>x<=10)),a=b*c+rr(3,18);return{zinnen:[`Nova heeft ${a} hartjeskralen.`,`Ze maakt ${b} armbandjes.`,`Voor elk armbandje gebruikt ze ${c} kralen.`,`Hoeveel kralen houdt Nova over?`],weten:["kralen Nova overhoudt","armbandjes Nova maakt","kralen er in één armbandje gaan"],stappen:[{a:b,op:"×",b:c},{a,op:"−",b:"V"}],model:"groepjes",eenheid:{groep:"armbandjes",stuk:"kralen"},dus:r=>`Dus Nova houdt ${r} kralen over.`}},
+  ()=>{const a=rr(8,30),b=rr(6,25),c=rr(4,a+b-4),x=anders(0,[a,b,c],2,4);return{zinnen:[`Lily is ${x} jaar.`,`Ze krijgt ${a} snoepjes op maandag en ${b} snoepjes op dinsdag.`,`Ze eet er ${c} op.`,`Hoeveel snoepjes heeft Lily nog?`],weten:["snoepjes Lily nog heeft","jaar Lily is","snoepjes Lily opeet"],stappen:[{a,op:"+",b},{a:"V",op:"−",b:c}],model:"strook",eenheid:{groep:"",stuk:"snoepjes"},dus:r=>`Dus Lily heeft nog ${r} snoepjes.`}}],
+ 3:[
+  ()=>{const a=rr(820,1480),b=rr(110,390);return{zinnen:[`Oom Bart heeft een kippenboerderij.`,`In de schuur liggen ${a} eieren.`,`Vandaag leggen de kippen er nog ${b} bij.`,`Hoeveel eieren heeft oom Bart nu?`],weten:["eieren oom Bart nu heeft","kippen oom Bart heeft","eieren de kippen vandaag leggen"],stappen:[{a,op:"+",b}],model:"strook",eenheid:{groep:"",stuk:"eieren"},dus:r=>`Dus oom Bart heeft ${r} eieren.`}},
+  ()=>{const a=rr(1200,2900),b=rr(240,880);return{zinnen:[`De stickerwinkel heeft ${a} stickers.`,`Op zaterdag worden er ${b} verkocht.`,`Hoeveel stickers heeft de winkel nog?`],weten:["stickers de winkel nog heeft","stickers er verkocht worden"],stappen:[{a,op:"−",b}],model:"strook",eenheid:{groep:"",stuk:"stickers"},dus:r=>`Dus de winkel heeft nog ${r} stickers.`}},
+  ()=>{const a=rr(310,690),b=rr(210,580),c=rr(60,240);return{zinnen:[`Bij de tekenwedstrijd doen op zaterdag ${a} kinderen mee.`,`Op zondag doen er ${b} kinderen mee.`,`Er winnen ${c} kinderen een prijs.`,`Hoeveel kinderen winnen geen prijs?`],weten:["kinderen geen prijs winnen","kinderen een prijs winnen","kinderen er op zondag meedoen"],stappen:[{a,op:"+",b},{a:"V",op:"−",b:c}],model:"strook",eenheid:{groep:"",stuk:"kinderen"},dus:r=>`Dus ${r} kinderen winnen geen prijs.`}},
+  ()=>{const a=kies([20,30,40,50,60]),b=kies(rvTafels().filter(x=>x<10));return{zinnen:[`De school koopt ${a} dozen kleurpotloden.`,`In elke doos zitten ${b} potloden.`,`Hoeveel potloden koopt de school?`],weten:["potloden de school koopt","dozen de school koopt"],stappen:[{a,op:"×",b}],model:"tabel",eenheid:{groep:"dozen",stuk:"potloden"},dus:r=>`Dus de school koopt ${r} potloden.`}},
+  ()=>{const a=rr(340,860),b=rr(45,180),x=anders(0,[a,b],15,45);return{zinnen:[`Nova en mama rijden ${x} minuten naar oma.`,`In het fotoboek van oma zitten ${a} foto's.`,`Oma plakt er ${b} foto's bij.`,`Hoeveel foto's zitten er nu in het fotoboek?`],weten:["foto's er nu in het fotoboek zitten","minuten ze naar oma rijden","foto's oma erbij plakt"],stappen:[{a,op:"+",b}],model:"lijn",eenheid:{groep:"",stuk:"foto's"},dus:r=>`Dus er zitten nu ${r} foto's in het fotoboek.`}}]};
+function reken(a,op,b){return op==="+"?a+b:op==="−"?a-b:a*b}
+function rvMaak(trede){const v=kies(RV_SJABLONEN[trede])();let vorige=null;
+  v.stappen.forEach(s=>{const a=s.a==="V"?vorige:s.a,b=s.b==="V"?vorige:s.b;s.r=reken(a,s.op,b);vorige=s.r});
+  v.uitkomst=vorige;v.dus=v.dus(vorige);v.goed=v.weten[0];v.keus=v.weten.slice().sort(()=>Math.random()-.5);
+  // woorden en getallen
+  const tekst=v.zinnen.join(" ");v.tekst=tekst;v.woorden=[];let m;const re=/\S+/g;
+  const vraagStart=tekst.length-v.zinnen[v.zinnen.length-1].length;
+  const nodig=[];v.stappen.forEach(s=>{if(s.a!=="V")nodig.push(s.a);if(s.b!=="V")nodig.push(s.b)});
+  const over=nodig.slice();
+  while((m=re.exec(tekst))){const g=m[0].match(/^(\d+)([.,!?]*)$/);const w={t:m[0],s:m.index,vraag:m.index>=vraagStart};
+    if(g){w.getal=+g[1];w.rest=g[2];const k=over.indexOf(w.getal);w.nodig=k>=0;if(k>=0)over.splice(k,1)}
+    v.woorden.push(w)}
+  v.trede=trede;return v}
+// ---- staat van het lopende verhaaltje ----
+let RVN=null; // = RV().nu
+function rvVandaag(){return new Date().toDateString()}
+function rvPlan(){const R=RV();R.dag=rvVandaag();R.plan=["opwarm","werk","werk","werk","herhaal"];R.stuk=0;rvBewaar()}
+function rvTredeVoor(rol){const R=RV(),t=R.trede;
+  if(rol==="opwarm")return Math.max(RV_LAAG,t-1);
+  if(rol==="herhaal"){const oud=[];for(let i=RV_LAAG;i<t;i++)oud.push(i);return oud.length?kies(oud):t}
+  return t}
+function zegV(t,stil){$("#rvZeg").textContent=t;if(!stil)spreek(t)}
+let leesId=0;
+function stopLees(){leesId++;try{speechSynthesis.cancel()}catch(e){}}
+function leesMee(box,tekst){stopLees();const mijn=leesId;const ws=[...box.querySelectorAll("[data-s]")];let timer=null,grens=false;
+  const zet=i=>ws.forEach((w,k)=>w.classList.toggle("nu",k===i));
+  const klaar=()=>{clearTimeout(timer);if(mijn===leesId)zet(-1)};
+  const val=()=>{if(timer)return;let i=0;const stap=()=>{if(mijn!==leesId||i>=ws.length){klaar();return}zet(i);const d=(ws[i].textContent.length*75+240)/.85;i++;timer=setTimeout(stap,d)};stap()};
+  if(!TTS&&window.speechSynthesis&&window.SpeechSynthesisUtterance){try{const u=new SpeechSynthesisUtterance(tekst);u.lang="nl-NL";u.rate=.85;
+      u.onboundary=e=>{if(mijn!==leesId||(e.name&&e.name!=="word"))return;grens=true;clearTimeout(timer);timer=-1;let i=0;for(let k=0;k<ws.length;k++)if(+ws[k].dataset.s<=e.charIndex)i=k;zet(i)};
+      u.onend=klaar;speechSynthesis.speak(u);setTimeout(()=>{if(!grens&&mijn===leesId)val()},900);return}catch(e){}}
+  if(TTS)TTS.speak(tekst,{language:"nl",rate:.85}).catch(()=>{});
+  val()}
+function tekstHTML(v,soort){return v.woorden.map((w,i)=>{
+  if(soort==="getallen"&&w.getal!==undefined){const in_=RVN.tasje.includes(i);return`<button class="getal ${in_?"gepakt":""}" data-gi="${i}">${w.getal}</button>${w.rest}`}
+  return`<span class="wd ${soort==="vraag"&&w.vraag&&RVN.toonVraag?"vraag":""}" data-s="${w.s}">${esc(w.t)}</span>`}).join(" ")}
+function rvKop(){const R=RV();const rol=RVN.rol;
+  const bol=R.plan.map((r,i)=>`<span class="${i<R.stuk?"vol":i===R.stuk&&rol!=="extra"?"nu":""}"></span>`).join("");
+  const st=RV_ICOON.map((ic,i)=>`<span class="${i+1===RVN.stap?"nu":i+1<RVN.stap?"af":""}">${ic}</span>`).join("");
+  return`<div class="rvkop"><span class="rvrol">${RV_ROL[rol]}</span><div class="rvbol">${bol}</div></div><div class="rvstappen">${st}</div>`}
+function inh(h){$("#rvInhoud").innerHTML=h;$("#rvInhoud").scrollTop=0}
+// ---- het overzicht: de trap ----
+function rvOverzicht(){stopLees();const R=RV();RVN=null;$("#rvTitel").textContent="Rekenverhaal";
+  if(R.dag!==rvVandaag())rvPlan();
+  const lily=`<img class="lilytje" src="${LILY}" alt="Lily">`;
+  let h=`<div class="trap">`+RV_TREDEN.map((t,i)=>{const ster=R.sterren.includes(i),nu=i===R.trede;
+    return`<div class="trede ${ster?"ster":""} ${nu?"nu":""} ${t.klaar?"":"dicht"}" style="margin-left:${i*4}%">${nu?lily:`<span class="nr">${i+1}</span>`}<span>${t.naam}${t.klaar?"":" <small style='font-weight:700;color:#b98aa8'>· binnenkort</small>"}</span><span class="sterren">${ster?"⭐":""}</span></div>`}).join("")+`</div>`;
+  const klaar=R.stuk>=R.plan.length;
+  if(R.nu)h+=`<button class="groot g-paars" id="rvVerder">Verder met je verhaaltje →</button>`;
+  else if(!klaar)h+=`<button class="groot g-paars" id="rvStart">${R.stuk?"Verder ♡":"Start ♡"}</button>`;
+  else h+=`<button class="groot g-paars" id="rvExtra">Verder ♡</button>`;
+  inh(h);
+  const aantal=R.sterren.length;
+  zegV(R.nu?"Je was nog bezig met een verhaaltje. Zullen we verder?":klaar?"Fijn dat je er weer bent! Zullen we verder?":aantal?`Kijk wat je al kunt! Je hebt al ${aantal} ster${aantal>1?"ren":""} op je trap.`:"Dit is jouw trap. Bij elk verhaaltje klim je een stukje. We doen vandaag een paar korte verhaaltjes.",true);
+  const v=$("#rvVerder");if(v)v.onclick=()=>rvToon();
+  const s=$("#rvStart");if(s)s.onclick=()=>rvVolgende();
+  const e=$("#rvExtra");if(e)e.onclick=()=>rvNieuw("extra");
+  $$("[data-terug-home]").forEach(b=>b.onclick=sluit)}
+function rvVolgende(){const R=RV();if(R.stuk>=R.plan.length){rvKlaarVandaag();return}rvNieuw(R.plan[R.stuk])}
+function rvNieuw(rol){const R=RV();const t=rvTredeVoor(rol);
+  R.nu={rol,v:rvMaak(t),stap:1,tasje:[],weg:[],weetGoed:false,model:null,som:0,poging:0,uit:[],kralen:!!R.kralen[t]};rvBewaar();rvToon()}
+function rvToon(){RVN=RV().nu;if(!RVN){rvOverzicht();return}$("#rvTitel").textContent="Rekenverhaal";
+  [null,rvStap1,rvStap2,rvStap3,rvStap4,rvStap5,rvStapDus][RVN.stap]()}
+function rvNaar(n){RVN.stap=n;rvBewaar();rvToon()}
+// stap 1: Lily leest voor
+function rvStap1(){const v=RVN.v;
+  inh(rvKop()+`<div class="rvtekst" id="rvTekst">${tekstHTML(v)}</div><div class="rij"><button class="groot g-geel" id="rvNog">🔊 Nog eens</button><button class="groot g-paars" id="rvDoor">Verder →</button></div>`);
+  zegV("Luister maar. Je mag ook zelf meelezen.",true);
+  const lees=()=>leesMee($("#rvTekst"),v.tekst);
+  $("#rvNog").onclick=lees;$("#rvDoor").onclick=()=>{stopLees();rvNaar(2)};setTimeout(lees,250)}
+// stap 2: wat wil de som weten?
+function rvStap2(){const v=RVN.v;
+  let h=rvKop()+`<div class="rvtekst klein" id="rvTekst">${tekstHTML(v,"vraag")}</div>`;
+  if(RVN.weetGoed)h+=`<div class="rvweet">Ze willen weten hoeveel <b>${esc(v.goed)}</b>.</div><button class="groot g-paars" id="rvDoor">Verder →</button>`;
+  else h+=`<div class="rvweet">Ze willen weten hoeveel …</div><div class="rvkeus">${v.keus.map((k,i)=>`<div class="regel"><button class="groot g-mint ${RVN.weg.includes(k)?"weg":""}" data-keus="${i}">… ${esc(k)}</button><button class="rvhoor" data-hoor="${i}" aria-label="Lees voor">🔊</button></div>`).join("")}</div>`;
+  inh(h);
+  if(RVN.weetGoed){$("#rvDoor").onclick=()=>rvNaar(3);return}
+  zegV("Wat wil de som weten? Maak de zin af. Ze willen weten hoeveel… "+v.keus.filter(k=>!RVN.weg.includes(k)).join("? Of… ")+"?");
+  $$("[data-hoor]").forEach(b=>b.onclick=()=>spreek("Ze willen weten hoeveel "+v.keus[+b.dataset.hoor]));
+  $$("[data-keus]").forEach(b=>b.onclick=e=>{const k=v.keus[+b.dataset.keus];if(RVN.weg.includes(k))return;
+    if(k===v.goed){RVN.weetGoed=true;RVN.toonVraag=false;hartjes(e.clientX,e.clientY);rvBewaar();rvStap2();zegV("Ja! Ze willen weten hoeveel "+k+".")}
+    else{RVN.weg.push(k);RVN.toonVraag=true;rvBewaar();rvStap2();zegV("Hmm, kijk naar de vraag. Die staat aan het eind, bij het vraagteken. Ik heb hem paars gemaakt.")}})}
+// stap 3: tik de getallen aan
+function rvStap3(){const v=RVN.v;
+  const tas=RVN.tasje.length?RVN.tasje.map(i=>`<button class="getal" data-ti="${i}">${v.woorden[i].getal}</button>`).join(""):`<span class="leegtekst">Je rekentasje is nog leeg</span>`;
+  inh(rvKop()+`<div class="rvtekst" id="rvTekst">${tekstHTML(v,"getallen")}</div><div class="tasje">${tas}</div><button class="groot g-paars" id="rvDoor">Klaar met tikken →</button>`);
+  if(!RVN.zei3){RVN.zei3=true;zegV("Tik op de getallen die je nodig hebt. Ze gaan in je rekentasje. Een getal dat je niet nodig hebt, laat je gewoon liggen.")}
+  const wissel=i=>{const k=RVN.tasje.indexOf(i);if(k>=0)RVN.tasje.splice(k,1);else RVN.tasje.push(i);rvBewaar();rvStap3()};
+  $$("[data-gi]").forEach(b=>b.onclick=()=>wissel(+b.dataset.gi));
+  $$("[data-ti]").forEach(b=>b.onclick=()=>wissel(+b.dataset.ti));
+  $("#rvDoor").onclick=e=>{const mist=v.woorden.some((w,i)=>w.nodig&&!RVN.tasje.includes(i)),teveel=RVN.tasje.some(i=>!v.woorden[i].nodig);
+    if(mist)zegV("Er mist nog een getal. Kijk nog eens in het verhaal. Welk getal heb je ook nodig?");
+    else if(teveel)zegV("Er zit een getal in je tasje dat je niet nodig hebt. Welke is dat? Tik erop, dan leg je hem terug.");
+    else{hartjes(e.clientX,e.clientY,"⭐");zegV("Goed gezien! Deze getallen heb je nodig.");setTimeout(()=>rvNaar(4),900)}}}
+// plaatjes
+function vk(x,vraag){return`<span class="vk ${vraag?"vraag":""}">${x}</span>`}
+function waarde(s,kant,bekend){const x=s[kant];if(x!=="V")return{t:x,n:x};return bekend?{t:bekend,n:bekend}:{t:"?",n:null}}
+function plaatje(s,model,eenheid,vorigeBekend,uitBekend){const A=waarde(s,"a",vorigeBekend),B=waarde(s,"b",vorigeBekend);const U=uitBekend!=null?uitBekend:"?";
+  if(s.op==="×"){const m=(model==="tabel")?"tabel":"groepjes";
+    if(m==="tabel")return`<table class="rvtabel"><tr><td>${esc(eenheid.groep||"groepjes")}</td><td>1</td><td>${A.t}</td></tr><tr><td>${esc(eenheid.stuk||"samen")}</td><td>${B.t}</td><td>${uitBekend!=null?U:'<span class="vk vraag">?</span>'}</td></tr></table>`;
+    const n=A.n||3,toon=Math.min(n,n>10?4:n),stip=B.n&&B.n<=10;let g="";
+    for(let i=0;i<toon;i++)g+=`<div class="rvgroep">${stip?"<i></i>".repeat(B.n):B.t}</div>`;
+    if(n>toon)g+=`<div class="rvsamen">… </div>`;
+    return`<div class="rvgroepen">${g}</div><div class="rvsamen">${vk(A.t,A.t==="?")} ${esc(eenheid.groep||"groepjes")} van ${vk(B.t,B.t==="?")} ${esc(eenheid.stuk)} → samen ${vk(U,U==="?")}</div>`}
+  const m=(model==="lijn")?"lijn":"strook";
+  if(m==="lijn"){const a=A.n??0,b=B.n??0,eind=s.op==="+"?a+b:a-b,lo=Math.min(a,eind),hi=Math.max(a,eind),span=Math.max(1,hi-lo);
+    const X=x=>60+(x-lo)/span*480,xa=X(a),xe=X(eind),mid=(xa+xe)/2;
+    return`<svg class="rvlijn" viewBox="0 0 600 150"><line x1="20" y1="110" x2="580" y2="110" stroke="#5a4a4a" stroke-width="3"/><line x1="${xa}" y1="98" x2="${xa}" y2="122" stroke="#5a4a4a" stroke-width="3"/><line x1="${xe}" y1="98" x2="${xe}" y2="122" stroke="#5a4a4a" stroke-width="3"/>
+      <path d="M${xa} 100 Q${mid} 10 ${xe} 100" fill="none" stroke="#a991d6" stroke-width="4" marker-end="url(#pijl)"/><defs><marker id="pijl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a991d6"/></marker></defs>
+      <text x="${mid}" y="44" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="26" fill="#4b3878">${s.op==="+"?"+":"−"} ${B.t}</text>
+      <text x="${xa}" y="146" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="24" fill="#4b3878">${A.t}</text>
+      <text x="${xe}" y="146" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="24" fill="${U==="?"?"#a2405f":"#2f6b55"}">${U}</text></svg>`}
+  const fa=Math.max(1,A.n||1),fb=Math.max(1,B.n||1);
+  if(s.op==="+")return`<div class="strook"><div class="boven">${vk(U,U==="?")}<div class="boog"></div></div><div class="balk"><div class="deel" style="flex:${fa}">${A.t}</div><div class="deel b" style="flex:${fb}">${B.t}</div></div><div class="rvsamen">${esc(eenheid.stuk)}</div></div>`;
+  const rest=Math.max(1,(A.n||fb*2)-fb);
+  return`<div class="strook"><div class="boven">${vk(A.t,A.t==="?")}<div class="boog"></div></div><div class="balk"><div class="deel" style="flex:${rest}">${U==="?"?'<span class="vk vraag">?</span>':U}</div><div class="deel weg" style="flex:${fb}">${B.t} weg</div></div><div class="rvsamen">${esc(eenheid.stuk)}</div></div>`}
+function passendModel(op,gekozen){if(op==="×")return["groepjes","tabel"].includes(gekozen)?gekozen:"groepjes";return["strook","lijn"].includes(gekozen)?gekozen:"strook"}
+function plaatjesHTML(tot){const v=RVN.v,n=v.stappen.length;let vorige=null,h="";
+  v.stappen.forEach((s,i)=>{if(tot!=null&&i>tot)return;const uit=RVN.uit[i]!=null?s.r:null;
+    h+=`<div class="rvplaatje">${n>1?`<h4>${i===0?"Eerst":"Dan"}</h4>`:""}${plaatje(s,passendModel(s.op,RVN.model),v.eenheid,vorige,uit)}</div>`;vorige=uit});
+  return`<div class="rvplaatjes">${h}</div>`}
+// stap 4: maak er een plaatje van
+const MODELICOON={strook:'<svg width="70" height="34" viewBox="0 0 70 34"><rect x="3" y="8" width="40" height="20" rx="4" fill="#fde4ee" stroke="#5a4a4a" stroke-width="2.2"/><rect x="43" y="8" width="24" height="20" rx="4" fill="#e3f5ee" stroke="#5a4a4a" stroke-width="2.2"/></svg>',
+  groepjes:'<svg width="70" height="34" viewBox="0 0 70 34"><g fill="#fff" stroke="#efc3e0" stroke-width="2.5"><circle cx="14" cy="17" r="11"/><circle cx="35" cy="17" r="11"/><circle cx="56" cy="17" r="11"/></g><g fill="#f08fa8"><circle cx="11" cy="14" r="2.5"/><circle cx="17" cy="20" r="2.5"/><circle cx="32" cy="14" r="2.5"/><circle cx="38" cy="20" r="2.5"/><circle cx="53" cy="14" r="2.5"/><circle cx="59" cy="20" r="2.5"/></g></svg>',
+  lijn:'<svg width="70" height="34" viewBox="0 0 70 34"><line x1="3" y1="28" x2="67" y2="28" stroke="#5a4a4a" stroke-width="2.4"/><path d="M14 26Q30 0 50 26" fill="none" stroke="#a991d6" stroke-width="3"/></svg>',
+  tabel:'<svg width="70" height="34" viewBox="0 0 70 34"><rect x="5" y="3" width="60" height="28" rx="3" fill="#fff" stroke="#c9b3ea" stroke-width="2.4"/><path d="M5 17h60M25 3v28M45 3v28" stroke="#c9b3ea" stroke-width="2.2"/></svg>'};
+function rvStap4(){const v=RVN.v;
+  const knoppen=["strook","groepjes","lijn","tabel"].map(m=>`<button class="rvmodel ${m===v.model?"tip":""} ${RVN.model===m?"aan":""}" data-model="${m}">${m===v.model?'<span class="tiplabel">✨ Lily\'s tip</span>':""}${MODELICOON[m]}<span>${m==="lijn"?"Getallenlijn":m[0].toUpperCase()+m.slice(1)}</span></button>`).join("");
+  let h=rvKop()+`<div class="rvmodellen">${knoppen}</div>`;
+  if(RVN.model)h+=plaatjesHTML()+`<button class="groot g-paars" id="rvDoor">Nu ga ik rekenen →</button>`;
+  inh(h);
+  if(!RVN.model)zegV(`Maak er een plaatje van. Dit lijkt op ${MODELNAAM[v.model]}. Tik op een plaatje.`);
+  $$("[data-model]").forEach(b=>b.onclick=()=>{const m=b.dataset.model;RVN.model=m;rvBewaar();rvStap4();
+    const past=v.stappen.every(s=>passendModel(s.op,m)===m);
+    zegV(past?`Kijk, zo ziet het verhaal eruit als ${MODELNAAM[m]}. Het vraagteken is wat we zoeken.`:`Dat plaatje past niet bij elke stap. Daar heb ik iets anders van gemaakt. Het vraagteken is wat we zoeken.`)});
+  const d=$("#rvDoor");if(d)d.onclick=()=>{RVN.som=0;RVN.poging=0;RVN.invoer="";rvNaar(5)}}
+// kralen (Montessori-goudkralen): duizend, honderd, tien, een
+function kralenVan(n){if(n==null||n<0||n>9999)return"";const d=[Math.floor(n/1000),Math.floor(n/100)%10,Math.floor(n/10)%10,n%10];let h="";
+  h+='<div class="k1000"></div>'.repeat(d[0]).replace(/<\/div>/g,"1000</div>");h+='<div class="k100"></div>'.repeat(d[1]);h+='<div class="k10"></div>'.repeat(d[2]);
+  if(d[3])h+=`<div class="k1s">${'<div class="k1"></div>'.repeat(d[3])}</div>`;return`<div class="kralenGetal"><div class="rijk">${h||"<b>0</b>"}</div><b>${n}</b></div>`}
+function kralenHTML(s,a,b){if(s.op==="×"&&a<=10&&b<=10)return`<div class="kralen">${groepjesHTML(a,b)}</div>`;
+  if(s.op==="×")return`<div class="kralen"><div class="rvsamen">${a} keer ${b}. Tip: doe eerst ${Math.floor(a/10)*10||a} keer ${b}.</div></div>`;
+  return`<div class="kralen">${kralenVan(a)}<div class="rvsamen" style="font-size:34px">${s.op}</div>${kralenVan(b)}</div>`}
+const OPWOORD={"+":"plus","−":"min","×":"keer"};
+// stap 5: reken en controleer
+function rvStap5(){const v=RVN.v,i=RVN.som,s=v.stappen[i];if(!s){rvNaar(6);return}
+  const vorige=i>0?v.stappen[i-1].r:null,a=s.a==="V"?vorige:s.a,b=s.b==="V"?vorige:s.b;
+  const opgelost=RVN.uit[i]!=null;
+  const pad=`<div class="numpad">${[1,2,3,4,5,6,7,8,9].map(n=>`<button data-n="${n}">${n}</button>`).join("")}<button class="wis" data-n="w">⌫</button><button data-n="0">0</button><button class="ok" data-n="ok">Klaar ✓</button></div>`;
+  let h=rvKop()+`<div class="rvreken"><div class="rvlinks">${plaatjesHTML(i)}<div class="rvsom">${a} ${s.op} ${b} = <span class="rvvak ${opgelost?"goed":""}" id="rvAntw">${opgelost?s.r:esc(RVN.invoer||"")}</span></div>`;
+  h+=`<div class="rij"><button class="groot g-geel" id="rvKralen">🧮 ${RVN.kralen?"Kralen weg":"Kralen erbij"}</button></div>${RVN.kralen?kralenHTML(s,a,b):""}</div>`;
+  h+=opgelost?`<button class="groot g-paars" id="rvDoor">Verder →</button>`:pad;h+=`</div>`;
+  inh(h);
+  if(!opgelost&&!RVN.zei5){RVN.zei5=true;zegV(`Reken maar uit. ${a} ${OPWOORD[s.op]} ${b}. Neem je tijd.`)}
+  $("#rvKralen").onclick=()=>{RVN.kralen=!RVN.kralen;rvBewaar();rvStap5()};
+  const d=$("#rvDoor");if(d)d.onclick=()=>{RVN.som++;RVN.poging=0;RVN.invoer="";RVN.zei5=false;rvBewaar();RVN.som<v.stappen.length?rvStap5():rvNaar(6)};
+  $$("[data-n]").forEach(k=>k.onclick=e=>{const n=k.dataset.n;
+    if(n==="w"){RVN.invoer=(RVN.invoer||"").slice(0,-1)}
+    else if(n==="ok"){if(!RVN.invoer)return;const x=+RVN.invoer;RVN.poging++;
+      if(x===s.r){RVN.uit[i]=RVN.poging===1?"goed":"bijna";hartjes(e.clientX,e.clientY);zegV(`Ja! ${a} ${OPWOORD[s.op]} ${b} is ${s.r}.`)}
+      else if(RVN.poging===1){RVN.invoer="";RVN.kralen=true;zegV("Hmm, kijk nog eens. De kralen helpen je.")}
+      else{RVN.uit[i]="mis";zegV(`Kijk, zo gaat het: ${a} ${OPWOORD[s.op]} ${b} is ${s.r}. Dat is lastig, en dat mag.`)}
+      rvBewaar();rvStap5();return}
+    else if((RVN.invoer||"").length<5){RVN.invoer=(RVN.invoer||"")+n}
+    $("#rvAntw").textContent=RVN.invoer;rvBewaar()})}
+// het antwoord gaat terug het verhaal in
+function rvStapDus(){const v=RVN.v;
+  inh(rvKop()+`<div class="rvtekst klein" id="rvTekst">${tekstHTML(v)}</div><div class="rvdus">${esc(v.dus)}<br>Klopt dat?</div><div class="rij"><button class="groot g-paars" id="rvJa">Ja, dat klopt ♡</button><button class="groot g-geel" id="rvLees">🔊 Lees het verhaal nog eens</button></div>`);
+  zegV(v.dus+" Klopt dat?");
+  $("#rvLees").onclick=()=>leesMee($("#rvTekst"),v.tekst);
+  $("#rvJa").onclick=e=>{hartjes(e.clientX,e.clientY,"💗",7);rvAfronden()}}
+function rvAfronden(){stopLees();const R=RV(),n=R.nu,t=n.v.trede;
+  const uit=n.uit.includes("mis")?"mis":n.uit.includes("bijna")?"bijna":"goed";
+  const nw=new Date();R.log.push({iso:nw.toISOString(),datum:nw.toLocaleDateString("nl-NL"),tijd:nw.toTimeString().slice(0,5),trede:t,rol:n.rol,uitkomst:uit,vraag:n.v.zinnen[n.v.zinnen.length-1]});if(R.log.length>300)R.log=R.log.slice(-300);
+  let bericht="";
+  if(n.rol==="werk"||n.rol==="extra"){
+    if(uit==="goed"){R.goed++;R.mis=0;if(R.goed>=3)bericht=rvOmhoog()}
+    else if(uit==="mis"){R.goed=0;R.mis++;if(R.mis>=2)bericht=rvOmlaag()}}
+  else if(uit==="goed"){R.reeks[t]=(R.reeks[t]||0)+1;if(R.reeks[t]>=3&&!R.sterren.includes(t)){R.sterren.push(t);bericht="Je hebt een ster verdiend op je trap! ⭐"}}
+  if(n.rol!=="extra")R.stuk++;R.nu=null;RVN=null;rvBewaar();
+  if(bericht){rvTussen(bericht);return}
+  if(n.rol==="extra"||R.stuk>=R.plan.length){rvKlaarVandaag();return}
+  rvVolgende()}
+function rvOmhoog(){const R=RV(),t=R.trede;R.goed=0;R.mis=0;if(!R.sterren.includes(t))R.sterren.push(t);R.kralen[t]=false;
+  if(t<RV_HOOG){R.trede=t+1;const st=geefSticker();return`Drie keer goed! Je klimt een trede hoger: ${RV_TREDEN[t+1].naam}.${st}`}
+  return"Drie keer goed! Je kunt alles wat er nu op je trap staat. Er komen nog nieuwe treden bij."}
+function rvOmlaag(){const R=RV(),t=R.trede;R.goed=0;R.mis=0;R.terug[t]=(R.terug[t]||0)+1;
+  if(t>RV_LAAG)R.trede=t-1;R.kralen[R.trede]=true;
+  return"We doen even een trede lager, met de kralen erbij. Zo wordt jouw trap extra stevig."}
+function rvTussen(t){inh(`<div class="rvdus">${esc(t)}</div><button class="groot g-paars" id="rvDoor">Verder →</button>`);zegV(t);
+  $("#rvDoor").onclick=()=>{const R=RV();if(R.stuk>=R.plan.length)rvKlaarVandaag();else rvVolgende()}}
+function rvKlaarVandaag(){const R=RV();
+  if(R.klaarDag!==rvVandaag()){R.klaarDag=rvVandaag();S.snoep++;toonBadges();rvBewaar();
+    inh(`<div class="rvdus">Wat knap van je! Je krijgt een snoepje voor mij.</div><button class="groot g-paars" id="rvDoor">Verder →</button>`);
+    zegV("Wat knap van je! Je krijgt een snoepje voor mij.");$("#rvDoor").onclick=()=>rvNieuw("extra");return}
+  rvNieuw("extra")}
+$("#rvTerug").onclick=()=>{stopLees();if(RVN)rvOverzicht();else sluit()};
+$("#rvZeg").onclick=()=>spreek($("#rvZeg").textContent);
+// ---- mama kijkt mee ----
+function toonMamaRv(){const el=$("#mamaRv");if(!el)return;const R=RV(),t=RV_TREDEN[R.trede];
+  const opties=RV_TREDEN.map((x,i)=>x.klaar?`<option value="${i}" ${i===R.instap?"selected":""}>${i+1}. ${esc(x.mama)} (${x.groep})</option>`:"").join("");
+  const terug=Object.keys(R.terug).filter(k=>R.terug[k]).map(k=>`${RV_TREDEN[k].mama}: ${R.terug[k]}×`).join(" · ")||"nog nergens";
+  const ico={goed:"✅ goed",bijna:"🟡 bijna (2e poging)",mis:"↩︎ lukte nog niet"};
+  const log=R.log.slice(-10).reverse().map(l=>`<tr><td>${esc(l.datum)} ${esc(l.tijd)}</td><td>${l.trede+1}</td><td>${esc(RV_ROL[l.rol]||l.rol)}</td><td>${ico[l.uitkomst]||l.uitkomst}</td></tr>`).join("")||"<tr><td colspan=4>Nog geen verhaaltjes gedaan.</td></tr>";
+  el.innerHTML=`<div><b>Nu op trede ${R.trede+1}:</b> ${esc(t.mama)} — schatting <b>${t.groep}</b></div>
+    <div>Werktrede: ${R.goed} van 3 goed op rij · terugzakken: ${esc(terug)}</div>
+    <div class="rij" style="justify-content:flex-start;margin-top:8px"><select class="invoer" id="rvInstap">${opties}</select><button class="groot g-paars" id="rvZetInstap">Zet Nova hierop</button></div>
+    <div style="max-height:220px;overflow:auto;margin-top:8px"><table><thead><tr><th>Wanneer</th><th>Trede</th><th>Stukje</th><th>Uitkomst</th></tr></thead><tbody>${log}</tbody></table></div>
+    <div style="color:#9a8db0;margin-top:6px;font-size:15px">Fouten bij lezen (stap 2) en getallen kiezen (stap 3) tellen niet mee; alleen het rekenen telt. Naar de Sheet (tabblad Oefenen) komt in een volgende stap.</div>`;
+  $("#rvZetInstap").onclick=()=>{const n=+$("#rvInstap").value;if(n===R.trede){meld("Nova staat al op deze trede");return}R.instap=n;R.trede=n;R.goed=0;R.mis=0;R.nu=null;rvBewaar();toonMamaRv();meld("Nova begint nu op trede "+(n+1))}}
+
 // ---------- start ----------
 pasStijl();toonTaken();toonBadges();verstop();leesScript().then(()=>{toonTaken();verstuur()});
-if(S.scherm&&S.scherm!=="home"&&S.scherm!=="mama"&&S.scherm!=="topo"){const waar=S.scherm;const namen={tafels:"de tafels",blokjes:"Blokjes kleuren",teken:"je tekening",camera:"je opdracht",stickers:"je stickerboek",snoep:"de snoepjes",bubbel:"je bubbel",help:"hulp"};
+if(S.scherm&&S.scherm!=="home"&&S.scherm!=="mama"&&S.scherm!=="topo"){const waar=S.scherm;const namen={verhaal:"het rekenverhaal",tafels:"de tafels",blokjes:"Blokjes kleuren",teken:"je tekening",camera:"je opdracht",stickers:"je stickerboek",snoep:"de snoepjes",bubbel:"je bubbel",help:"hulp"};
   zegHome("Zullen we verdergaan waar je was? Bij "+(namen[waar]||"je werkje")+".",{tekst:"Ja, verder ♡",doe:()=>open(waar)})}
 else{const u=new Date().getHours();zegHome(u<12?"Goedemorgen! Hoe voel je je?":u<18?"Hoi! Fijn dat je er bent. Hoe voel je je?":"Goedenavond! Hoe voel je je?")}
 S.scherm="home";bewaar();
