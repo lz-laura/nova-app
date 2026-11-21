@@ -323,6 +323,1438 @@ body.vol.paneelOpen .paneel #lagen{flex-direction:column}
  .k100,.k1000{width:56px;height:56px}
 }
 
+/* breukenlab */
+.bl-tekst{background:var(--card);border:2.5px solid var(--line);border-radius:26px;padding:12px 18px;font-size:calc(26px*var(--s));font-weight:700;line-height:1.6;max-width:820px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;text-align:center}
+.br{display:inline-flex;flex-direction:column;align-items:center;line-height:1;vertical-align:middle;font-weight:800;color:#a2405f;margin:0 3px;font-size:.95em}
+.br b{border-bottom:3px solid currentColor;padding:0 5px 3px}
+.br i{font-style:normal;padding-top:3px}
+.bl-werk{display:flex;gap:26px;align-items:center;justify-content:center;flex-wrap:wrap;width:100%}
+#blVormVak{display:flex}
+.bl-vorm{width:min(300px,62vw,44vh);height:auto;aspect-ratio:1;touch-action:none;transition:filter .2s}
+.bl-vorm.klein{width:min(190px,40vw,30vh)}
+.bl-vorm.doel{filter:drop-shadow(0 0 10px #c9b3ea)}
+.bl-vorm.past{filter:drop-shadow(0 0 12px #8fd3b6)}
+.bl-p{fill:#e04c4c;stroke:#8f2323;stroke-width:2.5;stroke-linejoin:round}
+.bl-p.uit{fill:#f6b3b3;stroke-dasharray:6 4}
+.bl-p[data-pi]{cursor:pointer}
+.bl-ref,.bl-kant{display:flex;flex-direction:column;align-items:center;gap:8px}
+.bl-onder{font-weight:800;font-size:calc(20px*var(--s));display:flex;align-items:center;gap:6px}
+.bl-bak{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-content:center;max-width:240px;background:#fff6ec;border:3px dashed #f6d9bd;border-radius:24px;padding:12px 16px}
+body.donker .bl-bak{background:#4d3a33}
+.bl-stuk{width:96px;min-height:120px;background:#fff;border:2.5px solid #efc3e0;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;touch-action:none;box-shadow:0 4px 0 #f3dcea;user-select:none;-webkit-user-select:none}
+.bl-stuk svg{width:66px;height:66px;pointer-events:none}
+.bl-stuk .br{font-size:calc(22px*var(--s));pointer-events:none}
+.bl-vlieg{position:fixed;pointer-events:none;z-index:70;transform:translate(-50%,-50%);opacity:.9}
+.bl-vlieg svg{width:100%;height:100%;overflow:visible}
+.bl-kaarten{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;max-width:420px}
+.bl-kaarten .regel{display:flex;gap:8px;align-items:stretch}
+.bl-kaart{min-width:110px;min-height:110px;border-radius:26px;background:#fff;border:3px solid #c9b3ea;box-shadow:0 4px 0 #c9b3ea;display:flex;align-items:center;justify-content:center;font-size:calc(40px*var(--s))}
+.bl-kaart.weg{opacity:.35;box-shadow:none}
+.bl-kaart.gekozen{background:#e3f5ee;border-color:#8fd3b6;box-shadow:0 4px 0 #8fd3b6}
+.bl-vgl{align-items:flex-end}
+@media (orientation:portrait){.bl-bak{max-width:none}}
+@media (max-width:700px){
+ .bl-tekst{font-size:calc(21px*var(--s));padding:10px 12px}
+ .bl-stuk{width:78px;min-height:100px}.bl-stuk svg{width:54px;height:54px}
+ .bl-kaart{min-width:88px;min-height:88px;font-size:calc(32px*var(--s))}
+ .bl-vgl{gap:12px}
+}
+
+/* mama */
+table{border-collapse:collapse;width:100%;font-size:calc(16px*var(--s))}
+th,td{border-bottom:1.5px solid #f3dcea;padding:7px 8px;text-align:left}
+.mamakaart{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:14px 16px;width:100%;max-width:820px}
+.mamakaart h3{color:#a2405f;margin-bottom:8px}
+.invoer{flex:1;min-width:200px;height:52px;border-radius:16px;border:2px solid #f3dcea;padding:0 14px;font-family:inherit;font-size:calc(18px*var(--s))}
+.werkjes{display:flex;gap:10px;flex-wrap:wrap}
+.werkjes img{width:120px;height:90px;object-fit:cover;border-radius:12px;border:2px solid #f3dcea}
+.melding{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:#fff;border:2.5px solid #f4b9cf;border-radius:22px;padding:12px 20px;font-weight:800;z-index:60;display:none;max-width:90vw;text-align:center}
+
+/* ===== telefoon ===== */
+@media (max-width:700px){
+ .sheet{padding:10px 12px 12px}
+ .kop{gap:8px;flex-wrap:nowrap}
+ .terug,.volknop{height:48px;padding:0 14px;font-size:calc(16px*var(--s));white-space:nowrap;flex:none;border-radius:24px}
+ .kop h2{flex:1;min-width:0;font-size:calc(20px*var(--s));line-height:1.1;overflow-wrap:anywhere}
+ .volLang{display:none}
+ .lilyhoek img{width:70px}.zeg{font-size:calc(17px*var(--s));padding:8px 12px}
+ .groot{min-height:54px;padding:0 18px;font-size:calc(18px*var(--s))}
+ /* startscherm */
+ .widgets{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+ .w{min-height:0;padding:12px}.w-kal{padding:0}.kalbody{padding:4px 4px 8px}.kal{font-size:13px}.kalkop{font-size:15px;padding:10px 10px 4px}
+ .w-lily{justify-content:flex-start;padding-top:0}
+ .w-lily img{position:relative;left:auto;top:auto;transform:none;width:70%;max-width:150px;margin:-26px auto 0;display:block}
+ .w-lily .hoi{font-size:calc(21px*var(--s))}
+ .lilybubble{font-size:calc(15px*var(--s));padding:6px 8px}
+ .tijd{font-size:calc(42px*var(--s))}.dag{font-size:calc(19px*var(--s))}.nog{font-size:calc(15px*var(--s))}
+ .w-weer{flex-direction:row;flex-wrap:wrap;gap:10px}
+ .w-van h3{font-size:calc(19px*var(--s))}.taak{font-size:calc(16px*var(--s))}
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+ .appbtn{width:auto;max-width:100%}
+ .icon{width:76px;height:76px;border-radius:24px}
+ .icon svg{width:56px;height:56px}
+ .lbl{font-size:calc(16px*var(--s))}
+ /* tekenen: telefoonindeling ook zonder groot scherm */
+ #tekenbalk{flex-wrap:nowrap;gap:10px;justify-content:flex-start;margin:8px 0}
+ .kleurKnop{display:inline-flex;flex:none;align-items:center;gap:8px;height:52px;padding:0 14px 0 6px;border-radius:26px;background:#fff;border:2.5px solid #f3dcea;font-weight:800;font-size:17px;color:#4a3f4f}
+ .kleurKnop i{width:40px;height:40px;border-radius:50%;display:block;border:3px solid #fff;box-shadow:0 0 0 2px #e6cfe0}
+ .kleurenSet{display:none}
+ body.kleurOpen .kleurenSet{display:grid;grid-template-columns:repeat(4,54px);gap:12px;position:absolute;top:130px;left:12px;z-index:35;background:var(--card);border:2.5px solid #c9b3ea;border-radius:22px;padding:14px;box-shadow:0 8px 24px rgba(75,56,120,.18)}
+ body.vol.kleurOpen .kleurenSet{top:70px}
+ body.kleurOpen .kleurenSet .kleur{width:54px;height:54px}
+ .dikteschuif{width:auto;flex:1;min-width:70px}
+ .studio{flex-direction:column;gap:8px}
+ .gereedschap{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;overflow:visible;flex:none}
+ .kwast{min-width:0;width:auto;min-height:56px;font-size:22px;padding:2px;border-radius:14px}
+ .kwast span{font-size:10px;letter-spacing:-.2px}
+ .doekvak{min-height:0;flex:1}
+ .paneel{display:none}
+ #paneelKnop{display:inline-flex!important}
+ body.paneelOpen .paneel{display:flex;flex-direction:column;flex-wrap:nowrap;position:absolute;right:12px;left:12px;top:auto;bottom:140px;max-height:60vh;width:auto;z-index:30;background:var(--card);border:2.5px solid #c9b3ea;border-radius:22px;padding:12px;box-shadow:0 8px 24px rgba(75,56,120,.18);overflow:auto}
+ body.paneelOpen .paneel #lagen{display:flex;flex-direction:column;gap:6px}
+ body.paneelOpen .paneel .stickerbak{grid-template-columns:repeat(5,1fr)}
+ #s-teken .tekenbalk:last-child{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 0}
+ #s-teken .tekenbalk .groot{min-height:48px;padding:4px 8px;font-size:16px;border-width:2.5px;line-height:1.1;text-align:center}
+ /* stickerboek */
+ .stickerboek{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%}
+ .sticker{width:100%;height:auto;aspect-ratio:1;font-size:40px}
+ .sticker.dicht{font-size:26px}
+ /* tafels */
+ .tafelrij{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%}
+ .tafelknop{width:100%;height:auto;aspect-ratio:1;font-size:28px}
+ .tabs{gap:6px}.tab{min-height:46px;padding:0 14px;font-size:calc(16px*var(--s))}
+ .sommen{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+ .som{font-size:calc(19px*var(--s));padding:8px 10px}
+ .somgroot{font-size:calc(46px*var(--s))}
+ .antw{width:88px;height:76px;font-size:34px;border-radius:22px}
+ .memory{grid-template-columns:repeat(var(--mkol,4),minmax(0,1fr));gap:8px;width:100%;max-width:420px}
+ .mkaart .rug{font-size:32px}
+ .mama{font-size:calc(15px*var(--s))}
+ .mkaart{width:100%;height:auto;aspect-ratio:1;font-size:20px;border-radius:16px}
+ .groepjes{gap:6px}.groepje{grid-template-columns:repeat(5,12px);gap:4px;padding:6px}.groepje i{width:12px;height:12px}
+ .staafje .hk{width:18px;height:17px}
+ /* blokjes */
+ .blok span{min-width:42px;font-size:32px}.blok{min-height:64px}.verf{width:58px;height:58px}
+ .woordplaat{font-size:calc(24px*var(--s))}
+}
+</style>
+</head>
+<body>
+<div class="app" id="home">
+  <div class="top">
+    <button class="mama" id="mamaKnop">♡ Mama kijkt mee</button>
+    <div class="tools">
+      <button class="tool" id="kleiner" aria-label="Kleinere letters">A−</button>
+      <button class="tool" id="groter" aria-label="Grotere letters">A+</button>
+      <button class="tool" id="maan" aria-label="Licht of donker"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="#fde8f0" stroke="#b07a99" stroke-width="2.2" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+  <div class="widgets">
+    <div class="w w-lily"><img data-lily alt="Lily de puppy" id="lilyHome"><div class="hoi">Hoi Nova!</div><div class="lilybubble" id="homeBubbel" style="display:none"></div></div>
+    <div class="w w-klok"><div class="dag" id="dag">dag</div><div class="tijd" id="tijd">00:00</div><div class="nog" id="nog">…</div></div>
+    <div class="w w-weer" id="weer"><div id="weerNu"><svg class="weericoon" viewBox="0 0 96 80" id="weerIcoon"></svg><div class="graden" id="graden">…</div><div class="weertekst" id="weerTekst">Even kijken naar buiten…</div></div><div><div class="weertip" id="weerTip" style="display:none"></div><div class="weerdag" id="weerDag"></div></div></div>
+    <div class="w w-kal"><div class="kalkop"><span id="maand">maand</span><span id="jaar"></span></div><div class="kalbody"><div class="kal" id="kal"></div></div></div>
+    <div class="w w-van"><div class="seizoen" id="seizoen">🍂</div><h3>Vandaag</h3><div id="taken"></div></div>
+  </div>
+  <div class="grid">
+    <a class="appbtn" href="https://claude.ai/artifact/W2xhYmoRoJxFyrYBVJ1dE8" target="_blank" rel="noopener" style="text-decoration:none;color:inherit"><div class="icon" style="background:#e3f5ee;border-color:#b6e2d0"><svg width="64" height="54" viewBox="0 0 64 54"><path d="M6 12l16-6 18 6 18-6v36l-18 6-18-6-16 6z" fill="#fffaf0" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><path d="M22 6v36M40 12v36" stroke="#5a4a4a" stroke-width="2"/><path d="M8 30q10-8 20 2t26-4" fill="none" stroke="#9fd3bd" stroke-width="3" stroke-linecap="round"/><path d="M44 10c0-6 10-6 10 0 0 5-5 10-5 10s-5-5-5-10z" fill="#f08fa8" stroke="#5a4a4a" stroke-width="2"/></svg></div><div class="lbl">Topo met Lily</div></a>
+    <button class="appbtn" data-open="blokjes"><div class="icon"><svg width="78" height="54" viewBox="0 0 78 54"><g stroke="#4a3f4f" stroke-width="2"><rect x="4" y="14" width="18" height="24" rx="3" fill="#4fc3f0"/><rect x="22" y="14" width="18" height="24" rx="3" fill="#8bc34a"/><rect x="40" y="14" width="18" height="24" rx="3" fill="#4fc3f0"/></g><g font-family="Nunito" font-weight="800" font-size="17" fill="#1f2a44" text-anchor="middle"><text x="13" y="32">k</text><text x="31" y="32">i</text><text x="49" y="32">p</text></g><path d="M62 30l10-14 4 3-10 14-5 2z" fill="#f4b9cf" stroke="#4a3f4f" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="lbl">Blokjes kleuren</div></button>
+    <button class="appbtn" data-open="teken"><div class="icon" style="background:#e6f0fb;border-color:#bcd3ee"><svg width="60" height="54" viewBox="0 0 64 54"><rect x="8" y="6" width="40" height="42" rx="5" fill="#fff" stroke="#5a4a4a" stroke-width="2.4"/><path d="M16 36q6-14 12-4t10-10" fill="none" stroke="#f08fa8" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="18" r="4" fill="#fbd96b"/><path d="M44 46l12-26 4 2-12 26-5 3z" fill="#cbb7ef" stroke="#5a4a4a" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="lbl">Ik teken het</div></button>
+    <button class="appbtn" data-open="stickers"><div class="icon" style="background:#fde4ee;border-color:#f4b9cf"><svg width="60" height="54" viewBox="0 0 64 54"><path d="M8 8h22q2 0 2 3v38q0-3-3-3H8z" fill="#fff" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><path d="M56 8H34q-2 0-2 3v38q0-3 3-3h21z" fill="#fff" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><path d="M19 20c-3-3-8 0-4 5l4 4 4-4c4-5-1-8-4-5z" fill="#f08fa8"/><path d="M45 18l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z" fill="#fbd96b" stroke="#5a4a4a" stroke-width="1.2"/></svg><div class="badge" id="stickerBadge" style="display:none">+1</div></div><div class="lbl">Mijn stickerboek</div></button>
+    <button class="appbtn" data-open="bubbel"><div class="icon" style="background:#fff4d6;border-color:#f3dc9c"><svg width="60" height="54" viewBox="0 0 64 54"><path d="M14 32V26a18 18 0 0 1 36 0v6" fill="none" stroke="#5a4a4a" stroke-width="2.6"/><rect x="8" y="30" width="12" height="18" rx="5" fill="#f4b9cf" stroke="#5a4a4a" stroke-width="2.4"/><rect x="44" y="30" width="12" height="18" rx="5" fill="#f4b9cf" stroke="#5a4a4a" stroke-width="2.4"/><path d="M30 38V24l8-2v12" fill="none" stroke="#5a4a4a" stroke-width="2.2"/><circle cx="27.5" cy="38" r="3" fill="#5a4a4a"/><circle cx="35.5" cy="34" r="3" fill="#5a4a4a"/></svg></div><div class="lbl">Mijn bubbel</div></button>
+    <button class="appbtn" data-open="tafels"><div class="icon" style="background:#fdeef8;border-color:#efc3e0"><svg width="64" height="54" viewBox="0 0 64 54"><rect x="6" y="6" width="52" height="42" rx="8" fill="#fff" stroke="#5a4a4a" stroke-width="2.4"/><g font-family="Nunito" font-weight="800" fill="#7a5fae" text-anchor="middle"><text x="32" y="25" font-size="15">3×4</text><text x="32" y="41" font-size="13" fill="#f08fa8">= 12</text></g><path d="M52 4l1.5 3.5L57 9l-3.5 1.5L52 14l-1.5-3.5L47 9l3.5-1.5z" fill="#fbd96b"/></svg><div class="badge" id="tafelBadge" style="display:none"></div></div><div class="lbl">Tafels</div></button>
+    <button class="appbtn" data-open="verhaal"><div class="icon" style="background:#f3edfc;border-color:#e2d5f6"><svg width="64" height="54" viewBox="0 0 64 54"><path d="M6 10q12-4 26 2v38q-14-6-26-2z" fill="#fff" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><path d="M58 10q-12-4-26 2v38q14-6 26-2z" fill="#fff" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><path d="M11 20h15M11 27h12M11 34h15" stroke="#c9b3ea" stroke-width="2.6" stroke-linecap="round"/><g font-family="Nunito" font-weight="800" text-anchor="middle"><text x="45" y="28" font-size="13" fill="#7a5fae">3+4</text><text x="45" y="42" font-size="12" fill="#f08fa8">= ?</text></g><path d="M54 2l1.5 3.5L59 7l-3.5 1.5L54 12l-1.5-3.5L49 7l3.5-1.5z" fill="#fbd96b"/></svg></div><div class="lbl">Rekenverhaal</div></button>
+    <button class="appbtn" data-open="breuk"><div class="icon" style="background:#fdecea;border-color:#f4c4bf"><svg width="60" height="58" viewBox="0 0 64 64"><circle cx="30" cy="34" r="24" fill="#fff" stroke="#5a4a4a" stroke-width="2.4"/><path d="M30 34V10a24 24 0 0 1 24 24z" fill="#e04c4c" stroke="#8f2323" stroke-width="2.2" stroke-linejoin="round"/><path d="M30 34h24a24 24 0 0 1-24 24z" fill="#e04c4c" stroke="#8f2323" stroke-width="2.2" stroke-linejoin="round"/><path d="M27 37v24a24 24 0 0 1-24-24z" fill="#e04c4c" stroke="#8f2323" stroke-width="2.2" stroke-linejoin="round" transform="translate(-3 3)"/><path d="M52 8l1.5 3.5L57 13l-3.5 1.5L52 18l-1.5-3.5L47 13l3.5-1.5z" fill="#fbd96b"/></svg></div><div class="lbl">Breukenlab</div></button>
+    <button class="appbtn" data-open="snoep"><div class="icon" style="background:#fff0e4;border-color:#f6cfae"><svg width="60" height="54" viewBox="0 0 64 54"><ellipse cx="32" cy="40" rx="24" ry="9" fill="#f6cfae" stroke="#5a4a4a" stroke-width="2.4"/><path d="M8 38q0-10 24-10t24 10" fill="#fff" stroke="#5a4a4a" stroke-width="2.4"/><circle cx="24" cy="32" r="5" fill="#d9a066" stroke="#5a4a4a" stroke-width="1.6"/><circle cx="36" cy="31" r="5" fill="#d9a066" stroke="#5a4a4a" stroke-width="1.6"/><circle cx="30" cy="27" r="5" fill="#d9a066" stroke="#5a4a4a" stroke-width="1.6"/></svg><div class="badge" id="snoepBadge" style="display:none">0</div></div><div class="lbl">Snoepjes voor Lily</div></button>
+  </div>
+  <div class="dockwrap"><div class="dock">
+    <label class="cam" for="camInput"><svg width="34" height="30" viewBox="0 0 74 64"><rect x="6" y="16" width="56" height="40" rx="9" fill="#fff" stroke="#3f2f63" stroke-width="3"/><rect x="18" y="9" width="18" height="9" rx="3" fill="#f4b9cf" stroke="#3f2f63" stroke-width="2.8"/><circle cx="34" cy="36" r="12" fill="#efe7fa" stroke="#3f2f63" stroke-width="3"/><circle cx="34" cy="36" r="6" fill="#3f2f63"/></svg>Camera</label>
+    <input type="file" id="camInput" accept="image/*" capture="environment" style="display:none">
+    <div class="sep"></div>
+    <button class="face" data-gevoel="blij" style="background:#fff4d6;border-color:#f3dc9c" aria-label="Ik voel me blij"><svg width="44" height="44" viewBox="0 0 48 48"><circle cx="17" cy="21" r="2.8" fill="#5a4a4a"/><circle cx="31" cy="21" r="2.8" fill="#5a4a4a"/><path d="M15 29q9 9 18 0" fill="none" stroke="#5a4a4a" stroke-width="2.6" stroke-linecap="round"/><ellipse cx="11" cy="28" rx="3.5" ry="2" fill="#f7b3c4"/><ellipse cx="37" cy="28" rx="3.5" ry="2" fill="#f7b3c4"/></svg></button>
+    <button class="face" data-gevoel="gewoon" style="background:#e3f5ee;border-color:#b6e2d0" aria-label="Ik voel me gewoon"><svg width="44" height="44" viewBox="0 0 48 48"><circle cx="17" cy="21" r="2.8" fill="#5a4a4a"/><circle cx="31" cy="21" r="2.8" fill="#5a4a4a"/><path d="M17 31h14" stroke="#5a4a4a" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+    <button class="face" data-gevoel="moe" style="background:#e6f0fb;border-color:#bcd3ee" aria-label="Ik voel me moe"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M12 21q4 3 8 0M28 21q4 3 8 0" fill="none" stroke="#5a4a4a" stroke-width="2.6" stroke-linecap="round"/><path d="M18 32q6-4 12 0" fill="none" stroke="#5a4a4a" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+    <div class="sep"></div>
+    <button class="bb lees" data-lees><svg width="28" height="28" viewBox="0 0 28 28"><path d="M4 11h5l7-6v18l-7-6H4z" fill="#fff" stroke="#3d5f8f" stroke-width="2.2" stroke-linejoin="round"/><path d="M20 9q4 5 0 10M23 6q6 8 0 16" fill="none" stroke="#3d5f8f" stroke-width="2.2" stroke-linecap="round"/></svg>Lees voor</button>
+    <button class="bb help" data-help><svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 24s-10-6-10-13a5.5 5.5 0 0 1 10-3 5.5 5.5 0 0 1 10 3c0 7-10 13-10 13z" fill="#f08fa8" stroke="#a2405f" stroke-width="2"/><text x="14" y="17" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="11" fill="#fff">?</text></svg>Help mij</button>
+  </div></div>
+</div>
+
+<!-- SHEETS -->
+<section class="sheet" id="s-camera">
+  <div class="kop"><button class="terug" data-terug>← Terug</button><h2>Mijn opdracht</h2></div>
+  <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg>Maak een foto van je opdracht. Dan kijken we samen.</div></div>
+  <div class="inhoud">
+    <img id="camFoto" style="max-width:min(640px,90%);max-height:40vh;border-radius:20px;border:3px solid #f3dcea;display:none" alt="Foto van de opdracht">
+    <label class="groot g-paars" for="camInput2">📷 Maak een foto</label>
+    <input type="file" id="camInput2" accept="image/*" capture="environment" style="display:none">
+    <div class="rij" id="camKnoppen" style="display:none">
+      <button class="groot g-mint" data-cam="snap">Ik snap het</button>
+      <button class="groot g-geel" data-cam="nog">Leg nog eens uit</button>
+      <button class="groot g-roze" data-cam="moeilijk">Nog te moeilijk</button>
+    </div>
+  </div>
+</section>
+
+<section class="sheet" id="s-blokjes">
+  <div class="kop"><button class="terug" data-terug>← Terug</button><h2>Blokjes kleuren</h2></div>
+  <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg id="blokZeg">Kies een kleur. Tik dan op een blokje.</div></div>
+  <div class="inhoud">
+    <button class="woordplaat" id="woordPlaat" aria-label="Hoor het woord">kip 🔊</button>
+    <div class="blokken" id="blokken"></div>
+    <div class="rij" id="verven"></div>
+    <div class="rij"><button class="groot g-mint" id="volgendWoord" style="display:none">Volgend woord →</button></div>
+  </div>
+</section>
+
+<section class="sheet" id="s-teken">
+  <div class="kop"><button class="terug" data-terug>← Terug</button><h2>Ik teken het</h2></div>
+  <div class="tekenbalk" id="tekenbalk"></div>
+  <div class="studio">
+    <div class="gereedschap" id="kwasten"></div>
+    <div class="doekvak" id="doekvak"></div>
+    <div class="paneel">
+      <div class="ptitel">Lagen</div><div id="lagen"></div>
+      <div class="ptitel">Mijn stickers</div><div id="stickerbak" class="stickerbak"></div>
+      <div id="stickerMaat" class="rij" style="gap:6px;margin-top:6px"></div>
+    </div>
+  </div>
+  <div class="tekenbalk">
+    <button class="groot g-geel" id="stapTerug">↶ Stapje terug</button>
+    <button class="groot g-roze" id="nieuwBlad">Nieuw blad</button>
+    <button class="groot g-mint alleenVol" id="paneelKnop">🌈 Lagen &amp; stickers</button>
+    <button class="groot g-paars" id="tekenKlaar">Klaar, bewaar ♡</button>
+  </div>
+</section>
+
+<section class="sheet" id="s-stickers">
+  <div class="kop"><button class="terug" data-terug>← Terug</button><h2>Mijn stickerboek</h2></div>
+  <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg id="stickerZeg">Kijk wat je al hebt verzameld!</div></div>
+  <div class="inhoud"><div class="stickerboek" id="stickerboek"></div></div>
+</section>
+
+<section class="sheet" id="s-snoep">
+  <div class="kop"><button class="terug" data-terug>← Terug</button><h2>Snoepjes voor Lily</h2></div>
+  <div class="inhoud">
+    <img data-lily alt="Lily" id="lilySnoep" style="width:min(300px,60vw)">
+    <div class="zeg" data-zeg id="snoepZeg">Wat lief dat je aan mij denkt!</div>
+    <div style="font-size:calc(22px*var(--s));font-weight:800" id="snoepTeller"></div>
+    <button class="groot g-paars" id="geefSnoep">🍪 Geef Lily een snoepje</button>
+  </div>
+</section>
+
+<section class="sheet" id="s-bubbel">
+  <div class="kop"><button class="terug" data-terug>← Terug</button><h2>Mijn bubbel</h2></div>
+  <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg>Een rustig geluidje op de achtergrond. Jij kiest. Je mag het ook uit laten.</div></div>
+  <div class="inhoud">
+    <div class="rij">
+      <button class="groot g-mint" data-geluid="regen">🌧️ Zachte regen</button>
+      <button class="groot g-geel" data-geluid="doosje">🎶 Muziekdoosje</button>
+      <button class="groot g-roze" data-geluid="uit">🔇 Stil</button>
+    </div>
+    <div style="font-weight:700;color:#b98aa8">Het geluid blijft aan als je teruggaat.</div>
+  </div>
+</section>
+
+<section class="sheet" id="s-help">
+  <div class="kop"><button class="terug" data-terug>← Terug</button><h2>Help mij</h2></div>
+  <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg id="helpZeg">Dit is lastig. Dat mag. We maken het kleiner.</div></div>
+  <div class="inhoud">
+    <div class="rij">
+      <button class="groot g-mint" data-hulp="kleiner">Maak het kleiner</button>
+      <button class="groot g-geel" data-hulp="voorlezen">Lees het voor</button>
+      <button class="groot g-roze" data-hulp="mama">Ik wil mama</button>
+    </div>
+  </div>
+</section>
+
+<section class="sheet" id="s-tafels">
+  <div class="kop"><button class="terug" id="tafelTerug">← Terug</button><h2 id="tafelTitel">Tafels</h2></div>
+  <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg id="tafelZeg">Kijk wat je al kunt!</div></div>
+  <div class="inhoud" id="tafelInhoud" style="justify-content:flex-start"></div>
+</section>
+<section class="sheet" id="s-verhaal">
+  <div class="kop"><button class="terug" id="rvTerug">← Terug</button><h2 id="rvTitel">Rekenverhaal</h2></div>
+  <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg id="rvZeg" role="button" title="Tik om het nog eens te horen">Hoi!</div></div>
+  <div class="inhoud" id="rvInhoud" style="justify-content:flex-start"></div>
+</section>
+<section class="sheet" id="s-breuk">
+  <div class="kop"><button class="terug" id="blTerug">← Terug</button><h2>Breukenlab</h2></div>
+  <div class="lilyhoek"><img data-lily alt=""><div class="zeg" data-zeg id="blZeg" role="button" title="Tik om het nog eens te horen">Hoi!</div></div>
+  <div class="inhoud" id="blInhoud" style="justify-content:flex-start"></div>
+</section>
+<section class="sheet" id="s-mama">
+  <div class="kop"><button class="terug" data-terug>← Terug</button><h2>Mama kijkt mee</h2></div>
+  <div class="inhoud" style="justify-content:flex-start">
+    <div class="mamakaart"><h3>Taken voor vandaag</h3>
+      <div class="rij" style="justify-content:flex-start"><input class="invoer" id="nieuweTaak" placeholder="Bijv. Rekenen, blz. 34"><button class="groot g-paars" id="voegTaak">Toevoegen</button></div>
+      <div id="mamaTaken" style="margin-top:8px"></div>
+    </div>
+    <div class="mamakaart"><h3>Stemmingsdagboek</h3><div id="opslagInfo" style="font-size:15px;color:#9a8db0;margin-bottom:6px"></div>
+      <div style="max-height:260px;overflow:auto"><table><thead><tr><th>Datum</th><th>Tijd</th><th>Gevoel</th><th>Waar</th></tr></thead><tbody id="stemRijen"></tbody></table></div>
+      <button class="groot g-geel" id="kopieer" style="margin-top:10px">Kopieer tabel</button>
+    </div>
+    <div class="mamakaart"><h3>Tafels</h3><div id="mamaTafels"></div></div>
+    <div class="mamakaart"><h3>Rekenverhaal</h3><div id="mamaRv"></div></div>
+    <div class="mamakaart"><h3>Breukenlab</h3><div id="mamaBl"></div></div>
+    <div class="mamakaart"><h3>Werkjes en tekeningen</h3><div style="font-size:15px;color:#9a8db0;margin-bottom:6px">Gaan vanzelf naar Drive › Nova › Werkjes (als de koppeling aan staat). Hier zie je de laatste 12.</div><div class="werkjes" id="werkjes"></div></div>
+  </div>
+</section>
+
+<div class="melding" id="melding"></div>
+<button id="volUit" aria-label="Terug naar klein scherm">✕ Klein<span class="volLang"> scherm</span></button>
+
+<script>
+const LILY="data:image/webp;base64,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";document.querySelectorAll("[data-lily]").forEach(i=>i.src=LILY);
+const TOPO_URL="https://claude.ai/artifact/W2xhYmoRoJxFyrYBVJ1dE8";
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+// ---------- opslag ----------
+const SLEUTEL="nova_lily_v1";
+const basis={taken:[],stickers:[],snoep:0,stemming:[],werkjes:[],scherm:"home",tekening:null,woordIdx:0,schaal:1,donker:false,schatDag:"",bubbel:"uit"};
+let S;
+try{S=Object.assign({},basis,JSON.parse(localStorage.getItem(SLEUTEL)||"{}"))}catch(e){S=Object.assign({},basis)}
+function bewaar(){try{localStorage.setItem(SLEUTEL,JSON.stringify(S))}catch(e){
+  // te vol: oudste werkjes eruit, nooit iets anders
+  if(S.werkjes.length>3){S.werkjes=S.werkjes.slice(-3);try{localStorage.setItem(SLEUTEL,JSON.stringify(S))}catch(e2){}}}}
+let DB=null;
+(async()=>{try{ if(!window.claude||!claude.use)return; const db=await claude.use("db"); if(!db)return; DB=db; zetOpslagInfo();
+  // centrale taken lezen
+  try{const d=await db.doc("app/vandaag").get(); const v=d&&(d.data?d.data():d); if(v&&Array.isArray(v.taken)){S.taken=v.taken;bewaar();toonTaken()}}catch(e){}
+}catch(e){}})();
+function zetOpslagInfo(){const el=$("#opslagInfo"); if(el) el.textContent=SCRIPT_URL?"Elke tik gaat naar de Google Sheet \u2018Nova app – gegevens\u2019 (tabblad Stemming). Hier zie je alleen wat op dit apparaat is aangetikt.":DB?"Wordt centraal bewaard (bij de app), en ook op dit apparaat.":"Wordt op dit apparaat bewaard. De koppeling met Google staat nog uit.";}
+async function dbZet(pad,obj){if(pad.startsWith("stemming/"))naarScript(Object.assign({actie:"stemming"},obj));else if(pad==="app/vandaag")naarScript({actie:"taken",taken:obj.taken});else if(pad==="app/tafels")naarScript({actie:"tafels",feiten:obj.feiten});
+  if(!DB)return;try{await DB.doc(pad).set(obj)}catch(e){}}
+function bewaarTakenCentraal(){dbZet("app/vandaag",{taken:S.taken,bijgewerkt:new Date().toISOString()})}
+// ---------- koppeling met Google (Apps Script) ----------
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbyv1fb-L7T9DoXLui86dFUuiPrrT6_R9PYTLD84JqGKuP2Edz8_88gIqgiU-g7txifN/exec"; // plak hier de web-app-URL van het Apps Script
+const SCRIPT_SLEUTEL="lily-7c5cd221b557ed99";
+let UIT=[];try{UIT=JSON.parse(localStorage.getItem("nova_lily_uitbak")||"[]")}catch(e){}
+function bewaarUit(){try{localStorage.setItem("nova_lily_uitbak",JSON.stringify(UIT))}catch(e){UIT=UIT.filter(x=>x.actie!=="werkje");try{localStorage.setItem("nova_lily_uitbak",JSON.stringify(UIT))}catch(e2){}}}
+function naarScript(obj){if(!SCRIPT_URL)return;
+  if(obj.actie==="taken"||obj.actie==="tafels")UIT=UIT.filter(x=>x.actie!==obj.actie);
+  UIT.push(Object.assign({sleutel:SCRIPT_SLEUTEL},obj));bewaarUit();verstuur()}
+let bezig=false;
+async function verstuur(){if(!SCRIPT_URL||bezig||!UIT.length)return;bezig=true;
+  try{while(UIT.length){const r=await fetch(SCRIPT_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(UIT[0])});const j=await r.json();if(!j.ok&&j.fout!=="geen afbeelding")break;UIT.shift();bewaarUit()}}catch(e){}
+  bezig=false}
+window.addEventListener("online",verstuur);setInterval(verstuur,60000);
+async function leesScript(){if(!SCRIPT_URL)return;try{const r=await fetch(SCRIPT_URL+"?sleutel="+encodeURIComponent(SCRIPT_SLEUTEL));const j=await r.json();if(!j.ok)return;
+  if(Array.isArray(j.taken)&&!UIT.some(x=>x.actie==="taken")){S.taken=j.taken;toonTaken()}
+  if(j.tafels){const f=S_t();for(const k in j.tafels)f[k]=Math.max(f[k]||0,j.tafels[k])}
+  if(Array.isArray(j.stemming)){const ids=new Set(S.stemming.map(x=>x.id));j.stemming.forEach(x=>{if(x.id&&!ids.has(x.id))S.stemming.push(x)})}
+  bewaar()}catch(e){}}
+function bewaarWerkje(w){S.werkjes.push(w);if(S.werkjes.length>12)S.werkjes=S.werkjes.slice(-12);naarScript(Object.assign({actie:"werkje"},w))}
+// ---------- spraak ----------
+let TTS=null;(async()=>{try{if(window.claude&&claude.use){TTS=await claude.use("tts")}}catch(e){}})();
+function spreek(tekst){if(!tekst)return;
+  if(TTS){TTS.speak(tekst,{language:"nl",rate:.9}).catch(()=>webSpreek(tekst));return}
+  webSpreek(tekst)}
+function webSpreek(t){try{const u=new SpeechSynthesisUtterance(t);u.lang="nl-NL";u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+// ---------- melding ----------
+function meld(t){const m=$("#melding");m.textContent=t;m.style.display="block";clearTimeout(meld.t);meld.t=setTimeout(()=>m.style.display="none",2600)}
+function hartjes(x,y,teken="💗",n=5){for(let i=0;i<n;i++){const h=document.createElement("div");h.className="hartjes";h.textContent=teken;h.style.left=(x+(Math.random()*80-40))+"px";h.style.top=(y+(Math.random()*20))+"px";h.style.animationDelay=(i*.12)+"s";document.body.appendChild(h);setTimeout(()=>h.remove(),2000)}}
+// ---------- weergave ----------
+function pasStijl(){document.documentElement.style.setProperty("--s",S.schaal);document.body.classList.toggle("donker",S.donker)}
+$("#kleiner").onclick=()=>{S.schaal=Math.max(.85,+(S.schaal-.1).toFixed(2));pasStijl();bewaar()};
+$("#groter").onclick=()=>{S.schaal=Math.min(1.4,+(S.schaal+.1).toFixed(2));pasStijl();bewaar()};
+$("#maan").onclick=()=>{S.donker=!S.donker;pasStijl();bewaar()};
+// ---------- klok en kalender ----------
+const DAGEN=["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"],MAANDEN=["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"];
+function klok(){const n=new Date();$("#dag").textContent=DAGEN[n.getDay()];$("#tijd").textContent=String(n.getHours()).padStart(2,"0")+":"+String(n.getMinutes()).padStart(2,"0")}
+function kalender(){const n=new Date(),j=n.getFullYear(),m=n.getMonth();$("#maand").textContent=MAANDEN[m];$("#jaar").textContent=j;
+  let h=["ma","di","wo","do","vr","za","zo"].map(d=>`<div class="h">${d}</div>`).join("");
+  const eerste=(new Date(j,m,1).getDay()+6)%7,dagen=new Date(j,m+1,0).getDate();
+  for(let i=0;i<eerste;i++)h+="<div></div>";
+  for(let d=1;d<=dagen;d++)h+=d===n.getDate()?`<div><span class="vd">${d}</span></div>`:`<div>${d}</div>`;
+  $("#kal").innerHTML=h;
+  const s=[[11,0,1],[2,3,4],[5,6,7],[8,9,10]].findIndex(a=>a.includes(m));$("#seizoen").textContent=["⛄","🌸","☀️","🍂"][s];}
+klok();kalender();setInterval(klok,10000);
+// ---------- taken ----------
+function toonTaken(){const el=$("#taken");
+  if(!S.taken.length){el.innerHTML='<div class="leeg">Nog geen werkjes. Mama zet ze hier.</div>'}
+  else el.innerHTML=S.taken.map((t,i)=>`<button class="taak ${t.af?"af":""}" data-taak="${i}"><span class="c">${t.af?'<svg width="14" height="14" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 4" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>':""}</span><span>${esc(t.tekst)}</span></button>`).join("");
+  const open=S.taken.filter(t=>!t.af).length;
+  $("#nog").textContent=!S.taken.length?"Fijne dag ♡":open===0?"Alles af! 🎉":`Nog ${open} werkje${open>1?"s":""}`;
+  $$("[data-taak]").forEach(b=>b.onclick=e=>{const t=S.taken[+b.dataset.taak];t.af=!t.af;if(t.af){S.snoep++;hartjes(e.clientX,e.clientY);zegHome("Knap gedaan! Je krijgt een snoepje voor mij.")}bewaar();bewaarTakenCentraal();toonTaken();toonBadges()});
+  toonMamaTaken()}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+// ---------- Lily op home ----------
+function zegHome(t,knop){const b=$("#homeBubbel");b.style.display="block";b.innerHTML=esc(t)+(knop?`<button id="bubbelKnop">${esc(knop.tekst)}</button>`:"");if(knop)$("#bubbelKnop").onclick=knop.doe;$("#lilyHome").classList.remove("hup");void $("#lilyHome").offsetWidth;$("#lilyHome").classList.add("hup")}
+// ---------- schermen ----------
+let huidig="home";
+function open(naam){if(naam==="topo"){window.location.href=TOPO_URL;return}
+  $$(".sheet").forEach(s=>s.classList.remove("open"));const s=$("#s-"+naam);if(!s)return;s.classList.add("open");huidig=naam;S.scherm=naam;bewaar();
+  if(naam==="tafels")tafelsOverzicht();if(naam==="verhaal")rvOverzicht();if(naam==="breuk")blOverzicht();if(naam==="blokjes")startBlokjes();if(naam==="teken")startTeken();if(naam==="stickers")toonStickers();if(naam==="snoep")toonSnoep();if(naam==="mama")toonMama();
+  if(naam==="stickers"){$("#stickerBadge").style.display="none";S.nieuweSticker=false;bewaar()}}
+function sluit(){try{stopLees()}catch(e){}if(document.body.classList.contains("vol"))zetVol(false);$$(".sheet").forEach(s=>s.classList.remove("open"));huidig="home";S.scherm="home";bewaar()}
+$$("[data-open]").forEach(b=>b.onclick=()=>open(b.dataset.open));
+$$("[data-terug]").forEach(b=>b.onclick=sluit);
+$("#mamaKnop").onclick=()=>open("mama");
+// ---------- lees voor & help ----------
+$$("[data-lees]").forEach(b=>b.onclick=()=>{let t;
+  if(huidig==="home"){const open=S.taken.filter(t=>!t.af).map(t=>t.tekst);t="Hoi Nova! Het is "+$("#dag").textContent+", "+$("#tijd").textContent+". "+($("#graden").textContent?"Het weer: "+$("#weerTekst").textContent+", "+$("#graden").textContent.replace("°"," graden")+". "+$("#weerTip").textContent+". ":"")+(open.length?"Je werkjes van vandaag: "+open.join(", ")+".":"Je hebt geen werkjes meer vandaag.");const hb=$("#homeBubbel");if(hb.style.display!=="none")t=hb.firstChild.textContent+" "+t}
+  else{const z=$("#s-"+huidig+" [data-zeg]");t=z?z.textContent:""}
+  spreek(t)});
+$$("[data-help]").forEach(b=>b.onclick=()=>open("help"));
+$$("[data-hulp]").forEach(b=>b.onclick=()=>{const z=$("#helpZeg"),k=b.dataset.hulp;
+  if(k==="kleiner")z.textContent="We doen alleen het eerste stukje. Meer niet. Lees de eerste zin, of doe de eerste som. Dan kijken we verder.";
+  if(k==="voorlezen")z.textContent="Maak een foto met de camera. Dan lees ik je opdracht voor. (Dit komt in de volgende bouwstap.)";
+  if(k==="mama")z.textContent="Roep mama maar even. Mama wil je graag helpen. Het is goed om hulp te vragen.";
+  spreek(z.textContent)});
+// ---------- stemming ----------
+const GEVOEL={blij:"Fijn! Dan gaan we lekker samen aan de slag.",gewoon:"Oké. Gewoon is goed. We doen het rustig.",moe:"Moe? Dan maken we alles vandaag extra klein. Eén ding tegelijk."};
+$$("[data-gevoel]").forEach(b=>b.onclick=e=>{const g=b.dataset.gevoel,n=new Date();
+  const regel={id:n.getTime().toString(36),datum:n.toLocaleDateString("nl-NL"),tijd:n.toTimeString().slice(0,5),dag:DAGEN[n.getDay()],gevoel:g,waar:huidig==="home"?"startscherm":huidig,iso:n.toISOString()};
+  S.stemming.push(regel);S.rustig=(g==="moe");bewaar();dbZet("stemming/"+regel.id,regel);
+  $$("[data-gevoel]").forEach(x=>x.classList.toggle("gekozen",x===b));
+  if(huidig==="home")zegHome(GEVOEL[g]);else meld(GEVOEL[g]);
+  hartjes(e.clientX,e.clientY,g==="moe"?"💤":"💗",3)});
+// ---------- camera ----------
+function verkleinFoto(file,max,cb){const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const f=Math.min(1,max/Math.max(im.width,im.height));const c=document.createElement("canvas");c.width=im.width*f;c.height=im.height*f;c.getContext("2d").drawImage(im,0,0,c.width,c.height);cb(c.toDataURL("image/jpeg",.7))};im.src=r.result};r.readAsDataURL(file)}
+function fotoGekozen(inp){const f=inp.files&&inp.files[0];if(!f)return;open("camera");
+  verkleinFoto(f,900,url=>{$("#camFoto").src=url;$("#camFoto").style.display="block";$("#camKnoppen").style.display="flex";
+    bewaarWerkje({soort:"opdracht",tijd:new Date().toISOString(),beeld:url});bewaar();
+    const z=$("#s-camera [data-zeg]");z.textContent="Wat een goede foto! Eerst: wat oefenen we hier? Kijk samen met mij. Snap je wat je moet doen?";spreek(z.textContent)});inp.value=""}
+$("#camInput").onchange=e=>fotoGekozen(e.target);$("#camInput2").onchange=e=>fotoGekozen(e.target);
+$$("[data-cam]").forEach(b=>b.onclick=()=>{const z=$("#s-camera [data-zeg]"),k=b.dataset.cam;
+  z.textContent=k==="snap"?"Top! Begin maar met de eerste stap. Ik zit naast je.":k==="nog"?"Ik leg het straks stap voor stap uit, met een piepklein voorbeeld. (Komt in de volgende bouwstap.)":"Dat mag. We maken het kleiner. Doe alleen het eerste stukje, of roep mama.";spreek(z.textContent)});
+// ---------- blokjes (Taal in Blokjes, kleuren van basiskaart 6) ----------
+const KL={g:"#8bc34a",y:"#fdd835",r:"#f26b4a",b:"#4fc3f0"};
+const KLNAAM={g:"groen",y:"geel",r:"rood",b:"blauw"};
+const WOORDEN=[ [["k","b"],["i","g"],["p","b"]], [["v","b"],["i","g"],["s","b"]], [["m","b"],["aa","y"],["n","b"]], [["b","b"],["oe","r"],["k","b"]], [["z","b"],["o","g"],["n","b"]], [["h","b"],["ui","r"],["s","b"]], [["r","b"],["aa","y"],["m","b"]], [["p","b"],["e","g"],["n","b"]], [["d","b"],["ui","r"],["f","b"]], [["sch","b"],["aa","y"],["p","b"]], [["v","b"],["ij","r"],["f","b"]], [["b","b"],["ee","y"],["r","b"]] ];
+let verf=null,blokStaat=[];
+function startBlokjes(){const w=WOORDEN[S.woordIdx%WOORDEN.length];blokStaat=w.map(()=>false);
+  const woord=w.map(x=>x[0]).join("");$("#woordPlaat").textContent=woord+" 🔊";$("#woordPlaat").onclick=()=>spreek(woord);
+  $("#blokken").innerHTML=`<div class="blok">${w.map((x,i)=>`<span data-blok="${i}">${x[0]}</span>`).join("")}</div>`;
+  $("#verven").innerHTML=Object.keys(KL).map(k=>`<button class="verf ${verf===k?"aan":""}" data-verf="${k}" style="background:${KL[k]}" aria-label="${KLNAAM[k]}"></button>`).join("");
+  $("#volgendWoord").style.display="none";$("#blokZeg").textContent=S.rustig?"Rustig aan. Kies een kleur, tik dan op één blokje.":"Kies een kleur. Tik dan op een blokje.";
+  $$("[data-verf]").forEach(b=>b.onclick=()=>{verf=b.dataset.verf;$$("[data-verf]").forEach(x=>x.classList.toggle("aan",x===b))});
+  $$("[data-blok]").forEach(sp=>sp.onclick=()=>{const i=+sp.dataset.blok,juist=w[i][1];spreek(w[i][0]);
+    if(!verf){$("#blokZeg").textContent="Kies eerst een kleur onderaan.";return}
+    if(verf===juist){sp.style.background=KL[juist];blokStaat[i]=true;
+      if(blokStaat.every(Boolean)){S.snoep++;S.woordIdx++;S.gekleurd=(S.gekleurd||0)+1;let extra="";if(S.gekleurd%3===0){extra=geefSticker()}bewaar();toonBadges();
+        $("#blokZeg").textContent="Goed gedaan! Lees het woord maar hardop: "+woord+". Je krijgt een snoepje voor mij."+extra;spreek("Goed gedaan! "+woord);$("#volgendWoord").style.display="inline-flex";const r=sp.getBoundingClientRect();hartjes(r.left,r.top)}}
+    else{sp.parentElement.classList.remove("wiebel");void sp.offsetWidth;sp.parentElement.classList.add("wiebel");$("#blokZeg").textContent="Bijna! Luister nog eens naar de klank: "+w[i][0]+". Welke kleur hoort daarbij?"}})}
+$("#volgendWoord").onclick=startBlokjes;
+// ---------- tekenen (lagen, penselen, stickers) ----------
+const VERF=["#3f2f63","#e2536f","#f08fa8","#c9b3ea","#8e5bc8","#8fd3b6","#4caf7d","#9cc7f0","#3b7dd8","#fbd96b","#f6b07a","#a8774f","#000000","#ffffff"];
+const KWASTEN=[["pen","✒️","Pen"],["potlood","✏️","Potlood"],["stift","🖍️","Stift"],["spray","💨","Spray"],["glitter","✨","Glitter"],["gum","🧽","Gum"],["sticker","🍓","Sticker"]];
+let T2={kwast:"pen",kleur:"#3f2f63",dikte:8,laag:1,zicht:[true,true,true],sticker:null,maat:70,hist:[[],[],[]],lagen:[],klaarVoor:""};
+let tekent=false,laatst=null;
+function laagCtx(i){return T2.lagen[i].getContext("2d")}
+function maakLaag(c,w,h){const dpr=window.devicePixelRatio||1;c.width=Math.round(w*dpr);c.height=Math.round(h*dpr);c.style.width=w+"px";c.style.height=h+"px";const x=c.getContext("2d");x.setTransform(dpr,0,0,dpr,0,0);x.lineCap="round";x.lineJoin="round";return x}
+function groeiDoek(w,h){w=Math.max(w,T2.W||0);h=Math.max(h,T2.H||0);if(w===T2.W&&h===T2.H)return;
+  T2.lagen.forEach(c=>{const tmp=document.createElement("canvas");tmp.width=c.width;tmp.height=c.height;tmp.getContext("2d").drawImage(c,0,0);const x=maakLaag(c,w,h);x.save();x.setTransform(1,0,0,1,0,0);x.drawImage(tmp,0,0);x.restore()});T2.W=w;T2.H=h}
+function zetBeeld(x,src,klaar){const dpr=window.devicePixelRatio||1,im=new Image();im.onload=()=>{groeiDoek(Math.ceil(im.width/dpr),Math.ceil(im.height/dpr));x.drawImage(im,0,0,im.width/dpr,im.height/dpr);klaar&&klaar()};im.src=src}
+function nieuwDoek(){const vak=$("#doekvak"),r=vak.getBoundingClientRect();vak.innerHTML="";T2.W=Math.round(r.width);T2.H=Math.round(r.height);
+  T2.lagen=[0,1,2].map(i=>{const c=document.createElement("canvas");maakLaag(c,T2.W,T2.H);vak.appendChild(c);return c});
+  T2.lagen.forEach((c,i)=>{if(S.lagen[i])zetBeeld(c.getContext("2d"),S.lagen[i])});T2.klaarVoor="ja";bindDoek()}
+function startTeken(){const vak=$("#doekvak"),r=vak.getBoundingClientRect();
+  if(!S.lagen){S.lagen=[S.tekening||null,null,null];S.tekening=null}
+  if(!T2.klaarVoor||!T2.lagen.length)nieuwDoek();else groeiDoek(Math.round(r.width),Math.round(r.height));
+  T2.lagen.forEach((c,i)=>c.style.display=T2.zicht[i]?"block":"none");
+  $("#tekenbalk").innerHTML=`<button class="kleurKnop" id="kleurKnop" aria-label="kies een kleur"><i style="background:${T2.kleur}"></i>Kleur</button><span class="kleurenSet">`+VERF.map(c=>`<button class="kleur ${c===T2.kleur?"aan":""}" data-pen="${c}" style="background:${c}" aria-label="kleur"></button>`).join("")+`<input type="color" id="eigenKleur" value="${T2.kleur}" style="width:50px;height:50px;border:none;background:none" aria-label="eigen kleur"></span><input type="range" class="dikteschuif" id="dikte" min="2" max="60" value="${T2.dikte}" aria-label="dikte"><span style="font-weight:800" id="dikteTxt">${T2.dikte}</span>`;
+  $("#kleurKnop").onclick=()=>{document.body.classList.toggle("kleurOpen");document.body.classList.remove("paneelOpen")};
+  $$("[data-pen]").forEach(b=>b.onclick=()=>{T2.kleur=b.dataset.pen;$("#kleurKnop i").style.background=T2.kleur;document.body.classList.remove("kleurOpen");$$("[data-pen]").forEach(x=>x.classList.toggle("aan",x===b));if(T2.kwast==="gum"||T2.kwast==="sticker")kiesKwast("pen")});
+  $("#eigenKleur").oninput=e=>{T2.kleur=e.target.value;$("#kleurKnop i").style.background=T2.kleur;$$("[data-pen]").forEach(x=>x.classList.remove("aan"))};
+  $("#dikte").oninput=e=>{T2.dikte=+e.target.value;$("#dikteTxt").textContent=T2.dikte};
+  $("#kwasten").innerHTML=KWASTEN.map(([k,i,n])=>`<button class="kwast ${T2.kwast===k?"aan":""}" data-kwast="${k}">${i}<span>${n}</span></button>`).join("");
+  $$("[data-kwast]").forEach(b=>b.onclick=()=>kiesKwast(b.dataset.kwast));
+  toonLagen();toonStickerbak()}
+function kiesKwast(k){T2.kwast=k;$$("[data-kwast]").forEach(x=>x.classList.toggle("aan",x.dataset.kwast===k));if(k==="sticker"&&!T2.sticker)meld(S.stickers.length?"Kies rechts een sticker":"Verzamel eerst stickers, dan kun je ze hier plakken!")}
+function toonLagen(){$("#lagen").innerHTML=[2,1,0].map(i=>`<div class="laag ${T2.laag===i?"aan":""} ${T2.zicht[i]?"":"verborgen"}"><button data-laag="${i}" style="font-weight:800">Laag ${i+1}${i===2?" (boven)":i===0?" (onder)":""}</button><button class="oog" data-oog="${i}" aria-label="laag tonen of verbergen">${T2.zicht[i]?"👁️":"🙈"}</button></div>`).join("");
+  $$("[data-laag]").forEach(b=>b.onclick=()=>{T2.laag=+b.dataset.laag;toonLagen()});
+  $$("[data-oog]").forEach(b=>b.onclick=()=>{const i=+b.dataset.oog;T2.zicht[i]=!T2.zicht[i];T2.lagen[i].style.display=T2.zicht[i]?"block":"none";toonLagen()})}
+function toonStickerbak(){const bak=$("#stickerbak");
+  bak.innerHTML=S.stickers.length?S.stickers.map(st=>`<button data-st="${st}" class="${T2.sticker===st?"aan":""}">${st}</button>`).join(""):`<div style="grid-column:1/-1;font-size:14px;color:#9a8db0;font-weight:700">Nog geen stickers. Verzamel ze met werkjes en glinstertjes ✨</div>`;
+  $$("[data-st]").forEach(b=>b.onclick=()=>{T2.sticker=b.dataset.st;kiesKwast("sticker");toonStickerbak()});
+  $("#stickerMaat").innerHTML=[["klein",40],["middel",70],["groot",120]].map(([n,m])=>`<button class="maat ${T2.maat===m?"aan":""}" data-maat="${m}">${n}</button>`).join("");
+  $$("[data-maat]").forEach(b=>b.onclick=()=>{T2.maat=+b.dataset.maat;toonStickerbak()})}
+function pt(e){const r=$("#doekvak").getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]}
+function bewaarStap(){const i=T2.laag,c=T2.lagen[i];const h=T2.hist[i];h.push(c.toDataURL("image/png"));if(h.length>12)h.shift();S.lagen[i]=h[h.length-1];bewaar()}
+function stip(x,ctx,px,py,r,kleur,a){ctx.globalAlpha=a;ctx.fillStyle=kleur;ctx.beginPath();ctx.arc(px,py,r,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1}
+const GLIT=["#ffd6e8","#fff1a8","#d9c8ff","#c8f2e2","#ffffff","#f7b3c4"];
+function schilder(x,y,eerste){const ctx=laagCtx(T2.laag),k=T2.kwast,d=T2.dikte;ctx.globalCompositeOperation=k==="gum"?"destination-out":"source-over";
+  const[lx,ly]=laatst||[x,y];
+  if(k==="pen"||k==="gum"){ctx.globalAlpha=1;ctx.strokeStyle=T2.kleur;ctx.lineWidth=d;ctx.lineCap="round";ctx.beginPath();ctx.moveTo(lx,ly);ctx.lineTo(x+(eerste?.1:0),y);ctx.stroke()}
+  else if(k==="potlood"){ctx.strokeStyle=T2.kleur;ctx.lineCap="round";for(let n=0;n<3;n++){ctx.globalAlpha=.35+Math.random()*.3;ctx.lineWidth=Math.max(1,d*.25);const j=()=>(Math.random()-.5)*d*.35;ctx.beginPath();ctx.moveTo(lx+j(),ly+j());ctx.lineTo(x+j(),y+j());ctx.stroke()}ctx.globalAlpha=1}
+  else if(k==="stift"){const c=T2.lagen[T2.laag];if(eerste){T2.snap=ctx.getImageData(0,0,c.width,c.height);T2.pts=[]}T2.pts.push([x,y]);ctx.putImageData(T2.snap,0,0);ctx.globalAlpha=.45;ctx.strokeStyle=T2.kleur;ctx.lineWidth=d*1.6;ctx.lineCap="round";ctx.lineJoin="round";ctx.beginPath();ctx.moveTo(T2.pts[0][0],T2.pts[0][1]);T2.pts.forEach(p=>ctx.lineTo(p[0],p[1]+(T2.pts.length===1?.1:0)));ctx.stroke();ctx.globalAlpha=1}
+  else if(k==="spray"){for(let n=0;n<d*2;n++){const a=Math.random()*Math.PI*2,r=Math.random()*d*1.4;stip(0,ctx,x+Math.cos(a)*r,y+Math.sin(a)*r,1.2,T2.kleur,.6)}}
+  else if(k==="glitter"){for(let n=0;n<Math.max(4,d/2);n++){const a=Math.random()*Math.PI*2,r=Math.random()*d*1.2;stip(0,ctx,x+Math.cos(a)*r,y+Math.sin(a)*r,Math.random()*2.2+.8,Math.random()<.5?T2.kleur:GLIT[Math.floor(Math.random()*GLIT.length)],.9)}
+    if(Math.random()<.12){ctx.fillStyle="#fff";ctx.font=`${d+8}px serif`;ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText("✦",x+(Math.random()-.5)*d,y+(Math.random()-.5)*d)}}
+  ctx.globalCompositeOperation="source-over";laatst=[x,y]}
+function bindDoek(){const vak=$("#doekvak");
+  vak.onpointerdown=e=>{document.body.classList.remove("kleurOpen","paneelOpen");if(!T2.zicht[T2.laag]){meld("Deze laag is verborgen. Tik op het oogje om hem te tonen.");return}const[x,y]=pt(e);
+    if(T2.kwast==="sticker"){if(!T2.sticker){kiesKwast("sticker");return}const ctx=laagCtx(T2.laag);ctx.globalAlpha=1;ctx.font=`${T2.maat}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif`;ctx.textAlign="center";ctx.textBaseline="middle";ctx.fillText(T2.sticker,x,y);bewaarStap();return}
+    tekent=true;laatst=null;vak.setPointerCapture(e.pointerId);schilder(x,y,true)};
+  vak.onpointermove=e=>{if(!tekent)return;const[x,y]=pt(e);schilder(x,y,false)};
+  vak.onpointerup=vak.onpointercancel=()=>{if(!tekent)return;tekent=false;laatst=null;bewaarStap()}}
+function samenvoegen(){const r={width:T2.W,height:T2.H},f=Math.min(1,1200/Math.max(r.width,r.height));const c=document.createElement("canvas");c.width=r.width*f;c.height=r.height*f;const x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,c.width,c.height);T2.lagen.forEach((l,i)=>{if(T2.zicht[i])x.drawImage(l,0,0,c.width,c.height)});return c.toDataURL("image/jpeg",.75)}
+function leeg(){return!S.lagen||S.lagen.every(x=>!x)}
+function wisAlles(){T2.hist=[[],[],[]];S.lagen=[null,null,null];bewaar();if(huidig==="teken")nieuwDoek();else{T2.lagen.forEach(c=>c.getContext("2d").clearRect(0,0,c.width,c.height));T2.klaarVoor=""}}
+$("#stapTerug").onclick=()=>{const i=T2.laag,h=T2.hist[i];h.pop();const c=T2.lagen[i],x=c.getContext("2d"),r=$("#doekvak").getBoundingClientRect();x.save();x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,c.width,c.height);x.restore();const vorige=h[h.length-1]||null;S.lagen[i]=vorige;bewaar();if(vorige)zetBeeld(x,vorige)};
+$("#nieuwBlad").onclick=()=>{if(!leeg()){bewaarWerkje({soort:"tekening",tijd:new Date().toISOString(),beeld:samenvoegen()})}wisAlles();meld("Je vorige tekening is bewaard ♡")};
+$("#tekenKlaar").onclick=e=>{if(leeg()){meld("Teken eerst iets moois!");return}bewaarWerkje({soort:"tekening",tijd:new Date().toISOString(),beeld:samenvoegen()});S.snoep++;const extra=geefSticker();bewaar();toonBadges();hartjes(e.clientX,e.clientY);wisAlles();toonStickerbak();meld("Bewaard! Mama ziet hem straks."+(extra?" Je kreeg een sticker!":""))};
+function pasDoekAan(){if(huidig!=="teken"||!T2.lagen.length)return;const r=$("#doekvak").getBoundingClientRect();if(r.width>0)groeiDoek(Math.round(r.width),Math.round(r.height))}
+window.addEventListener("resize",pasDoekAan);if(window.ResizeObserver)new ResizeObserver(pasDoekAan).observe($("#doekvak"));
+// ---------- groot scherm ----------
+function isVolBrowser(){return!!(document.fullscreenElement||document.webkitFullscreenElement)}
+function zetVol(aan){document.body.classList.toggle("vol",aan);if(!aan)document.body.classList.remove("paneelOpen","kleurOpen");
+  const d=document.documentElement;
+  try{if(aan&&!isVolBrowser()){const f=d.requestFullscreen||d.webkitRequestFullscreen;if(f){const p=f.call(d);p&&p.catch&&p.catch(()=>{})}}
+      else if(!aan&&isVolBrowser()){const f=document.exitFullscreen||document.webkitExitFullscreen;if(f){const p=f.call(document);p&&p.catch&&p.catch(()=>{})}}}catch(e){}
+  setTimeout(pasDoekAan,350)}
+$$(".sheet .kop").forEach(k=>k.insertAdjacentHTML("beforeend",'<button class="volknop" data-vol aria-label="Groot scherm">⛶ Groot<span class="volLang"> scherm</span></button>'));
+$$("[data-vol]").forEach(b=>b.onclick=()=>zetVol(true));
+$("#volUit").onclick=()=>zetVol(false);
+["fullscreenchange","webkitfullscreenchange"].forEach(ev=>document.addEventListener(ev,()=>{if(!isVolBrowser()&&document.body.classList.contains("vol"))zetVol(false)}));
+$("#paneelKnop").onclick=()=>{document.body.classList.toggle("paneelOpen");document.body.classList.remove("kleurOpen")};
+$("#stickerbak").addEventListener("click",e=>{if(e.target.closest("[data-st]")&&document.body.classList.contains("vol"))setTimeout(()=>document.body.classList.remove("paneelOpen"),150)});
+// ---------- stickers ----------
+const STICKERS=["🍓","🌸","🐣","🍩","🌈","⭐","🧁","🦋","🍀","🌙","🐰","🍒","🦄","🍦","🐱","🎀"];
+function geefSticker(){const nog=STICKERS.filter(s=>!S.stickers.includes(s));if(!nog.length)return"";const s=nog[Math.floor(Math.random()*nog.length)];S.stickers.push(s);S.nieuweSticker=true;bewaar();toonBadges();return" En een nieuwe sticker: "+s}
+function toonStickers(){$("#stickerboek").innerHTML=STICKERS.map(s=>S.stickers.includes(s)?`<div class="sticker">${s}</div>`:`<div class="sticker dicht">?</div>`).join("");
+  $("#stickerZeg").textContent=S.stickers.length?`Je hebt er al ${S.stickers.length}! Er zijn er nog ${STICKERS.length-S.stickers.length} verstopt. Zoek maar naar glinstertjes ✨`:"Nog leeg. Je krijgt stickers door werkjes te doen. En er zijn er een paar verstopt. Zoek maar naar glinstertjes ✨"}
+function toonBadges(){const sb=$("#stickerBadge");sb.style.display=S.nieuweSticker?"block":"none";sb.textContent="nieuw";
+  const nb=$("#snoepBadge");nb.style.display=S.snoep?"block":"none";nb.textContent=S.snoep}
+// verstopte sticker: één per dag, op een willekeurige plek
+function verstop(){const vandaag=new Date().toDateString();if(S.schatDag===vandaag)return;
+  const s=document.createElement("button");s.className="schat";s.textContent="✨";s.setAttribute("aria-label","glinstertje");
+  s.style.left=(10+Math.random()*80)+"vw";s.style.top=(35+Math.random()*30)+"vh";
+  s.onclick=e=>{S.schatDag=vandaag;const t=geefSticker();bewaar();hartjes(e.clientX,e.clientY,"✨",6);s.remove();zegHome("Je hebt een verstopte sticker gevonden!"+t)};
+  $("#home").appendChild(s)}
+// ---------- snoepjes ----------
+function toonSnoep(){$("#snoepTeller").textContent=S.snoep?`Je hebt ${S.snoep} snoepje${S.snoep>1?"s":""} voor mij`:"Je hebt nu geen snoepjes. Dat geeft niks, ik heb geen honger!";$("#geefSnoep").style.display=S.snoep?"inline-flex":"none"}
+$("#geefSnoep").onclick=e=>{if(!S.snoep)return;S.snoep--;bewaar();toonBadges();toonSnoep();const l=$("#lilySnoep");l.classList.remove("hup");void l.offsetWidth;l.classList.add("hup");hartjes(e.clientX,e.clientY-200,"💗",6);
+  const zinnen=["Mmm, lekker! Dankjewel!","Jij bent lief!","Nom nom nom!","Wat een feestje!"];$("#snoepZeg").textContent=zinnen[Math.floor(Math.random()*zinnen.length)]};
+// ---------- bubbel (geluid, zelf gemaakt met de browser) ----------
+let AC=null,bron=null,doosjeTimer=null;
+function stopGeluid(){try{bron&&bron.stop()}catch(e){}bron=null;clearInterval(doosjeTimer);doosjeTimer=null}
+function speel(soort){stopGeluid();S.bubbel=soort;bewaar();if(soort==="uit"){meld("Stil");return}
+  try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();AC.resume&&AC.resume();
+    if(soort==="regen"){const len=AC.sampleRate*4,buf=AC.createBuffer(1,len,AC.sampleRate),d=buf.getChannelData(0);let last=0;for(let i=0;i<len;i++){const w=Math.random()*2-1;last=(last+.02*w)/1.02;d[i]=last*3.2}
+      bron=AC.createBufferSource();bron.buffer=buf;bron.loop=true;const f=AC.createBiquadFilter();f.type="lowpass";f.frequency.value=900;const g=AC.createGain();g.gain.value=.35;bron.connect(f).connect(g).connect(AC.destination);bron.start();meld("Zachte regen 🌧️")}
+    if(soort==="doosje"){const noten=[523,659,784,659,587,698,880,698,523,659,784,1046];let i=0;doosjeTimer=setInterval(()=>{const o=AC.createOscillator(),g=AC.createGain();o.type="sine";o.frequency.value=noten[i++%noten.length];g.gain.setValueAtTime(.12,AC.currentTime);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+1.4);o.connect(g).connect(AC.destination);o.start();o.stop(AC.currentTime+1.5)},700);meld("Muziekdoosje 🎶")}
+  }catch(e){meld("Geluid lukt niet op dit apparaat")}}
+$$("[data-geluid]").forEach(b=>b.onclick=()=>speel(b.dataset.geluid));
+// ---------- mama ----------
+function toonMamaTaken(){const el=$("#mamaTaken");if(!el)return;el.innerHTML=S.taken.map((t,i)=>`<div class="rij" style="justify-content:space-between;border-bottom:1.5px solid #f3dcea;padding:6px 0"><span>${t.af?"✔️ ":""}${esc(t.tekst)}</span><button class="terug" style="height:44px" data-weg="${i}">Weghalen</button></div>`).join("")||"<div style='color:#9a8db0'>Nog geen taken.</div>";
+  $$("[data-weg]").forEach(b=>b.onclick=()=>{S.taken.splice(+b.dataset.weg,1);bewaar();bewaarTakenCentraal();toonTaken()})}
+$("#voegTaak").onclick=()=>{const v=$("#nieuweTaak").value.trim();if(!v)return;S.taken.push({tekst:v,af:false});$("#nieuweTaak").value="";bewaar();bewaarTakenCentraal();toonTaken()};
+$("#nieuweTaak").addEventListener("keydown",e=>{if(e.key==="Enter")$("#voegTaak").click()});
+async function toonMama(){zetOpslagInfo();let rijen=S.stemming.slice();
+  if(DB){try{const res=await DB.collection("stemming").get();const lijst=Array.isArray(res)?res:(res&&res.docs)?res.docs:[];const centraal=lijst.map(d=>d&&d.data?d.data():d).filter(x=>x&&x.id);const ids=new Set(rijen.map(r=>r.id));centraal.forEach(c=>{if(!ids.has(c.id))rijen.push(c)})}catch(e){}}
+  rijen.sort((a,b)=>(a.iso||"")<(b.iso||"")?1:-1);mamaRijen=rijen;
+  const ico={blij:"😊 blij",gewoon:"😐 gewoon",moe:"😴 moe"};
+  $("#stemRijen").innerHTML=rijen.map(r=>`<tr><td>${esc(r.dag||"")} ${esc(r.datum)}</td><td>${esc(r.tijd)}</td><td>${ico[r.gevoel]||esc(r.gevoel)}</td><td>${esc(r.waar)}</td></tr>`).join("")||"<tr><td colspan=4>Nog geen gezichtjes aangetikt.</td></tr>";
+  $("#werkjes").innerHTML=S.werkjes.slice().reverse().map(w=>`<img src="${w.beeld}" alt="${w.soort}" title="${w.soort} ${new Date(w.tijd).toLocaleString("nl-NL")}">`).join("")||"<div style='color:#9a8db0'>Nog geen werkjes.</div>";
+  toonMamaTaken();toonMamaTafels();toonMamaRv();toonMamaBl()}
+let mamaRijen=[];
+$("#kopieer").onclick=async()=>{const tsv=["Datum\tTijd\tDag\tGevoel\tWaar",...mamaRijen.map(r=>[r.datum,r.tijd,r.dag,r.gevoel,r.waar].join("\t"))].join("\n");
+  try{await navigator.clipboard.writeText(tsv);meld("Gekopieerd! Plak het in een spreadsheet.")}catch(e){meld("Kopiëren lukt hier niet")}};
+// ---------- weer (Open-Meteo, gratis, zonder sleutel) ----------
+const WEER_PLEK={lat:51.59,lon:4.78};
+function weerSoort(c){if(c===0)return"zon";if(c<=2)return"zonwolk";if(c===3)return"wolk";if(c===45||c===48)return"mist";if((c>=51&&c<=67)||(c>=80&&c<=82))return"regen";if((c>=71&&c<=77)||c===85||c===86)return"sneeuw";if(c>=95)return"onweer";return"wolk"}
+const WEERWOORD={zon:"Zonnig!",zonwolk:"Zon en wolkjes",wolk:"Bewolkt",mist:"Mistig",regen:"Regen",sneeuw:"Sneeuw!",onweer:"Onweer"};
+function weerSvg(soort,klein){const zon='<circle cx="34" cy="32" r="16" fill="#fbd96b" stroke="#5a4a4a" stroke-width="2.4"/><g stroke="#f2b84b" stroke-width="3" stroke-linecap="round"><path d="M34 6v6M34 52v6M8 32h6M54 32h6M15 13l4 4M49 47l4 4M15 51l4-4M49 17l4-4"/></g><circle cx="29" cy="31" r="1.8" fill="#5a4a4a"/><circle cx="39" cy="31" r="1.8" fill="#5a4a4a"/><path d="M30 37q4 3 8 0" fill="none" stroke="#5a4a4a" stroke-width="1.8" stroke-linecap="round"/>';
+  const wolk=(x,y,f)=>`<path d="M${x} ${y+22}h40a12 12 0 0 0 0-24 16 16 0 0 0-30-4 11 11 0 0 0-10 28z" fill="${f||"#fff"}" stroke="#5a4a4a" stroke-width="2.4" stroke-linejoin="round"/><circle cx="${x+18}" cy="${y+10}" r="1.8" fill="#5a4a4a"/><circle cx="${x+28}" cy="${y+10}" r="1.8" fill="#5a4a4a"/><path d="M${x+20} ${y+15}q3 2 6 0" fill="none" stroke="#5a4a4a" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="${x+14}" cy="${y+14}" rx="2.6" ry="1.5" fill="#f7b3c4"/><ellipse cx="${x+32}" cy="${y+14}" rx="2.6" ry="1.5" fill="#f7b3c4"/>`;
+  let g="";
+  if(soort==="zon")g=`<g transform="translate(14,8)">${zon}</g>`;
+  else if(soort==="zonwolk")g=`<g transform="translate(-2,-6)">${zon}</g>${wolk(30,34)}`;
+  else if(soort==="regen")g=`${wolk(20,14,"#e6f0fb")}<g fill="#9cc7f0"><path d="M30 56c0 4 6 4 6 0l-3-6z"/><path d="M46 62c0 4 6 4 6 0l-3-6z"/><path d="M62 56c0 4 6 4 6 0l-3-6z"/></g>`;
+  else if(soort==="sneeuw")g=`${wolk(20,14,"#f3edfc")}<g fill="#c9b3ea"><circle cx="34" cy="58" r="3.5"/><circle cx="50" cy="64" r="3.5"/><circle cx="66" cy="58" r="3.5"/></g>`;
+  else if(soort==="onweer")g=`${wolk(20,14,"#e3dcef")}<path d="M48 48l-8 14h8l-4 12 14-18h-8l4-8z" fill="#fbd96b" stroke="#5a4a4a" stroke-width="2"/>`;
+  else if(soort==="mist")g=`${wolk(20,10,"#f2f2f5")}<g stroke="#b8b0c4" stroke-width="3.5" stroke-linecap="round"><path d="M20 54h56M28 64h44"/></g>`;
+  else g=wolk(20,22);
+  return g}
+function weerTip(t,soort,regen){if(soort==="regen"||soort==="onweer"||regen>0.2)return"Neem je regenjas mee ☔";if(soort==="sneeuw")return"Wanten en muts aan ❄️";if(t<5)return"Dikke jas aan, het is koud 🧣";if(t<14)return"Een jas is fijn vandaag";if(t>24)return"Lekker warm! Drink genoeg 💧";return"Fijn weer om naar buiten te kijken"}
+function toonWeer(d){const c=d.current,soort=weerSoort(c.weather_code),t=Math.round(c.temperature_2m);
+  $("#weerIcoon").innerHTML=weerSvg(soort);$("#graden").textContent=t+"°";$("#weerTekst").textContent=WEERWOORD[soort];
+  const tip=$("#weerTip");tip.textContent=weerTip(t,soort,c.precipitation||0);tip.style.display="inline-block";
+  const uren=d.hourly,nu=new Date().getHours(),delen=[["ochtend",9],["middag",14],["avond",19]].filter(x=>x[1]>nu-2);
+  $("#weerDag").innerHTML=delen.map(([naam,u])=>{const i=uren.time.findIndex(x=>new Date(x).getHours()===u);if(i<0)return"";return`<div><svg viewBox="0 0 96 80">${weerSvg(weerSoort(uren.weather_code[i]))}</svg>${naam}<br>${Math.round(uren.temperature_2m[i])}°</div>`}).join("");
+  S.weer={tijd:Date.now(),d};bewaar()}
+async function haalWeer(){
+  try{const url=`https://api.open-meteo.com/v1/forecast?latitude=${WEER_PLEK.lat}&longitude=${WEER_PLEK.lon}&current=temperature_2m,weather_code,precipitation&hourly=temperature_2m,weather_code&forecast_days=1&timezone=Europe%2FAmsterdam`;
+    const r=await fetch(url);if(!r.ok)throw 0;toonWeer(await r.json())}
+  catch(e){if(S.weer&&Date.now()-S.weer.tijd<3*3600e3){toonWeer(S.weer.d);return}
+    $("#weerIcoon").innerHTML=weerSvg("zonwolk");$("#graden").textContent="";$("#weerTekst").textContent="Kijk maar even uit het raam! Het weerbericht komt in de echte app.";}}
+haalWeer();setInterval(haalWeer,30*60e3);
+// ---------- tafels ----------
+const KENT=[1,2,5,10];
+const TRUC={3:"Tel steeds 3 erbij: 3, 6, 9, 12, 15…",4:"De tafel van 4 is de tafel van 2, maar dan dubbel. 2 × 3 = 6, dus 4 × 3 = 12.",6:"Doe eerst de tafel van 5. Tel er dan nog één keer bij. 5 × 4 = 20, dus 6 × 4 = 24.",7:"Veel van de 7 ken je al! 7 × 2, 7 × 5 en 7 × 10 weet je. De rest oefenen we samen.",8:"Verdubbelen, verdubbelen, verdubbelen. 8 × 3: 3, 6, 12, 24.",9:"Doe de tafel van 10, en haal er één keer af. 10 × 4 = 40, min 4 is 36."};
+const VOLGORDE=[3,4,6,9,8,7];
+let T={tafel:null,modus:"ontdek",rondje:[],nu:null};
+function feitSleutel(a,b){return Math.min(a,b)+"x"+Math.max(a,b)}
+function S_t(){S.tafels=S.tafels||{};return S.tafels}
+function kentFeit(a,b){if(KENT.includes(a)||KENT.includes(b))return true;return (S_t()[feitSleutel(a,b)]||0)>=2}
+function tafelKlaar(t){for(let i=1;i<=10;i++)if(!kentFeit(i,t))return false;return true}
+function tafelTel(t){let n=0;for(let i=1;i<=10;i++)if(kentFeit(i,t))n++;return n}
+function bewaarTafels(){bewaar();dbZet("app/tafels",{feiten:S_t(),bijgewerkt:new Date().toISOString()})}
+function zegT(t){$("#tafelZeg").textContent=t}
+const KRAAL={1:"#e53935",2:"#43a047",3:"#f48fb1",4:"#fdd835",5:"#81d4fa",6:"#8e5bc8",7:"#ffffff",8:"#8d5a3b",9:"#1e3a8a",10:"#d4a017"};
+function hartKraal(k){return`<svg class="hk" viewBox="0 0 24 22"><path d="M12 21C5 16 1.5 12 1.5 7.2 1.5 4 4 1.5 7 1.5c2.1 0 3.8 1.1 5 2.8 1.2-1.7 2.9-2.8 5-2.8 3 0 5.5 2.5 5.5 5.7C22.5 12 19 16 12 21z" fill="${k}" stroke="rgba(60,40,40,.5)" stroke-width="1.4"/><ellipse cx="7.5" cy="7" rx="2.4" ry="1.6" fill="#fff" opacity=".55"/></svg>`}
+function groepjesHTML(a,b){const k=KRAAL[b]||"#f08fa8";let h="";for(let g=0;g<a;g++){h+=`<div class="staafje">`+hartKraal(k).repeat(b)+"</div>"}return`<div class="staafjes">${h}</div><div style="text-align:center;font-weight:700;color:#9a8db0;margin-top:4px">${a} kralenstaafje${a>1?"s":""} van ${b}</div>`}
+function tafelsOverzicht(){T.tafel=null;$("#tafelTitel").textContent="Tafels";
+  const volgende=VOLGORDE.find(t=>!tafelKlaar(t));
+  zegT(volgende?`Je kent de tafels van 1, 2, 5 en 10 al. Super! Zullen we de tafel van ${volgende} doen?`:"Je kent alle tafels! Wat ben jij knap!");
+  let h=`<div class="tafelrij">`;for(let t=1;t<=10;t++){const k=tafelKlaar(t),p=Math.round(tafelTel(t)*10);h+=`<button class="tafelknop ${k?"kan":""}" data-tafel="${t}">${t}${k?'<span class="ster">⭐</span>':`<span class="vul"><i style="width:${p}%"></i></span>`}</button>`}h+="</div>";
+  if(volgende)h+=`<button class="groot g-paars" data-tafel="${volgende}">Oefen de tafel van ${volgende} →</button>`;
+  $("#tafelInhoud").innerHTML=h;$$("#tafelInhoud [data-tafel]").forEach(b=>b.onclick=()=>tafelOpen(+b.dataset.tafel))}
+function tafelOpen(t){T.tafel=t;$("#tafelTitel").textContent="Tafel van "+t;zegT(TRUC[t]||(KENT.includes(t)?"Deze ken je al! Oefenen mag altijd.":"Kijk eerst rustig naar de sommen."));tafelModus(T.modus||"ontdek")}
+function tabsHTML(){return`<div class="tabs">${[["ontdek","Ontdekken"],["zoek","Oefenen"],["zeg","Zeg het"],["spel","Memory"]].map(([k,n])=>`<button class="tab ${T.modus===k?"aan":""}" data-modus="${k}">${n}</button>`).join("")}</div>`}
+function bindTabs(){$$("[data-modus]").forEach(b=>b.onclick=()=>tafelModus(b.dataset.modus))}
+function tafelModus(m){T.modus=m;const t=T.tafel;
+  if(m==="ontdek"){let h=tabsHTML()+`<div style="display:flex;gap:28px;flex-wrap:wrap;justify-content:center;align-items:flex-start"><div class="sommen">`;for(let i=1;i<=10;i++){const k=kentFeit(i,t),al=KENT.includes(i)&&!KENT.includes(t);h+=`<button class="som ${k?"geleerd":""}" data-som="${i}"><span>${i} × ${t} = ${i*t}</span>${al?`<small>ken je al ♡</small>`:k?"<small>⭐</small>":""}</button>`}h+=`</div><div id="beeld" style="min-width:140px"></div></div>`;
+    $("#tafelInhoud").innerHTML=h;bindTabs();
+    $$("[data-som]").forEach(b=>b.onclick=()=>{const i=+b.dataset.som;$("#beeld").innerHTML=groepjesHTML(i,t);spreek(`${i} keer ${t} is ${i*t}`);
+      zegT(KENT.includes(i)&&!KENT.includes(t)?`${i} × ${t} is hetzelfde als ${t} × ${i}. Die ken je al uit de tafel van ${i}!`:`${i} keer ${t}. Dat zijn ${i} kralenstaafjes van ${t}, net als op school. Samen ${i*t}.`)});return}
+  if(m==="spel"){startMemory();return}
+  // oefenen / zeg het: rondje van 3 sommen die ze nog niet kent
+  nieuwRondje();toonSom()}
+function startMemory(){const t=T.tafel;let pool=[];for(let i=1;i<=10;i++)pool.push(i);
+  pool.sort((a,b)=>(kentFeit(a,t)?1:0)-(kentFeit(b,t)?1:0)||Math.random()-.5);
+  const n=S.rustig?3:4,kies=pool.slice(0,n);let kaarten=[];
+  kies.forEach(i=>{kaarten.push({id:i,tekst:`${i} × ${t}`});kaarten.push({id:i,tekst:String(i*t)})});
+  kaarten.sort(()=>Math.random()-.5);let open=[],klaar=0,slot=false;
+  $("#tafelInhoud").innerHTML=tabsHTML()+`<div class="memory" style="--mkol:${n===3?3:4}">${kaarten.map((k,x)=>`<button class="mkaart" data-k="${x}"><span class="rug">💗</span></button>`).join("")}</div><div id="beeld"></div>`;bindTabs();
+  zegT("Memory! Zoek een som en het goede antwoord. Draai twee kaartjes om.");
+  $$("[data-k]").forEach(b=>b.onclick=e=>{if(slot)return;const x=+b.dataset.k,k=kaarten[x];if(b.classList.contains("open")||b.classList.contains("gevonden"))return;
+    b.classList.add("open");b.textContent=k.tekst;open.push([b,k]);
+    if(open.length===2){const[[b1,k1],[b2,k2]]=open;open=[];
+      if(k1.id===k2.id&&k1.tekst!==k2.tekst){b1.classList.add("gevonden");b2.classList.add("gevonden");klaar++;hartjes(e.clientX,e.clientY);
+        $("#beeld").innerHTML=groepjesHTML(k1.id,t);zegT(`Gevonden! ${k1.id} × ${t} = ${k1.id*t}.`);spreek(`${k1.id} keer ${t} is ${k1.id*t}`);
+        const sk=feitSleutel(k1.id,t);S_t()[sk]=(S_t()[sk]||0)+1;bewaarTafels();
+        if(klaar===n){S.snoep++;bewaar();toonBadges();setTimeout(()=>{zegT("Alles gevonden! Je krijgt een snoepje voor mij.");$("#tafelInhoud").insertAdjacentHTML("beforeend",`<div class="rij"><button class="groot g-paars" id="nogSpel">Nog een keer</button></div>`);$("#nogSpel").onclick=startMemory},900)}}
+      else{slot=true;zegT("Bijna! Onthoud waar ze liggen.");setTimeout(()=>{[b1,b2].forEach(x=>{x.classList.remove("open");x.innerHTML='<span class="rug">💗</span>'});slot=false},1300)}}})}
+function nieuwRondje(){const t=T.tafel;let open=[];for(let i=1;i<=10;i++)if(!kentFeit(i,t))open.push(i);
+  if(!open.length){for(let i=1;i<=10;i++)open.push(i)}
+  open.sort(()=>Math.random()-.5);T.rondje=open.slice(0,S.rustig?2:3);T.nr=0}
+function toonSom(){const t=T.tafel,i=T.rondje[T.nr];T.nu=i;
+  const bol=T.rondje.map((_,k)=>`<span class="${k<T.nr?"vol":""}"></span>`).join("");
+  let h=tabsHTML()+`<div class="voortgang">${bol}</div><div class="somgroot">${i} × ${t} = ?</div><div id="beeld"></div>`;
+  if(T.modus==="zoek"){const goed=i*t,opties=new Set([goed]);while(opties.size<3){const d=[t,-t,1,-1,2*t][Math.floor(Math.random()*5)];if(goed+d>0)opties.add(goed+d)}
+    h+=`<div class="rij">${[...opties].sort(()=>Math.random()-.5).map(o=>`<button class="antw" data-antw="${o}">${o}</button>`).join("")}</div><button class="groot g-geel" id="laatZien">Laat zien</button>`}
+  else h+=`<div style="font-weight:700">Zeg het antwoord hardop. Tik dan op Klaar.</div><button class="groot g-paars" id="zegKlaar">Klaar</button>`;
+  $("#tafelInhoud").innerHTML=h;bindTabs();zegT(S.rustig?"Rustig aan. Neem je tijd.":"Neem je tijd. Er is geen haast.");
+  const toon=()=>{$("#beeld").innerHTML=groepjesHTML(i,t)};
+  if(T.modus==="zoek"){$("#laatZien").onclick=toon;
+    $$("[data-antw]").forEach(b=>b.onclick=e=>{const o=+b.dataset.antw;if(o===i*t){b.classList.add("goed");raak(true,e)}else{toon();zegT(`Bijna! Kijk maar naar de kralenstaafjes: ${i} keer ${t}. Tel maar mee.`);S_t()[feitSleutel(i,t)]=0;bewaarTafels()}})}
+  else $("#zegKlaar").onclick=()=>{$("#tafelInhoud").querySelector(".somgroot").textContent=`${i} × ${t} = ${i*t}`;spreek(`${i} keer ${t} is ${i*t}`);toon();
+    $("#zegKlaar").outerHTML=`<div class="rij"><button class="groot g-mint" id="wistIk">Wist ik!</button><button class="groot g-roze" id="nogNiet">Nog niet</button></div>`;
+    $("#wistIk").onclick=e=>raak(true,e);$("#nogNiet").onclick=()=>{S_t()[feitSleutel(i,t)]=0;bewaarTafels();zegT("Dat geeft niks. Hij komt straks nog een keer.");setTimeout(volgendeSom,1400)}}}
+function raak(goed,e){const i=T.nu,t=T.tafel,k=feitSleutel(i,t);S_t()[k]=(S_t()[k]||0)+1;bewaarTafels();hartjes(e.clientX,e.clientY);
+  zegT(S_t()[k]>=2&&!KENT.includes(i)?`Goed zo! ${i} × ${t} = ${i*t}. Die ken je nu! ⭐`:`Goed zo! ${i} × ${t} = ${i*t}.`);setTimeout(volgendeSom,1300)}
+function volgendeSom(){T.nr++;if(T.nr<T.rondje.length){toonSom();return}
+  S.snoep++;let extra="";if(tafelKlaar(T.tafel)&&!(S.tafelSter||[]).includes(T.tafel)){S.tafelSter=(S.tafelSter||[]).concat(T.tafel);extra=" Je kent nu de hele tafel van "+T.tafel+"!"+geefSticker()}
+  bewaar();toonBadges();
+  $("#tafelInhoud").innerHTML=tabsHTML()+`<div class="somgroot" style="font-size:48px">Rondje klaar! 🎉</div><div class="rij"><button class="groot g-paars" id="nogRondje">Nog een rondje</button><button class="groot g-mint" id="naarTafels">Klaar voor nu</button></div>`;bindTabs();
+  zegT("Je krijgt een snoepje voor mij!"+extra);$("#nogRondje").onclick=()=>{nieuwRondje();toonSom()};$("#naarTafels").onclick=tafelsOverzicht}
+$("#tafelTerug").onclick=()=>{if(T.tafel)tafelsOverzicht();else sluit()};
+function toonMamaTafels(){const el=$("#mamaTafels");if(!el)return;el.innerHTML=[3,4,6,7,8,9].map(t=>`<div>Tafel van ${t}: ${tafelTel(t)} van de 10 ${tafelKlaar(t)?"⭐":""}</div>`).join("")+`<div style="color:#9a8db0;margin-top:4px">1, 2, 5 en 10 kent ze al. Een som telt als geleerd na 2 keer goed achter elkaar.</div>`}
+(async()=>{for(let n=0;n<20&&!DB;n++)await new Promise(r=>setTimeout(r,500));if(!DB)return;try{const d=await DB.doc("app/tafels").get();const v=d&&(d.data?d.data():d);if(v&&v.feiten){const f=S_t();for(const k in v.feiten)f[k]=Math.max(f[k]||0,v.feiten[k]);bewaar()}}catch(e){}})();
+// ---------- rekenverhaal (fase 1) ----------
+// Trap met treden. Gebouwd in fase 1: trede 1 (tafels in een verhaal), 2 (instap: twee stappen), 3 (grote getallen).
+const RV_TREDEN=[
+  {naam:"Plussen en minnen",mama:"Vangnet: optellen en aftrekken tot 100",groep:"groep 4",klaar:false},
+  {naam:"Tafels in een verhaal",mama:"Vangnet: tafels in een verhaal",groep:"groep 4–5",klaar:true},
+  {naam:"Twee stappen",mama:"Instap: twee stappen",groep:"midden groep 5",klaar:true},
+  {naam:"Grote getallen",mama:"Grote getallen",groep:"groep 6",klaar:true},
+  {naam:"Geld, tijd en meten",mama:"Geld, tijd en meten",groep:"groep 6–7",klaar:false},
+  {naam:"Breuken in een verhaal",mama:"Breuken en procenten in een verhaal",groep:"groep 7",klaar:false},
+  {naam:"Tabellen lezen",mama:"Tabellen en grafieken lezen",groep:"groep 7–8",klaar:false}];
+const RV_LAAG=1,RV_HOOG=3,RV_INSTAP=2;
+const RV_ROL={opwarm:"Even opwarmen",werk:"Jouw trede",herhaal:"Nog eentje van vroeger",extra:"Nog eentje"};
+const RV_ICOON=["👂","❓","👆","🖼️","✏️"];
+const MODELNAAM={strook:"een strook",groepjes:"groepjes",lijn:"een getallenlijn",tabel:"een tabel"};
+function RV(){if(!S.rv)S.rv={trede:RV_INSTAP,instap:RV_INSTAP,goed:0,mis:0,sterren:[],reeks:{},kralen:{},terug:{},dag:"",plan:[],stuk:0,klaarDag:"",nu:null,log:[]};return S.rv}
+function rvBewaar(){bewaar();dbZet("app/oefenen",{rekenverhaal:{trede:RV().trede,instap:RV().instap,terug:RV().terug,log:RV().log.slice(-60)},bijgewerkt:new Date().toISOString()})}
+const rr=(a,b)=>a+Math.floor(Math.random()*(b-a+1)), kies=a=>a[Math.floor(Math.random()*a.length)];
+function rvTafels(){const t=[2,5,10];[3,4,6,7,8,9].forEach(x=>{if(tafelKlaar(x))t.push(x)});return t}
+function anders(waarde,vermijd,min,max){let x,n=0;do{x=rr(min,max);n++}while(vermijd.includes(x)&&n<50);return x}
+// ---- verhaaltjes: vaste sjablonen, wisselende getallen ----
+// stap: {a,op,b} ; "V" = de uitkomst van de vorige stap
+const RV_SJABLONEN={
+ 1:[
+  ()=>{const a=rr(2,9),b=kies(rvTafels());return{zinnen:[`Lily heeft ${a} zakjes met snoepjes.`,`In elk zakje zitten ${b} snoepjes.`,`Hoeveel snoepjes heeft Lily samen?`],weten:["snoepjes Lily samen heeft","zakjes Lily heeft","snoepjes er in één zakje zitten"],stappen:[{a,op:"×",b}],model:"groepjes",eenheid:{groep:"zakjes",stuk:"snoepjes"},dus:r=>`Dus Lily heeft ${r} snoepjes.`}},
+  ()=>{const a=rr(2,9),b=kies(rvTafels());return{zinnen:[`Nova plakt stickers in haar stickerboek.`,`Op elke bladzijde passen ${b} stickers.`,`Ze maakt ${a} bladzijden vol.`,`Hoeveel stickers plakt Nova?`],weten:["stickers Nova plakt","bladzijden Nova volmaakt","stickers er op één bladzijde passen"],stappen:[{a,op:"×",b}],model:"groepjes",eenheid:{groep:"bladzijden",stuk:"stickers"},dus:r=>`Dus Nova plakt ${r} stickers.`}},
+  ()=>{const a=rr(2,9),b=kies(rvTafels()),x=anders(0,[a,b,a*b],11,24);return{zinnen:[`Het is ${x} graden en de zon schijnt.`,`Nova tekent ${a} bloemen.`,`Elke bloem krijgt ${b} hartjes.`,`Hoeveel hartjes tekent Nova?`],weten:["hartjes Nova tekent","graden het is","bloemen Nova tekent"],stappen:[{a,op:"×",b}],model:"groepjes",eenheid:{groep:"bloemen",stuk:"hartjes"},dus:r=>`Dus Nova tekent ${r} hartjes.`}},
+  ()=>{const a=rr(3,8),b=kies(rvTafels());return{zinnen:[`Lily speelt in het park met ${a} vriendjes.`,`Elk vriendje krijgt ${b} koekjes.`,`Hoeveel koekjes krijgen de vriendjes samen?`],weten:["koekjes de vriendjes samen krijgen","vriendjes Lily heeft"],stappen:[{a,op:"×",b}],model:"tabel",eenheid:{groep:"vriendjes",stuk:"koekjes"},dus:r=>`Dus de vriendjes krijgen samen ${r} koekjes.`}}],
+ 2:[
+  ()=>{const a=rr(18,55),b=rr(6,30),c=rr(5,a+b-6);return{zinnen:[`Nova heeft ${a} stickers.`,`Oma geeft haar er nog ${b}.`,`Daarna geeft Nova er ${c} aan haar vriendin.`,`Hoeveel stickers heeft Nova nu?`],weten:["stickers Nova nu heeft","stickers oma geeft","stickers de vriendin krijgt"],stappen:[{a,op:"+",b},{a:"V",op:"−",b:c}],model:"strook",eenheid:{groep:"",stuk:"stickers"},dus:r=>`Dus Nova heeft nu ${r} stickers.`}},
+  ()=>{const a=rr(2,6),b=kies(rvTafels()),c=rr(3,19);return{zinnen:[`Nova koopt ${a} pakjes stiften.`,`In elk pakje zitten ${b} stiften.`,`Thuis had ze al ${c} stiften.`,`Hoeveel stiften heeft Nova nu?`],weten:["stiften Nova nu heeft","pakjes Nova koopt","stiften er in één pakje zitten"],stappen:[{a,op:"×",b},{a:"V",op:"+",b:c}],model:"groepjes",eenheid:{groep:"pakjes",stuk:"stiften"},dus:r=>`Dus Nova heeft nu ${r} stiften.`}},
+  ()=>{const a=rr(3,12),b=rr(2,9),c=rr(1,a+b-1);return{zinnen:[`'s Ochtends is het ${a} graden.`,`'s Middags wordt het ${b} graden warmer.`,`'s Avonds is het ${c} graden kouder dan 's middags.`,`Hoe warm is het 's avonds?`],weten:["graden het 's avonds is","graden het 's ochtends is","graden het warmer wordt"],stappen:[{a,op:"+",b},{a:"V",op:"−",b:c}],model:"lijn",eenheid:{groep:"",stuk:"graden"},dus:r=>`Dus het is 's avonds ${r} graden.`}},
+  ()=>{const b=rr(2,5),c=kies(rvTafels().filter(x=>x<=10)),a=b*c+rr(3,18);return{zinnen:[`Nova heeft ${a} hartjeskralen.`,`Ze maakt ${b} armbandjes.`,`Voor elk armbandje gebruikt ze ${c} kralen.`,`Hoeveel kralen houdt Nova over?`],weten:["kralen Nova overhoudt","armbandjes Nova maakt","kralen er in één armbandje gaan"],stappen:[{a:b,op:"×",b:c},{a,op:"−",b:"V"}],model:"groepjes",eenheid:{groep:"armbandjes",stuk:"kralen"},dus:r=>`Dus Nova houdt ${r} kralen over.`}},
+  ()=>{const a=rr(8,30),b=rr(6,25),c=rr(4,a+b-4),x=anders(0,[a,b,c],2,4);return{zinnen:[`Lily is ${x} jaar.`,`Ze krijgt ${a} snoepjes op maandag en ${b} snoepjes op dinsdag.`,`Ze eet er ${c} op.`,`Hoeveel snoepjes heeft Lily nog?`],weten:["snoepjes Lily nog heeft","jaar Lily is","snoepjes Lily opeet"],stappen:[{a,op:"+",b},{a:"V",op:"−",b:c}],model:"strook",eenheid:{groep:"",stuk:"snoepjes"},dus:r=>`Dus Lily heeft nog ${r} snoepjes.`}}],
+ 3:[
+  ()=>{const a=rr(820,1480),b=rr(110,390);return{zinnen:[`Oom Bart heeft een kippenboerderij.`,`In de schuur liggen ${a} eieren.`,`Vandaag leggen de kippen er nog ${b} bij.`,`Hoeveel eieren heeft oom Bart nu?`],weten:["eieren oom Bart nu heeft","kippen oom Bart heeft","eieren de kippen vandaag leggen"],stappen:[{a,op:"+",b}],model:"strook",eenheid:{groep:"",stuk:"eieren"},dus:r=>`Dus oom Bart heeft ${r} eieren.`}},
+  ()=>{const a=rr(1200,2900),b=rr(240,880);return{zinnen:[`De stickerwinkel heeft ${a} stickers.`,`Op zaterdag worden er ${b} verkocht.`,`Hoeveel stickers heeft de winkel nog?`],weten:["stickers de winkel nog heeft","stickers er verkocht worden"],stappen:[{a,op:"−",b}],model:"strook",eenheid:{groep:"",stuk:"stickers"},dus:r=>`Dus de winkel heeft nog ${r} stickers.`}},
+  ()=>{const a=rr(310,690),b=rr(210,580),c=rr(60,240);return{zinnen:[`Bij de tekenwedstrijd doen op zaterdag ${a} kinderen mee.`,`Op zondag doen er ${b} kinderen mee.`,`Er winnen ${c} kinderen een prijs.`,`Hoeveel kinderen winnen geen prijs?`],weten:["kinderen geen prijs winnen","kinderen een prijs winnen","kinderen er op zondag meedoen"],stappen:[{a,op:"+",b},{a:"V",op:"−",b:c}],model:"strook",eenheid:{groep:"",stuk:"kinderen"},dus:r=>`Dus ${r} kinderen winnen geen prijs.`}},
+  ()=>{const a=kies([20,30,40,50,60]),b=kies(rvTafels().filter(x=>x<10));return{zinnen:[`De school koopt ${a} dozen kleurpotloden.`,`In elke doos zitten ${b} potloden.`,`Hoeveel potloden koopt de school?`],weten:["potloden de school koopt","dozen de school koopt"],stappen:[{a,op:"×",b}],model:"tabel",eenheid:{groep:"dozen",stuk:"potloden"},dus:r=>`Dus de school koopt ${r} potloden.`}},
+  ()=>{const a=rr(340,860),b=rr(45,180),x=anders(0,[a,b],15,45);return{zinnen:[`Nova en mama rijden ${x} minuten naar oma.`,`In het fotoboek van oma zitten ${a} foto's.`,`Oma plakt er ${b} foto's bij.`,`Hoeveel foto's zitten er nu in het fotoboek?`],weten:["foto's er nu in het fotoboek zitten","minuten ze naar oma rijden","foto's oma erbij plakt"],stappen:[{a,op:"+",b}],model:"lijn",eenheid:{groep:"",stuk:"foto's"},dus:r=>`Dus er zitten nu ${r} foto's in het fotoboek.`}}]};
+function reken(a,op,b){return op==="+"?a+b:op==="−"?a-b:a*b}
+function rvMaak(trede){const v=kies(RV_SJABLONEN[trede])();let vorige=null;
+  v.stappen.forEach(s=>{const a=s.a==="V"?vorige:s.a,b=s.b==="V"?vorige:s.b;s.r=reken(a,s.op,b);vorige=s.r});
+  v.uitkomst=vorige;v.dus=v.dus(vorige);v.goed=v.weten[0];v.keus=v.weten.slice().sort(()=>Math.random()-.5);
+  // woorden en getallen
+  const tekst=v.zinnen.join(" ");v.tekst=tekst;v.woorden=[];let m;const re=/\S+/g;
+  const vraagStart=tekst.length-v.zinnen[v.zinnen.length-1].length;
+  const nodig=[];v.stappen.forEach(s=>{if(s.a!=="V")nodig.push(s.a);if(s.b!=="V")nodig.push(s.b)});
+  const over=nodig.slice();
+  while((m=re.exec(tekst))){const g=m[0].match(/^(\d+)([.,!?]*)$/);const w={t:m[0],s:m.index,vraag:m.index>=vraagStart};
+    if(g){w.getal=+g[1];w.rest=g[2];const k=over.indexOf(w.getal);w.nodig=k>=0;if(k>=0)over.splice(k,1)}
+    v.woorden.push(w)}
+  v.trede=trede;return v}
+// ---- staat van het lopende verhaaltje ----
+let RVN=null; // = RV().nu
+function rvVandaag(){return new Date().toDateString()}
+function rvPlan(){const R=RV();R.dag=rvVandaag();R.plan=["opwarm","werk","werk","werk","herhaal"];R.stuk=0;rvBewaar()}
+function rvTredeVoor(rol){const R=RV(),t=R.trede;
+  if(rol==="opwarm")return Math.max(RV_LAAG,t-1);
+  if(rol==="herhaal"){const oud=[];for(let i=RV_LAAG;i<t;i++)oud.push(i);return oud.length?kies(oud):t}
+  return t}
+function zegV(t,stil){$("#rvZeg").textContent=t;if(!stil)spreek(t)}
+let leesId=0;
+function stopLees(){leesId++;try{speechSynthesis.cancel()}catch(e){}}
+function leesMee(box,tekst){stopLees();const mijn=leesId;const ws=[...box.querySelectorAll("[data-s]")];let timer=null,grens=false;
+  const zet=i=>ws.forEach((w,k)=>w.classList.toggle("nu",k===i));
+  const klaar=()=>{clearTimeout(timer);if(mijn===leesId)zet(-1)};
+  const val=()=>{if(timer)return;let i=0;const stap=()=>{if(mijn!==leesId||i>=ws.length){klaar();return}zet(i);const d=(ws[i].textContent.length*75+240)/.85;i++;timer=setTimeout(stap,d)};stap()};
+  if(!TTS&&window.speechSynthesis&&window.SpeechSynthesisUtterance){try{const u=new SpeechSynthesisUtterance(tekst);u.lang="nl-NL";u.rate=.85;
+      u.onboundary=e=>{if(mijn!==leesId||(e.name&&e.name!=="word"))return;grens=true;clearTimeout(timer);timer=-1;let i=0;for(let k=0;k<ws.length;k++)if(+ws[k].dataset.s<=e.charIndex)i=k;zet(i)};
+      u.onend=klaar;speechSynthesis.speak(u);setTimeout(()=>{if(!grens&&mijn===leesId)val()},900);return}catch(e){}}
+  if(TTS)TTS.speak(tekst,{language:"nl",rate:.85}).catch(()=>{});
+  val()}
+function tekstHTML(v,soort){return v.woorden.map((w,i)=>{
+  if(soort==="getallen"&&w.getal!==undefined){const in_=RVN.tasje.includes(i);return`<button class="getal ${in_?"gepakt":""}" data-gi="${i}">${w.getal}</button>${w.rest}`}
+  return`<span class="wd ${soort==="vraag"&&w.vraag&&RVN.toonVraag?"vraag":""}" data-s="${w.s}">${esc(w.t)}</span>`}).join(" ")}
+function rvKop(){const R=RV();const rol=RVN.rol;
+  const bol=R.plan.map((r,i)=>`<span class="${i<R.stuk?"vol":i===R.stuk&&rol!=="extra"?"nu":""}"></span>`).join("");
+  const st=RV_ICOON.map((ic,i)=>`<span class="${i+1===RVN.stap?"nu":i+1<RVN.stap?"af":""}">${ic}</span>`).join("");
+  return`<div class="rvkop"><span class="rvrol">${RV_ROL[rol]}</span><div class="rvbol">${bol}</div></div><div class="rvstappen">${st}</div>`}
+function inh(h){$("#rvInhoud").innerHTML=h;$("#rvInhoud").scrollTop=0}
+// ---- het overzicht: de trap ----
+function rvOverzicht(){stopLees();const R=RV();RVN=null;$("#rvTitel").textContent="Rekenverhaal";
+  if(R.dag!==rvVandaag())rvPlan();
+  const lily=`<img class="lilytje" src="${LILY}" alt="Lily">`;
+  let h=`<div class="trap">`+RV_TREDEN.map((t,i)=>{const ster=R.sterren.includes(i),nu=i===R.trede;
+    return`<div class="trede ${ster?"ster":""} ${nu?"nu":""} ${t.klaar?"":"dicht"}" style="margin-left:${i*4}%">${nu?lily:`<span class="nr">${i+1}</span>`}<span>${t.naam}${t.klaar?"":" <small style='font-weight:700;color:#b98aa8'>· binnenkort</small>"}</span><span class="sterren">${ster?"⭐":""}</span></div>`}).join("")+`</div>`;
+  const klaar=R.stuk>=R.plan.length;
+  if(R.nu)h+=`<button class="groot g-paars" id="rvVerder">Verder met je verhaaltje →</button>`;
+  else if(!klaar)h+=`<button class="groot g-paars" id="rvStart">${R.stuk?"Verder ♡":"Start ♡"}</button>`;
+  else h+=`<button class="groot g-paars" id="rvExtra">Verder ♡</button>`;
+  inh(h);
+  const aantal=R.sterren.length;
+  zegV(R.nu?"Je was nog bezig met een verhaaltje. Zullen we verder?":klaar?"Fijn dat je er weer bent! Zullen we verder?":aantal?`Kijk wat je al kunt! Je hebt al ${aantal} ster${aantal>1?"ren":""} op je trap.`:"Dit is jouw trap. Bij elk verhaaltje klim je een stukje. We doen vandaag een paar korte verhaaltjes.",true);
+  const v=$("#rvVerder");if(v)v.onclick=()=>rvToon();
+  const s=$("#rvStart");if(s)s.onclick=()=>rvVolgende();
+  const e=$("#rvExtra");if(e)e.onclick=()=>rvNieuw("extra");
+  $$("[data-terug-home]").forEach(b=>b.onclick=sluit)}
+function rvVolgende(){const R=RV();if(R.stuk>=R.plan.length){rvKlaarVandaag();return}rvNieuw(R.plan[R.stuk])}
+function rvNieuw(rol){const R=RV();const t=rvTredeVoor(rol);
+  R.nu={rol,v:rvMaak(t),stap:1,tasje:[],weg:[],weetGoed:false,model:null,som:0,poging:0,uit:[],kralen:!!R.kralen[t]};rvBewaar();rvToon()}
+function rvToon(){RVN=RV().nu;if(!RVN){rvOverzicht();return}$("#rvTitel").textContent="Rekenverhaal";
+  [null,rvStap1,rvStap2,rvStap3,rvStap4,rvStap5,rvStapDus][RVN.stap]()}
+function rvNaar(n){RVN.stap=n;rvBewaar();rvToon()}
+// stap 1: Lily leest voor
+function rvStap1(){const v=RVN.v;
+  inh(rvKop()+`<div class="rvtekst" id="rvTekst">${tekstHTML(v)}</div><div class="rij"><button class="groot g-geel" id="rvNog">🔊 Nog eens</button><button class="groot g-paars" id="rvDoor">Verder →</button></div>`);
+  zegV("Luister maar. Je mag ook zelf meelezen.",true);
+  const lees=()=>leesMee($("#rvTekst"),v.tekst);
+  $("#rvNog").onclick=lees;$("#rvDoor").onclick=()=>{stopLees();rvNaar(2)};setTimeout(lees,250)}
+// stap 2: wat wil de som weten?
+function rvStap2(){const v=RVN.v;
+  let h=rvKop()+`<div class="rvtekst klein" id="rvTekst">${tekstHTML(v,"vraag")}</div>`;
+  if(RVN.weetGoed)h+=`<div class="rvweet">Ze willen weten hoeveel <b>${esc(v.goed)}</b>.</div><button class="groot g-paars" id="rvDoor">Verder →</button>`;
+  else h+=`<div class="rvweet">Ze willen weten hoeveel …</div><div class="rvkeus">${v.keus.map((k,i)=>`<div class="regel"><button class="groot g-mint ${RVN.weg.includes(k)?"weg":""}" data-keus="${i}">… ${esc(k)}</button><button class="rvhoor" data-hoor="${i}" aria-label="Lees voor">🔊</button></div>`).join("")}</div>`;
+  inh(h);
+  if(RVN.weetGoed){$("#rvDoor").onclick=()=>rvNaar(3);return}
+  zegV("Wat wil de som weten? Maak de zin af. Ze willen weten hoeveel… "+v.keus.filter(k=>!RVN.weg.includes(k)).join("? Of… ")+"?");
+  $$("[data-hoor]").forEach(b=>b.onclick=()=>spreek("Ze willen weten hoeveel "+v.keus[+b.dataset.hoor]));
+  $$("[data-keus]").forEach(b=>b.onclick=e=>{const k=v.keus[+b.dataset.keus];if(RVN.weg.includes(k))return;
+    if(k===v.goed){RVN.weetGoed=true;RVN.toonVraag=false;hartjes(e.clientX,e.clientY);rvBewaar();rvStap2();zegV("Ja! Ze willen weten hoeveel "+k+".")}
+    else{RVN.weg.push(k);RVN.toonVraag=true;rvBewaar();rvStap2();zegV("Hmm, kijk naar de vraag. Die staat aan het eind, bij het vraagteken. Ik heb hem paars gemaakt.")}})}
+// stap 3: tik de getallen aan
+function rvStap3(){const v=RVN.v;
+  const tas=RVN.tasje.length?RVN.tasje.map(i=>`<button class="getal" data-ti="${i}">${v.woorden[i].getal}</button>`).join(""):`<span class="leegtekst">Je rekentasje is nog leeg</span>`;
+  inh(rvKop()+`<div class="rvtekst" id="rvTekst">${tekstHTML(v,"getallen")}</div><div class="tasje">${tas}</div><button class="groot g-paars" id="rvDoor">Klaar met tikken →</button>`);
+  if(!RVN.zei3){RVN.zei3=true;zegV("Tik op de getallen die je nodig hebt. Ze gaan in je rekentasje. Een getal dat je niet nodig hebt, laat je gewoon liggen.")}
+  const wissel=i=>{const k=RVN.tasje.indexOf(i);if(k>=0)RVN.tasje.splice(k,1);else RVN.tasje.push(i);rvBewaar();rvStap3()};
+  $$("[data-gi]").forEach(b=>b.onclick=()=>wissel(+b.dataset.gi));
+  $$("[data-ti]").forEach(b=>b.onclick=()=>wissel(+b.dataset.ti));
+  $("#rvDoor").onclick=e=>{const mist=v.woorden.some((w,i)=>w.nodig&&!RVN.tasje.includes(i)),teveel=RVN.tasje.some(i=>!v.woorden[i].nodig);
+    if(mist)zegV("Er mist nog een getal. Kijk nog eens in het verhaal. Welk getal heb je ook nodig?");
+    else if(teveel)zegV("Er zit een getal in je tasje dat je niet nodig hebt. Welke is dat? Tik erop, dan leg je hem terug.");
+    else{hartjes(e.clientX,e.clientY,"⭐");zegV("Goed gezien! Deze getallen heb je nodig.");setTimeout(()=>rvNaar(4),900)}}}
+// plaatjes
+function vk(x,vraag){return`<span class="vk ${vraag?"vraag":""}">${x}</span>`}
+function waarde(s,kant,bekend){const x=s[kant];if(x!=="V")return{t:x,n:x};return bekend?{t:bekend,n:bekend}:{t:"?",n:null}}
+function plaatje(s,model,eenheid,vorigeBekend,uitBekend){const A=waarde(s,"a",vorigeBekend),B=waarde(s,"b",vorigeBekend);const U=uitBekend!=null?uitBekend:"?";
+  if(s.op==="×"){const m=(model==="tabel")?"tabel":"groepjes";
+    if(m==="tabel")return`<table class="rvtabel"><tr><td>${esc(eenheid.groep||"groepjes")}</td><td>1</td><td>${A.t}</td></tr><tr><td>${esc(eenheid.stuk||"samen")}</td><td>${B.t}</td><td>${uitBekend!=null?U:'<span class="vk vraag">?</span>'}</td></tr></table>`;
+    const n=A.n||3,toon=Math.min(n,n>10?4:n),stip=B.n&&B.n<=10;let g="";
+    for(let i=0;i<toon;i++)g+=`<div class="rvgroep">${stip?"<i></i>".repeat(B.n):B.t}</div>`;
+    if(n>toon)g+=`<div class="rvsamen">… </div>`;
+    return`<div class="rvgroepen">${g}</div><div class="rvsamen">${vk(A.t,A.t==="?")} ${esc(eenheid.groep||"groepjes")} van ${vk(B.t,B.t==="?")} ${esc(eenheid.stuk)} → samen ${vk(U,U==="?")}</div>`}
+  const m=(model==="lijn")?"lijn":"strook";
+  if(m==="lijn"){const a=A.n??0,b=B.n??0,eind=s.op==="+"?a+b:a-b,lo=Math.min(a,eind),hi=Math.max(a,eind),span=Math.max(1,hi-lo);
+    const X=x=>60+(x-lo)/span*480,xa=X(a),xe=X(eind),mid=(xa+xe)/2;
+    return`<svg class="rvlijn" viewBox="0 0 600 150"><line x1="20" y1="110" x2="580" y2="110" stroke="#5a4a4a" stroke-width="3"/><line x1="${xa}" y1="98" x2="${xa}" y2="122" stroke="#5a4a4a" stroke-width="3"/><line x1="${xe}" y1="98" x2="${xe}" y2="122" stroke="#5a4a4a" stroke-width="3"/>
+      <path d="M${xa} 100 Q${mid} 10 ${xe} 100" fill="none" stroke="#a991d6" stroke-width="4" marker-end="url(#pijl)"/><defs><marker id="pijl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a991d6"/></marker></defs>
+      <text x="${mid}" y="44" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="26" fill="#4b3878">${s.op==="+"?"+":"−"} ${B.t}</text>
+      <text x="${xa}" y="146" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="24" fill="#4b3878">${A.t}</text>
+      <text x="${xe}" y="146" text-anchor="middle" font-family="Nunito" font-weight="800" font-size="24" fill="${U==="?"?"#a2405f":"#2f6b55"}">${U}</text></svg>`}
+  const fa=Math.max(1,A.n||1),fb=Math.max(1,B.n||1);
+  if(s.op==="+")return`<div class="strook"><div class="boven">${vk(U,U==="?")}<div class="boog"></div></div><div class="balk"><div class="deel" style="flex:${fa}">${A.t}</div><div class="deel b" style="flex:${fb}">${B.t}</div></div><div class="rvsamen">${esc(eenheid.stuk)}</div></div>`;
+  const rest=Math.max(1,(A.n||fb*2)-fb);
+  return`<div class="strook"><div class="boven">${vk(A.t,A.t==="?")}<div class="boog"></div></div><div class="balk"><div class="deel" style="flex:${rest}">${U==="?"?'<span class="vk vraag">?</span>':U}</div><div class="deel weg" style="flex:${fb}">${B.t} weg</div></div><div class="rvsamen">${esc(eenheid.stuk)}</div></div>`}
+function passendModel(op,gekozen){if(op==="×")return["groepjes","tabel"].includes(gekozen)?gekozen:"groepjes";return["strook","lijn"].includes(gekozen)?gekozen:"strook"}
+function plaatjesHTML(tot){const v=RVN.v,n=v.stappen.length;let vorige=null,h="";
+  v.stappen.forEach((s,i)=>{if(tot!=null&&i>tot)return;const uit=RVN.uit[i]!=null?s.r:null;
+    h+=`<div class="rvplaatje">${n>1?`<h4>${i===0?"Eerst":"Dan"}</h4>`:""}${plaatje(s,passendModel(s.op,RVN.model),v.eenheid,vorige,uit)}</div>`;vorige=uit});
+  return`<div class="rvplaatjes">${h}</div>`}
+// stap 4: maak er een plaatje van
+const MODELICOON={strook:'<svg width="70" height="34" viewBox="0 0 70 34"><rect x="3" y="8" width="40" height="20" rx="4" fill="#fde4ee" stroke="#5a4a4a" stroke-width="2.2"/><rect x="43" y="8" width="24" height="20" rx="4" fill="#e3f5ee" stroke="#5a4a4a" stroke-width="2.2"/></svg>',
+  groepjes:'<svg width="70" height="34" viewBox="0 0 70 34"><g fill="#fff" stroke="#efc3e0" stroke-width="2.5"><circle cx="14" cy="17" r="11"/><circle cx="35" cy="17" r="11"/><circle cx="56" cy="17" r="11"/></g><g fill="#f08fa8"><circle cx="11" cy="14" r="2.5"/><circle cx="17" cy="20" r="2.5"/><circle cx="32" cy="14" r="2.5"/><circle cx="38" cy="20" r="2.5"/><circle cx="53" cy="14" r="2.5"/><circle cx="59" cy="20" r="2.5"/></g></svg>',
+  lijn:'<svg width="70" height="34" viewBox="0 0 70 34"><line x1="3" y1="28" x2="67" y2="28" stroke="#5a4a4a" stroke-width="2.4"/><path d="M14 26Q30 0 50 26" fill="none" stroke="#a991d6" stroke-width="3"/></svg>',
+  tabel:'<svg width="70" height="34" viewBox="0 0 70 34"><rect x="5" y="3" width="60" height="28" rx="3" fill="#fff" stroke="#c9b3ea" stroke-width="2.4"/><path d="M5 17h60M25 3v28M45 3v28" stroke="#c9b3ea" stroke-width="2.2"/></svg>'};
+function rvStap4(){const v=RVN.v;
+  const knoppen=["strook","groepjes","lijn","tabel"].map(m=>`<button class="rvmodel ${m===v.model?"tip":""} ${RVN.model===m?"aan":""}" data-model="${m}">${m===v.model?'<span class="tiplabel">✨ Lily\'s tip</span>':""}${MODELICOON[m]}<span>${m==="lijn"?"Getallenlijn":m[0].toUpperCase()+m.slice(1)}</span></button>`).join("");
+  let h=rvKop()+`<div class="rvmodellen">${knoppen}</div>`;
+  if(RVN.model)h+=plaatjesHTML()+`<button class="groot g-paars" id="rvDoor">Nu ga ik rekenen →</button>`;
+  inh(h);
+  if(!RVN.model)zegV(`Maak er een plaatje van. Dit lijkt op ${MODELNAAM[v.model]}. Tik op een plaatje.`);
+  $$("[data-model]").forEach(b=>b.onclick=()=>{const m=b.dataset.model;RVN.model=m;rvBewaar();rvStap4();
+    const past=v.stappen.every(s=>passendModel(s.op,m)===m);
+    zegV(past?`Kijk, zo ziet het verhaal eruit als ${MODELNAAM[m]}. Het vraagteken is wat we zoeken.`:`Dat plaatje past niet bij elke stap. Daar heb ik iets anders van gemaakt. Het vraagteken is wat we zoeken.`)});
+  const d=$("#rvDoor");if(d)d.onclick=()=>{RVN.som=0;RVN.poging=0;RVN.invoer="";rvNaar(5)}}
+// kralen (Montessori-goudkralen): duizend, honderd, tien, een
+function kralenVan(n){if(n==null||n<0||n>9999)return"";const d=[Math.floor(n/1000),Math.floor(n/100)%10,Math.floor(n/10)%10,n%10];let h="";
+  h+='<div class="k1000"></div>'.repeat(d[0]).replace(/<\/div>/g,"1000</div>");h+='<div class="k100"></div>'.repeat(d[1]);h+='<div class="k10"></div>'.repeat(d[2]);
+  if(d[3])h+=`<div class="k1s">${'<div class="k1"></div>'.repeat(d[3])}</div>`;return`<div class="kralenGetal"><div class="rijk">${h||"<b>0</b>"}</div><b>${n}</b></div>`}
+function kralenHTML(s,a,b){if(s.op==="×"&&a<=10&&b<=10)return`<div class="kralen">${groepjesHTML(a,b)}</div>`;
+  if(s.op==="×")return`<div class="kralen"><div class="rvsamen">${a} keer ${b}. Tip: doe eerst ${Math.floor(a/10)*10||a} keer ${b}.</div></div>`;
+  return`<div class="kralen">${kralenVan(a)}<div class="rvsamen" style="font-size:34px">${s.op}</div>${kralenVan(b)}</div>`}
+const OPWOORD={"+":"plus","−":"min","×":"keer"};
+// stap 5: reken en controleer
+function rvStap5(){const v=RVN.v,i=RVN.som,s=v.stappen[i];if(!s){rvNaar(6);return}
+  const vorige=i>0?v.stappen[i-1].r:null,a=s.a==="V"?vorige:s.a,b=s.b==="V"?vorige:s.b;
+  const opgelost=RVN.uit[i]!=null;
+  const pad=`<div class="numpad">${[1,2,3,4,5,6,7,8,9].map(n=>`<button data-n="${n}">${n}</button>`).join("")}<button class="wis" data-n="w">⌫</button><button data-n="0">0</button><button class="ok" data-n="ok">Klaar ✓</button></div>`;
+  let h=rvKop()+`<div class="rvreken"><div class="rvlinks">${plaatjesHTML(i)}<div class="rvsom">${a} ${s.op} ${b} = <span class="rvvak ${opgelost?"goed":""}" id="rvAntw">${opgelost?s.r:esc(RVN.invoer||"")}</span></div>`;
+  h+=`<div class="rij"><button class="groot g-geel" id="rvKralen">🧮 ${RVN.kralen?"Kralen weg":"Kralen erbij"}</button></div>${RVN.kralen?kralenHTML(s,a,b):""}</div>`;
+  h+=opgelost?`<button class="groot g-paars" id="rvDoor">Verder →</button>`:pad;h+=`</div>`;
+  inh(h);
+  if(!opgelost&&!RVN.zei5){RVN.zei5=true;zegV(`Reken maar uit. ${a} ${OPWOORD[s.op]} ${b}. Neem je tijd.`)}
+  $("#rvKralen").onclick=()=>{RVN.kralen=!RVN.kralen;rvBewaar();rvStap5()};
+  const d=$("#rvDoor");if(d)d.onclick=()=>{RVN.som++;RVN.poging=0;RVN.invoer="";RVN.zei5=false;rvBewaar();RVN.som<v.stappen.length?rvStap5():rvNaar(6)};
+  $$("[data-n]").forEach(k=>k.onclick=e=>{const n=k.dataset.n;
+    if(n==="w"){RVN.invoer=(RVN.invoer||"").slice(0,-1)}
+    else if(n==="ok"){if(!RVN.invoer)return;const x=+RVN.invoer;RVN.poging++;
+      if(x===s.r){RVN.uit[i]=RVN.poging===1?"goed":"bijna";hartjes(e.clientX,e.clientY);zegV(`Ja! ${a} ${OPWOORD[s.op]} ${b} is ${s.r}.`)}
+      else if(RVN.poging===1){RVN.invoer="";RVN.kralen=true;zegV("Hmm, kijk nog eens. De kralen helpen je.")}
+      else{RVN.uit[i]="mis";zegV(`Kijk, zo gaat het: ${a} ${OPWOORD[s.op]} ${b} is ${s.r}. Dat is lastig, en dat mag.`)}
+      rvBewaar();rvStap5();return}
+    else if((RVN.invoer||"").length<5){RVN.invoer=(RVN.invoer||"")+n}
+    $("#rvAntw").textContent=RVN.invoer;rvBewaar()})}
+// het antwoord gaat terug het verhaal in
+function rvStapDus(){const v=RVN.v;
+  inh(rvKop()+`<div class="rvtekst klein" id="rvTekst">${tekstHTML(v)}</div><div class="rvdus">${esc(v.dus)}<br>Klopt dat?</div><div class="rij"><button class="groot g-paars" id="rvJa">Ja, dat klopt ♡</button><button class="groot g-geel" id="rvLees">🔊 Lees het verhaal nog eens</button></div>`);
+  zegV(v.dus+" Klopt dat?");
+  $("#rvLees").onclick=()=>leesMee($("#rvTekst"),v.tekst);
+  $("#rvJa").onclick=e=>{hartjes(e.clientX,e.clientY,"💗",7);rvAfronden()}}
+function rvAfronden(){stopLees();const R=RV(),n=R.nu,t=n.v.trede;
+  const uit=n.uit.includes("mis")?"mis":n.uit.includes("bijna")?"bijna":"goed";
+  const nw=new Date();R.log.push({iso:nw.toISOString(),datum:nw.toLocaleDateString("nl-NL"),tijd:nw.toTimeString().slice(0,5),trede:t,rol:n.rol,uitkomst:uit,vraag:n.v.zinnen[n.v.zinnen.length-1]});if(R.log.length>300)R.log=R.log.slice(-300);
+  let bericht="";
+  if(n.rol==="werk"||n.rol==="extra"){
+    if(uit==="goed"){R.goed++;R.mis=0;if(R.goed>=3)bericht=rvOmhoog()}
+    else if(uit==="mis"){R.goed=0;R.mis++;if(R.mis>=2)bericht=rvOmlaag()}}
+  else if(uit==="goed"){R.reeks[t]=(R.reeks[t]||0)+1;if(R.reeks[t]>=3&&!R.sterren.includes(t)){R.sterren.push(t);bericht="Je hebt een ster verdiend op je trap! ⭐"}}
+  if(n.rol!=="extra")R.stuk++;R.nu=null;RVN=null;rvBewaar();
+  if(bericht){rvTussen(bericht);return}
+  if(n.rol==="extra"||R.stuk>=R.plan.length){rvKlaarVandaag();return}
+  rvVolgende()}
+function rvOmhoog(){const R=RV(),t=R.trede;R.goed=0;R.mis=0;if(!R.sterren.includes(t))R.sterren.push(t);R.kralen[t]=false;
+  if(t<RV_HOOG){R.trede=t+1;const st=geefSticker();return`Drie keer goed! Je klimt een trede hoger: ${RV_TREDEN[t+1].naam}.${st}`}
+  return"Drie keer goed! Je kunt alles wat er nu op je trap staat. Er komen nog nieuwe treden bij."}
+function rvOmlaag(){const R=RV(),t=R.trede;R.goed=0;R.mis=0;R.terug[t]=(R.terug[t]||0)+1;
+  if(t>RV_LAAG)R.trede=t-1;R.kralen[R.trede]=true;
+  return"We doen even een trede lager, met de kralen erbij. Zo wordt jouw trap extra stevig."}
+function rvTussen(t){inh(`<div class="rvdus">${esc(t)}</div><button class="groot g-paars" id="rvDoor">Verder →</button>`);zegV(t);
+  $("#rvDoor").onclick=()=>{const R=RV();if(R.stuk>=R.plan.length)rvKlaarVandaag();else rvVolgende()}}
+function rvKlaarVandaag(){const R=RV();
+  if(R.klaarDag!==rvVandaag()){R.klaarDag=rvVandaag();S.snoep++;toonBadges();rvBewaar();
+    inh(`<div class="rvdus">Wat knap van je! Je krijgt een snoepje voor mij.</div><button class="groot g-paars" id="rvDoor">Verder →</button>`);
+    zegV("Wat knap van je! Je krijgt een snoepje voor mij.");$("#rvDoor").onclick=()=>rvNieuw("extra");return}
+  rvNieuw("extra")}
+$("#rvTerug").onclick=()=>{stopLees();if(RVN)rvOverzicht();else sluit()};
+$("#rvZeg").onclick=()=>spreek($("#rvZeg").textContent);
+// ---- mama kijkt mee ----
+function toonMamaRv(){const el=$("#mamaRv");if(!el)return;const R=RV(),t=RV_TREDEN[R.trede];
+  const opties=RV_TREDEN.map((x,i)=>x.klaar?`<option value="${i}" ${i===R.instap?"selected":""}>${i+1}. ${esc(x.mama)} (${x.groep})</option>`:"").join("");
+  const terug=Object.keys(R.terug).filter(k=>R.terug[k]).map(k=>`${RV_TREDEN[k].mama}: ${R.terug[k]}×`).join(" · ")||"nog nergens";
+  const ico={goed:"✅ goed",bijna:"🟡 bijna (2e poging)",mis:"↩︎ lukte nog niet"};
+  const log=R.log.slice(-10).reverse().map(l=>`<tr><td>${esc(l.datum)} ${esc(l.tijd)}</td><td>${l.trede+1}</td><td>${esc(RV_ROL[l.rol]||l.rol)}</td><td>${ico[l.uitkomst]||l.uitkomst}</td></tr>`).join("")||"<tr><td colspan=4>Nog geen verhaaltjes gedaan.</td></tr>";
+  el.innerHTML=`<div><b>Nu op trede ${R.trede+1}:</b> ${esc(t.mama)} — schatting <b>${t.groep}</b></div>
+    <div>Werktrede: ${R.goed} van 3 goed op rij · terugzakken: ${esc(terug)}</div>
+    <div class="rij" style="justify-content:flex-start;margin-top:8px"><select class="invoer" id="rvInstap">${opties}</select><button class="groot g-paars" id="rvZetInstap">Zet Nova hierop</button></div>
+    <div style="max-height:220px;overflow:auto;margin-top:8px"><table><thead><tr><th>Wanneer</th><th>Trede</th><th>Stukje</th><th>Uitkomst</th></tr></thead><tbody>${log}</tbody></table></div>
+    <div style="color:#9a8db0;margin-top:6px;font-size:15px">Fouten bij lezen (stap 2) en getallen kiezen (stap 3) tellen niet mee; alleen het rekenen telt. Naar de Sheet (tabblad Oefenen) komt in een volgende stap.</div>`;
+  $("#rvZetInstap").onclick=()=>{const n=+$("#rvInstap").value;if(n===R.trede){meld("Nova staat al op deze trede");return}R.instap=n;R.trede=n;R.goed=0;R.mis=0;R.nu=null;rvBewaar();toonMamaRv();meld("Nova begint nu op trede "+(n+1))}}
+
+// ---------- breukenlab (fase 2) ----------
+// Trap met 10 treden. Gebouwd in fase 2: trede 1 t/m 4. Rode Montessori-breukencirkels: stukjes slepen of aantikken.
+// Zelfcontrole: het stukje past precies, er blijft een gaatje, of het steekt uit. Nooit rood als fout, nooit een cijfer.
+const BL_TREDEN=[
+  {naam:"Wat is een breuk?",mama:"Wat is een breuk? (½ en ¼ in de cirkel)",groep:"groep 4–5",klaar:true},
+  {naam:"Breuken maken",mama:"Instap: breuken benoemen en zelf maken",groep:"midden groep 5",klaar:true},
+  {naam:"Evenveel taart",mama:"Gelijkwaardig: 2/4 = 1/2",groep:"groep 5–6",klaar:true},
+  {naam:"Wat is meer?",mama:"Vergelijken: wat is groter?",groep:"groep 6",klaar:true},
+  {naam:"Plussen met dezelfde stukjes",mama:"Optellen met dezelfde noemer",groep:"groep 6",klaar:false},
+  {naam:"Stukjes ruilen",mama:"Optellen met een andere noemer",groep:"groep 7",klaar:false},
+  {naam:"Eerlijk verdelen",mama:"Breuk van een hoeveelheid (¼ van 20)",groep:"groep 6–7",klaar:false},
+  {naam:"Kommagetallen",mama:"Kommagetallen: 0,5 = ½",groep:"groep 7",klaar:false},
+  {naam:"Procenten",mama:"Procenten met het 100-veld",groep:"groep 7–8",klaar:false},
+  {naam:"Breuken in een verhaal",mama:"Breuken in een verhaal (koppeling Rekenverhaal)",groep:"groep 8",klaar:false}];
+const BL_LAAG=0,BL_HOOG=3,BL_INSTAP=1,BL_EEN=2520; // 2520 is deelbaar door 1 t/m 10: zo rekenen we zonder afrondfouten
+const BL_N=[3,4,5,6,8];
+function BL(){if(!S.bl)S.bl={trede:BL_INSTAP,instap:BL_INSTAP,goed:0,mis:0,sterren:[],reeks:{},hulp:{},terug:{},dag:"",plan:[],stuk:0,klaarDag:"",nu:null,log:[]};return S.bl}
+function blBewaar(){bewaar();dbZet("app/breukenlab",{trede:BL().trede,instap:BL().instap,terug:BL().terug,log:BL().log.slice(-60),bijgewerkt:new Date().toISOString()})}
+function blSchud(a){return a.slice().sort(()=>Math.random()-.5)}
+// ---- breuken als woorden (voor Lily) en als plaatje (teller boven noemer) ----
+const BL_TEL=["nul","een","twee","drie","vier","vijf","zes","zeven","acht","negen","tien"];
+const BL_NOEM={3:"derde",5:"vijfde",6:"zesde",7:"zevende",8:"achtste",9:"negende",10:"tiende"};
+function brWoord(k,n){if(n===1)return k===1?"een hele":BL_TEL[k]+" hele";if(n===2)return k===1?"een half":BL_TEL[k]+" halve";
+  if(n===4)return k===1?"een kwart":BL_TEL[k]+" vierde";return BL_TEL[k]+" "+BL_NOEM[n]}
+function brHTML(k,n){return`<span class="br"><b>${k}</b><i>${n}</i></span>`}
+function blTekst(t){return{html:esc(t).replace(/\{(\d+)\/(\d+)\}/g,(m,k,n)=>brHTML(+k,+n)),spraak:t.replace(/\{(\d+)\/(\d+)\}/g,(m,k,n)=>brWoord(+k,+n))}}
+// ---- opgaven: vaste vormen, wisselende breuken ----
+function blMaak(t){let o;
+  if(t===0){
+    if(Math.random()<.5){const n=kies([2,4]);
+      o={soort:"bouw",tekst:`Lily wil een hele taart. Vul de hele taartvorm met stukjes van {1/${n}}.`,doel:[1,1],maat:n,bak:[2,4],dus:`Dus {${n}/${n}} is de hele taart.`}}
+    else{const d=kies([[1,2],[1,4]]);
+      o={soort:"bouw",tekst:`Lily krijgt {${d[0]}/${d[1]}} van de taart. Leg {${d[0]}/${d[1]}} in de taartvorm.`,doel:d,maat:null,bak:[2,4],dus:`Dus dit is {${d[0]}/${d[1]}} van de hele taart.`}}}
+  if(t===1){const n=kies(BL_N);
+    if(Math.random()<.5){const k=rr(1,n-1),kaarten=[[k,n]];
+      const bij=c=>{if(c[1]&&c[0]>=1&&c[0]<c[1]&&!kaarten.some(x=>x[0]*c[1]===c[0]*x[1]))kaarten.push(c)};
+      bij([n-k,n]);bij([k,kies(BL_N.filter(x=>x!==n&&x>k).concat([0]))]);
+      let p=0;while(kaarten.length<3&&p<40){const m=kies(BL_N);bij([rr(1,m-1),m]);p++}
+      o={soort:"benoem",tekst:"Er ligt nog een stuk taart. Hoeveel van de hele taart is dit?",toon:[k,n],kaarten:blSchud(kaarten),doel:[k,n],
+        dus:`Dus dit is {${k}/${n}} van de taart: ${BL_TEL[k]} stukje${k>1?"s":""} van {1/${n}}.`}}
+    else{const k=rr(2,n-1),ander=blSchud(BL_N.filter(x=>x!==n)).slice(0,2);
+      o={soort:"bouw",tekst:`Bak {${k}/${n}} taart voor Lily.`,doel:[k,n],maat:null,bak:[n,...ander].sort((a,b)=>a-b),dus:`Dus {${k}/${n}} is ${BL_TEL[k]} stukjes van {1/${n}}.`}}}
+  if(t===2){const [a,b,m]=kies([[1,2,4],[1,2,6],[1,2,8],[1,3,6],[2,3,6],[1,4,8],[3,4,8],[1,5,10],[2,5,10]]),c=a*m/b;
+    o={soort:"bouw",tekst:`Lily heeft {${a}/${b}} taart. Leg precies evenveel taart met stukjes van {1/${m}}.`,doel:[a,b],maat:m,bak:[m],ref:[a,b],ghost:true,
+      dus:`Dus {${a}/${b}} = {${c}/${m}}. Het is evenveel taart.`}}
+  if(t===3){let a,b;const s=kies(["noemer","teller","gelijk","anders"]);
+    if(s==="noemer"){const n=kies(BL_N),k1=rr(1,n-1);let k2;do{k2=rr(1,n-1)}while(k2===k1);a=[k1,n];b=[k2,n]}
+    if(s==="teller"){const k=kies([1,1,2]),ns=blSchud([3,4,5,6,8,10].filter(x=>x>k)).slice(0,2);a=[k,ns[0]];b=[k,ns[1]]}
+    if(s==="gelijk"){const p=kies([[1,2,2],[1,2,3],[1,2,4],[1,3,2],[2,3,2],[1,4,2],[1,5,2],[3,4,2]]);a=[p[0],p[1]];b=[p[0]*p[2],p[1]*p[2]]}
+    if(s==="anders"){do{const n1=kies(BL_N),n2=kies(BL_N.filter(x=>x!==n1));a=[rr(1,n1-1),n1];b=[rr(1,n2-1),n2]}while(a[0]*b[1]===b[0]*a[1])}
+    if(Math.random()<.5)[a,b]=[b,a];
+    const v=Math.sign(a[0]*b[1]-b[0]*a[1]),g=v>0?a:b,k=v>0?b:a;
+    o={soort:"vergelijk",tekst:`Wat is meer taart: {${a[0]}/${a[1]}} of {${b[0]}/${b[1]}}?`,a,b,goed:v>0?"a":v<0?"b":"even",
+      dus:v===0?`Dus {${a[0]}/${a[1]}} is evenveel taart als {${b[0]}/${b[1]}}.`:`Dus {${g[0]}/${g[1]}} is meer taart dan {${k[0]}/${k[1]}}.`}}
+  o.trede=t;return o}
+// ---- de taartvorm (SVG) ----
+function blPunt(a,r){const h=a*2*Math.PI;return[110+r*Math.sin(h),110-r*Math.cos(h)]}
+function blWig(a0,a1,attr,dx,dy){dx=dx||0;dy=dy||0;const r=92;
+  if(a1-a0>=.9999)return`<circle cx="${110+dx}" cy="${110+dy}" r="${r}" ${attr}/>`;
+  const p=blPunt(a0,r),q=blPunt(a1,r),g=(a1-a0)>.5?1:0;
+  return`<path d="M${110+dx} ${110+dy}L${(p[0]+dx).toFixed(2)} ${(p[1]+dy).toFixed(2)}A${r} ${r} 0 ${g} 1 ${(q[0]+dx).toFixed(2)} ${(q[1]+dy).toFixed(2)}Z" ${attr}/>`}
+function blVorm(o){
+  let s=`<svg class="bl-vorm${o.klein?" klein":""}${o.past?" past":""}" ${o.id?`id="${o.id}"`:""} viewBox="0 0 220 220"><rect x="2" y="2" width="216" height="216" rx="26" fill="#fdeef0" stroke="#efc3e0" stroke-width="3"/><circle cx="110" cy="110" r="94" fill="#fff" stroke="#5a4a4a" stroke-width="4"/>`;
+  if(o.hulpN>1)for(let i=0;i<o.hulpN;i++){const p=blPunt(i/o.hulpN,92);s+=`<line x1="110" y1="110" x2="${p[0].toFixed(1)}" y2="${p[1].toFixed(1)}" stroke="#d7bfd0" stroke-width="2" stroke-dasharray="5 5"/>`}
+  if(o.ghost)s+=blWig(0,o.ghost[0]/o.ghost[1],`fill="rgba(201,179,234,.28)" stroke="#a991d6" stroke-width="3" stroke-dasharray="8 6"`);
+  let u=0;(o.stukjes||[]).forEach((n,i)=>{const u1=u+BL_EEN/n,a0=u/BL_EEN,a1=u1/BL_EEN;
+    const uit=u1>BL_EEN,voorbij=o.ghost&&u1*o.ghost[1]>o.ghost[0]*BL_EEN;let dx=0,dy=0;
+    if(uit){const m=blPunt((a0+a1)/2,14);dx=m[0]-110;dy=m[1]-110}
+    s+=blWig(a0,a1,`class="bl-p${uit||voorbij?" uit":""}"${o.tik?` data-pi="${i}"`:""}`,dx,dy);u=u1});
+  return s+`</svg>`}
+function blStukSVG(n){return`<svg viewBox="0 0 220 220"><circle cx="110" cy="110" r="92" fill="none" stroke="#e6cfe0" stroke-width="4" stroke-dasharray="7 7"/>${blWig(0,1/n,'class="bl-p"')}</svg>`}
+// ---- staat van de lopende opgave ----
+let BLN=null; // = BL().nu
+function blVandaag(){return new Date().toDateString()}
+function blPlan(){const R=BL();R.dag=blVandaag();R.plan=["opwarm","werk","werk","werk","herhaal"];R.stuk=0;blBewaar()}
+function blTredeVoor(rol){const R=BL(),t=R.trede;
+  if(rol==="opwarm")return Math.max(BL_LAAG,t-1);
+  if(rol==="herhaal"){const oud=[];for(let i=BL_LAAG;i<t;i++)oud.push(i);return oud.length?kies(oud):t}
+  return t}
+function zegB(t,stil){$("#blZeg").textContent=t;if(!stil)spreek(t)}
+function inhB(h){$("#blInhoud").innerHTML=h;$("#blInhoud").scrollTop=0}
+function blKop(){const R=BL(),rol=BLN.rol;
+  const bol=R.plan.map((r,i)=>`<span class="${i<R.stuk?"vol":i===R.stuk&&rol!=="extra"?"nu":""}"></span>`).join("");
+  return`<div class="rvkop"><span class="rvrol">${RV_ROL[rol]}</span><div class="rvbol">${bol}</div></div>`}
+function blTekstHTML(){const T=blTekst(BLN.o.tekst);return`<div class="bl-tekst"><span>${T.html}</span><button class="rvhoor" id="blNog" aria-label="Nog eens voorlezen">🔊</button></div>`}
+function blDusHTML(){const T=blTekst(BLN.o.dus);return`<div class="rvdus">${T.html}</div><div class="rij"><button class="groot g-paars" id="blJa">${BLN.uitkomst==="mis"?"Verder →":"Ja, klopt! →"}</button></div>`}
+function blBind(){const nog=$("#blNog");if(nog)nog.onclick=()=>spreek(blTekst(BLN.o.tekst).spraak);
+  const ja=$("#blJa");if(ja)ja.onclick=e=>{if(BLN.uitkomst!=="mis")hartjes(e.clientX,e.clientY,"💗",7);blAfronden()}}
+// ---- het overzicht: de trap ----
+function blOverzicht(){stopLees();const R=BL();BLN=null;
+  if(R.dag!==blVandaag())blPlan();
+  const lily=`<img class="lilytje" src="${LILY}" alt="Lily">`;
+  let h=`<div class="trap">`+BL_TREDEN.map((t,i)=>{const ster=R.sterren.includes(i),nu=i===R.trede;
+    return`<div class="trede ${ster?"ster":""} ${nu?"nu":""} ${t.klaar?"":"dicht"}" style="margin-left:${i*3}%">${nu?lily:`<span class="nr">${i+1}</span>`}<span>${t.naam}${t.klaar?"":" <small style='font-weight:700;color:#b98aa8'>· binnenkort</small>"}</span><span class="sterren">${ster?"⭐":""}</span></div>`}).join("")+`</div>`;
+  const klaar=R.stuk>=R.plan.length;
+  const knop=R.nu?`<button class="groot g-paars" id="blVerder">Verder met je taart →</button>`:`<button class="groot g-paars" id="blStart">${!klaar&&!R.stuk?"Start ♡":"Verder ♡"}</button>`;
+  inhB(knop+h);const aantal=R.sterren.length;
+  zegB(R.nu?"Je was nog bezig met een taart. Zullen we verder?":klaar?"Fijn dat je er weer bent! Zullen we verder bakken?":aantal?`Kijk wat je al kunt! Je hebt al ${aantal} ster${aantal>1?"ren":""} op je trap.`:"Welkom in het breukenlab! We gaan taarten bakken en delen. Sleep de stukjes in de taartvorm.",true);
+  const v=$("#blVerder");if(v)v.onclick=()=>blToon();
+  const s=$("#blStart");if(s)s.onclick=()=>klaar?blNieuw("extra"):blVolgende()}
+function blVolgende(){const R=BL();if(R.stuk>=R.plan.length){blKlaarVandaag();return}blNieuw(R.plan[R.stuk])}
+function blNieuw(rol){const R=BL(),t=blTredeVoor(rol);
+  R.nu={rol,o:blMaak(t),stukjes:[],poging:0,weg:[],klaar:false,uitkomst:null};blBewaar();blToon()}
+function blToon(){BLN=BL().nu;if(!BLN){blOverzicht();return}
+  ({bouw:blBouw,benoem:blBenoem,vergelijk:blVergelijk})[BLN.o.soort]();
+  if(!BLN.klaar&&!blToon.stil)setTimeout(()=>{if(BLN)zegB(blTekst(BLN.o.tekst).spraak)},200);blToon.stil=false}
+// ---- bouwen: stukjes in de taartvorm ----
+function blBouw(){const o=BLN.o,R=BL(),hulp=!!R.hulp[o.trede];
+  let h=blKop()+blTekstHTML()+`<div class="bl-werk">`;
+  if(o.ref)h+=`<div class="bl-ref">${blVorm({stukjes:Array(o.ref[0]).fill(o.ref[1]),klein:true})}<div class="bl-onder">Lily heeft ${brHTML(o.ref[0],o.ref[1])}</div></div>`;
+  h+=`<div id="blVormVak"></div>`;
+  if(!BLN.klaar)h+=`<div class="bl-bak">${o.bak.map(n=>`<button class="bl-stuk" data-n="${n}" aria-label="Stukje van ${brWoord(1,n)}">${blStukSVG(n)}${brHTML(1,n)}</button>`).join("")}</div></div>
+    <div class="rij"><button class="groot g-roze" id="blLeeg">↺ Opnieuw</button><button class="groot g-paars" id="blKlaar">Klaar ✓</button></div>`;
+  else h+=`</div>`+blDusHTML();
+  inhB(h);blTekenVorm(hulp);blBind();
+  if(BLN.klaar)return;
+  $$(".bl-stuk").forEach(blSleep);
+  $("#blLeeg").onclick=()=>{BLN.stukjes=[];blBewaar();blTekenVorm(hulp)};
+  $("#blKlaar").onclick=blCheck}
+function blTekenVorm(hulp){const o=BLN.o,vak=$("#blVormVak");if(!vak)return;
+  const ghost=o.ghost||BLN.poging>0||BLN.klaar?o.doel:null;
+  vak.innerHTML=blVorm({id:"blVorm",klein:BLN.klaar,stukjes:BLN.stukjes,ghost,hulpN:hulp?(o.maat||o.doel[1]):0,tik:!BLN.klaar,past:BLN.klaar&&BLN.uitkomst!=="mis"});
+  if(BLN.klaar)return;
+  $$("#blVorm [data-pi]").forEach(p=>p.onclick=()=>{BLN.stukjes.splice(+p.dataset.pi,1);blBewaar();blTekenVorm(hulp)})}
+function blSleep(knop){knop.onpointerdown=e=>{if(e.button>0)return;e.preventDefault();const n=+knop.dataset.n,vorm=$("#blVorm");if(!vorm)return;
+  const W=vorm.getBoundingClientRect().width,sc=W/220;
+  const vl=document.createElement("div");vl.className="bl-vlieg";vl.style.width=vl.style.height=W+"px";vl.innerHTML=`<svg viewBox="0 0 220 220">${blWig(0,1/n,'class="bl-p"')}</svg>`;
+  // het zwaartepunt van het stukje komt onder de vinger
+  const th=2*Math.PI/n,d=(4*92*Math.sin(th/2))/(3*th),c=blPunt(.5/n,d),ox=(c[0]-110)*sc,oy=(c[1]-110)*sc;
+  const x0=e.clientX,y0=e.clientY;let bewogen=false;
+  const zet=(x,y)=>{vl.style.left=(x-ox)+"px";vl.style.top=(y-oy)+"px"};
+  const boven=(x,y)=>{const r=vorm.getBoundingClientRect();return x>r.left&&x<r.right&&y>r.top&&y<r.bottom};
+  try{knop.setPointerCapture(e.pointerId)}catch(_){}
+  zet(x0,y0);
+  knop.onpointermove=ev=>{if(!bewogen&&Math.hypot(ev.clientX-x0,ev.clientY-y0)>8){bewogen=true;document.body.appendChild(vl)}
+    if(bewogen){zet(ev.clientX,ev.clientY);vorm.classList.toggle("doel",boven(ev.clientX,ev.clientY))}};
+  const eind=ev=>{knop.onpointermove=knop.onpointerup=knop.onpointercancel=null;vl.remove();vorm.classList.remove("doel");
+    if(ev.type==="pointercancel")return;if(!bewogen||boven(ev.clientX,ev.clientY))blLeg(n)};
+  knop.onpointerup=eind;knop.onpointercancel=eind}}
+function blLeg(n){if(!BLN||BLN.klaar)return;if(BLN.stukjes.length>=24)return;BLN.stukjes.push(n);blBewaar();blTekenVorm(!!BL().hulp[BLN.o.trede])}
+function blGoedeStukjes(o){return o.maat?Array(o.doel[0]*o.maat/o.doel[1]).fill(o.maat):Array(o.doel[0]).fill(o.doel[1])}
+function blCheck(){const o=BLN.o;
+  if(!BLN.stukjes.length){zegB("Sleep eerst een stukje taart in de taartvorm. Je mag er ook op tikken.");return}
+  const tot=BLN.stukjes.reduce((s,n)=>s+BL_EEN/n,0),doel=o.doel[0]*BL_EEN/o.doel[1],maatOk=!o.maat||BLN.stukjes.every(n=>n===o.maat);
+  if(tot===doel&&maatOk){blKlaar(true);return}
+  BLN.poging++;
+  if(BLN.poging>=2){BLN.stukjes=blGoedeStukjes(o);blKlaar(false);return}
+  const tip=tot>doel?"Kijk maar, het steekt uit. Tik op een stukje om het terug te leggen.":tot<doel?"Kijk maar, er is nog een gaatje. Er past nog wat bij.":`Het past precies! Maar Lily wil alleen stukjes van ${brWoord(1,o.maat)}. Ruil de andere stukjes maar.`;
+  blBewaar();blToon.stil=true;blToon();zegB(tip)}
+// goed = eerste keer goed, bijna = tweede keer goed, mis = twee keer mis (dan laat Lily het zien)
+function blKlaar(goed){BLN.klaar=true;BLN.uitkomst=goed?(BLN.poging?"bijna":"goed"):"mis";blBewaar();blToon.stil=true;blToon();
+  const dus=blTekst(BLN.o.dus).spraak;
+  zegB(goed?(BLN.o.soort==="bouw"?"Ja! Het past precies. ":"Ja, goed gezien! ")+dus+" Klopt dat?":"Kijk, zo ziet het eruit. "+dus+" De volgende keer lukt het vast.")}
+// ---- benoemen: welke breuk zie je? ----
+function blBenoem(){const o=BLN.o,R=BL(),hulp=!!R.hulp[o.trede]||BLN.poging>0||BLN.klaar;
+  let h=blKop()+blTekstHTML()+`<div class="bl-werk">${blVorm({stukjes:Array(o.toon[0]).fill(o.toon[1]),hulpN:hulp?o.toon[1]:0,past:BLN.klaar&&BLN.uitkomst!=="mis"})}`;
+  if(BLN.klaar)h+=`</div>`+blDusHTML();
+  else h+=`<div class="bl-kant"><div class="rvweet">Dit is … van de taart.</div><div class="bl-kaarten">${o.kaarten.map((c,i)=>`<div class="regel"><button class="bl-kaart ${BLN.weg.includes(i)?"weg":""}" data-kaart="${i}" aria-label="${brWoord(c[0],c[1])}">${brHTML(c[0],c[1])}</button><button class="rvhoor" data-hoor="${i}" aria-label="Lees voor">🔊</button></div>`).join("")}</div></div></div>`;
+  inhB(h);blBind();if(BLN.klaar)return;
+  $$("[data-hoor]").forEach(b=>b.onclick=()=>{const c=o.kaarten[+b.dataset.hoor];spreek("Dit is "+brWoord(c[0],c[1])+" van de taart.")});
+  $$("[data-kaart]").forEach(b=>b.onclick=()=>{const i=+b.dataset.kaart,c=o.kaarten[i];if(BLN.weg.includes(i))return;
+    if(c[0]===o.doel[0]&&c[1]===o.doel[1]){blKlaar(true);return}
+    BLN.weg.push(i);BLN.poging++;if(BLN.poging>=2){blKlaar(false);return}
+    blBewaar();blToon.stil=true;blToon();zegB("Kijk eens naar de stippellijntjes. In hoeveel stukjes past de hele taart? En hoeveel rode stukjes liggen er?")})}
+// ---- vergelijken: wat is meer? ----
+function blVergelijk(){const o=BLN.o,R=BL(),toon=!!R.hulp[o.trede]||BLN.poging>0||BLN.klaar;
+  const kaart=(x,key)=>`<button class="bl-kaart ${BLN.weg.includes(key)?"weg":""} ${BLN.klaar&&o.goed===key?"gekozen":""}" data-vk="${key}" aria-label="${brWoord(x[0],x[1])}">${brHTML(x[0],x[1])}</button>`;
+  const cirkel=x=>toon?blVorm({stukjes:Array(x[0]).fill(x[1]),klein:true}):"";
+  let h=blKop()+blTekstHTML()+`<div class="bl-werk bl-vgl"><div class="bl-kant">${cirkel(o.a)}${kaart(o.a,"a")}</div>
+    <div class="bl-kant"><button class="groot g-geel ${BLN.klaar&&o.goed==="even"?"gekozen":""}" data-vk="even" ${BLN.weg.includes("even")?'style="opacity:.35;box-shadow:none"':""}>Evenveel</button></div>
+    <div class="bl-kant">${cirkel(o.b)}${kaart(o.b,"b")}</div></div>`;
+  h+=BLN.klaar?blDusHTML():`<div class="rvweet">Tik op wat meer taart is.</div>`;
+  inhB(h);blBind();if(BLN.klaar)return;
+  $$("[data-vk]").forEach(b=>b.onclick=()=>{const k=b.dataset.vk;if(BLN.weg.includes(k))return;
+    if(k===o.goed){blKlaar(true);return}
+    BLN.weg.push(k);BLN.poging++;if(BLN.poging>=2){blKlaar(false);return}
+    blBewaar();blToon.stil=true;blToon();zegB("Kijk maar, ik heb de taarten erbij gelegd. Waar ligt meer rood?")})}
+// ---- afronden en de trap ----
+function blAfronden(){const R=BL(),n=R.nu,t=n.o.trede,uit=n.uitkomst||"mis";
+  const nw=new Date();R.log.push({iso:nw.toISOString(),datum:nw.toLocaleDateString("nl-NL"),tijd:nw.toTimeString().slice(0,5),trede:t,rol:n.rol,uitkomst:uit,vraag:blTekst(n.o.tekst).spraak});if(R.log.length>300)R.log=R.log.slice(-300);
+  let bericht="";
+  if(n.rol==="werk"||n.rol==="extra"){
+    if(uit==="goed"){R.goed++;R.mis=0;if(R.goed>=3)bericht=blOmhoog()}
+    else if(uit==="mis"){R.goed=0;R.mis++;if(R.mis>=2)bericht=blOmlaag()}}
+  else if(uit==="goed"){R.reeks[t]=(R.reeks[t]||0)+1;if(R.reeks[t]>=3&&!R.sterren.includes(t)){R.sterren.push(t);bericht="Je hebt een ster verdiend op je trap! ⭐"}}
+  if(n.rol!=="extra")R.stuk++;R.nu=null;BLN=null;blBewaar();
+  if(bericht){blTussen(bericht);return}
+  if(n.rol==="extra"||R.stuk>=R.plan.length){blKlaarVandaag();return}
+  blVolgende()}
+function blOmhoog(){const R=BL(),t=R.trede;R.goed=0;R.mis=0;if(!R.sterren.includes(t))R.sterren.push(t);R.hulp[t]=false;
+  if(t<BL_HOOG){R.trede=t+1;const st=geefSticker();return`Drie keer goed! Je klimt een trede hoger: ${BL_TREDEN[t+1].naam}.${st}`}
+  return"Drie keer goed! Je kunt alles wat er nu op je trap staat. Er komen nog nieuwe treden bij."}
+function blOmlaag(){const R=BL(),t=R.trede;R.goed=0;R.mis=0;R.terug[t]=(R.terug[t]||0)+1;
+  if(t>BL_LAAG)R.trede=t-1;R.hulp[R.trede]=true;
+  return"We doen even een trede lager, met hulplijntjes in de taart. Zo wordt jouw trap extra stevig."}
+function blTussen(t){inhB(`<div class="rvdus">${esc(t)}</div><button class="groot g-paars" id="blDoor">Verder →</button>`);zegB(t);
+  $("#blDoor").onclick=()=>{const R=BL();if(R.stuk>=R.plan.length)blKlaarVandaag();else blVolgende()}}
+// geen dagrem: na de eerste ronde één snoepje per dag, daarna gaat het gewoon door op haar eigen trede
+function blKlaarVandaag(){const R=BL();
+  if(R.klaarDag!==blVandaag()){R.klaarDag=blVandaag();S.snoep++;toonBadges();blBewaar();
+    inhB(`<div class="rvdus">Wat knap van je! Je krijgt een snoepje voor mij.</div><button class="groot g-paars" id="blDoor">Verder →</button>`);
+    zegB("Wat knap van je! Je krijgt een snoepje voor mij.");$("#blDoor").onclick=()=>blNieuw("extra");return}
+  blNieuw("extra")}
+$("#blTerug").onclick=()=>{stopLees();if(BLN)blOverzicht();else sluit()};
+$("#blZeg").onclick=()=>spreek($("#blZeg").textContent);
+// ---- mama kijkt mee ----
+function toonMamaBl(){const el=$("#mamaBl");if(!el)return;const R=BL(),t=BL_TREDEN[R.trede];
+  const opties=BL_TREDEN.map((x,i)=>x.klaar?`<option value="${i}" ${i===R.trede?"selected":""}>${i+1}. ${esc(x.mama)} (${x.groep})</option>`:"").join("");
+  const terug=Object.keys(R.terug).filter(k=>R.terug[k]).map(k=>`${esc(BL_TREDEN[k].mama)}: ${R.terug[k]}×`).join(" · ")||"nog nergens";
+  const ico={goed:"✅ goed",bijna:"🟡 bijna (2e poging)",mis:"↩︎ lukte nog niet"};
+  const log=R.log.slice(-10).reverse().map(l=>`<tr><td>${esc(l.datum)} ${esc(l.tijd)}</td><td>${l.trede+1}</td><td>${esc(RV_ROL[l.rol]||l.rol)}</td><td>${esc(l.vraag)}</td><td>${ico[l.uitkomst]||l.uitkomst}</td></tr>`).join("")||"<tr><td colspan=5>Nog geen opgaven gedaan.</td></tr>";
+  el.innerHTML=`<div><b>Nu op trede ${R.trede+1}:</b> ${esc(t.mama)} — schatting <b>${t.groep}</b>${R.hulp[R.trede]?" · hulplijntjes staan aan":""}</div>
+    <div>Werktrede: ${R.goed} van 3 goed op rij · terugzakken: ${terug}</div>
+    <div class="rij" style="justify-content:flex-start;margin-top:8px"><select class="invoer" id="blInstap">${opties}</select><button class="groot g-paars" id="blZetInstap">Zet Nova hierop</button></div>
+    <div style="max-height:220px;overflow:auto;margin-top:8px"><table><thead><tr><th>Wanneer</th><th>Trede</th><th>Stukje</th><th>Opgave</th><th>Uitkomst</th></tr></thead><tbody>${log}</tbody></table></div>
+    <div style="color:#9a8db0;margin-top:6px;font-size:15px">Treden 1 t/m 4 zijn gebouwd; de rest volgt. Naar de Sheet (tabblad Oefenen) komt in een volgende stap.</div>`;
+  $("#blZetInstap").onclick=()=>{const n=+$("#blInstap").value;if(n===R.trede){meld("Nova staat al op deze trede");return}R.instap=n;R.trede=n;R.goed=0;R.mis=0;R.nu=null;blBewaar();toonMamaBl();meld("Nova begint nu op trede "+(n+1))}}
+
+// ---------- start ----------
+pasStijl();toonTaken();toonBadges();verstop();leesScript().then(()=>{toonTaken();verstuur()});
+if(S.scherm&&S.scherm!=="home"&&S.scherm!=="mama"&&S.scherm!=="topo"){const waar=S.scherm;const namen={verhaal:"het rekenverhaal",breuk:"het breukenlab",tafels:"de tafels",blokjes:"Blokjes kleuren",teken:"je tekening",camera:"je opdracht",stickers:"je stickerboek",snoep:"de snoepjes",bubbel:"je bubbel",help:"hulp"};
+  zegHome("Zullen we verdergaan waar je was? Bij "+(namen[waar]||"je werkje")+".",{tekst:"Ja, verder ♡",doe:()=>open(waar)})}
+else{const u=new Date().getHours();zegHome(u<12?"Goedemorgen! Hoe voel je je?":u<18?"Hoi! Fijn dat je er bent. Hoe voel je je?":"Goedenavond! Hoe voel je je?")}
+S.scherm="home";bewaar();
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nova's app met Lily</title>
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Nova &amp; Lily">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#fdf3f6">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--s:1;--ink:#4a3f4f;--bg:#fdf3f6;--card:rgba(255,255,255,.94);--line:#f6dbe6;--paars:#c9b3ea;--paarsd:#4b3878;--roze:#fde4ee;--rozed:#a2405f}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--ink);font-size:calc(18px*var(--s));overflow:hidden;
+background-color:var(--bg);
+background-image:repeating-linear-gradient(0deg,rgba(244,185,207,.22) 0 26px,transparent 26px 52px),repeating-linear-gradient(90deg,rgba(244,185,207,.22) 0 26px,transparent 26px 52px);
+padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+body.donker{--ink:#f1e6f3;--bg:#2c2433;--card:rgba(60,48,70,.95);--line:#5a4866;--roze:#5a3a4c;--rozed:#ffc2d6;--paarsd:#e6dbff}
+body.donker .icon,body.donker .w{filter:saturate(.9)}
+button{font-family:inherit;color:inherit;border:none;background:none;cursor:pointer;font-size:inherit}
+.app{position:fixed;inset:0;display:flex;flex-direction:column;padding:12px 24px 16px;overflow:auto}
+.top{display:flex;justify-content:space-between;align-items:center;min-height:46px}
+.mama{font-weight:700;color:#b98aa8;font-size:calc(16px*var(--s));padding:8px 4px}
+.tools{display:flex;gap:10px}
+.tool{width:46px;height:46px;border-radius:50%;background:var(--card);border:2px solid var(--line);font-weight:800;color:#b07a99;font-size:16px;display:flex;align-items:center;justify-content:center}
+.widgets{display:grid;grid-template-columns:1fr 1fr 1fr 1.25fr 1fr;gap:20px;margin-top:34px}
+.w{position:relative;background:var(--card);border-radius:34px;border:2.5px solid var(--line);box-shadow:0 6px 0 rgba(200,150,175,.18);min-height:240px;padding:16px}
+.w-lily{background:#fde9f1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-top:0}
+body.donker .w-lily{background:#5a3a4c}
+.w-lily img{position:absolute;left:50%;transform:translateX(-50%);top:-40px;width:78%;max-width:220px;pointer-events:none}
+.w-lily .hoi{font-size:calc(24px*var(--s));font-weight:800;color:#7a5fae;position:relative;z-index:2;text-align:center}
+.lilybubble{position:relative;z-index:2;background:#fff;color:#4a3f4f;border:2px solid #f4b9cf;border-radius:18px;padding:6px 12px;font-weight:700;font-size:calc(16px*var(--s));text-align:center;margin-top:4px}
+.lilybubble button{display:block;margin:6px auto 0;background:#c9b3ea;color:#3f2f63;border-radius:14px;padding:6px 14px;font-weight:800}
+.w-klok{background:#f3edfc;border-color:#e2d5f6;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#4b3878}
+body.donker .w-klok{background:#3e3456;color:#e6dbff}
+.dag{font-size:calc(22px*var(--s));font-weight:800;color:#8a72b8}
+.tijd{font-size:calc(62px*var(--s));font-weight:800;line-height:1;margin-top:4px;font-variant-numeric:tabular-nums}
+.nog{font-size:calc(17px*var(--s));font-weight:700;margin-top:12px;background:#fff;color:#6b5a90;border-radius:18px;padding:5px 14px}
+.w-kal{padding:0;overflow:hidden}
+.kalkop{background:#fff;padding:12px 18px 6px;font-size:calc(20px*var(--s));font-weight:800;color:#a2405f;display:flex;justify-content:space-between}
+.kalkop span:last-child{color:#d79ab4}
+.kalbody{background:#fde4ee;padding:6px 10px 12px;height:100%}
+body.donker .kalbody{background:#5a3a4c}body.donker .kalkop{background:#4a3a52}
+.kal{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;font-weight:700;font-size:calc(16px*var(--s));row-gap:2px}
+.kal .h{font-size:calc(13px*var(--s));font-weight:800;color:#b98aa8}
+.kal .vd{display:inline-flex;width:32px;height:32px;border-radius:50%;background:#fff;border:2.5px solid #f08fa8;align-items:center;justify-content:center;color:#a2405f;font-weight:800}
+.w-weer{background:#eaf4fd;border-color:#c9dbf1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#3d5f8f}
+body.donker .w-weer{background:#2f3e55;color:#cfe2ff}
+.weericoon{width:96px;height:80px}
+.graden{font-size:calc(40px*var(--s));font-weight:800;line-height:1}
+.weertekst{font-size:calc(17px*var(--s));font-weight:700;margin-top:4px}
+.weertip{font-size:calc(15px*var(--s));font-weight:700;margin-top:8px;background:#fff;color:#3d5f8f;border-radius:16px;padding:4px 12px}
+.weerdag{display:flex;gap:10px;margin-top:8px;font-size:calc(14px*var(--s));font-weight:700}
+.weerdag div{display:flex;flex-direction:column;align-items:center}
+.weerdag svg{width:30px;height:26px}
+.w-van{background:#fff6ec;border-color:#f6d9bd}
+body.donker .w-van{background:#4d3a33}
+.w-van h3{font-size:calc(22px*var(--s));font-weight:800;color:#a8622e}
+.taak{display:flex;align-items:center;gap:10px;border-bottom:2px dashed #f2d6bd;padding:9px 0;font-weight:700;width:100%;text-align:left}
+.taak .c{flex:none;width:28px;height:28px;border-radius:50%;border:2.5px solid #efb88a;background:#fff;display:flex;align-items:center;justify-content:center}
+.taak.af .c{background:#f6c79a}.taak.af span{color:#b9a08c}
+.seizoen{position:absolute;right:12px;top:-18px;font-size:34px}
+.leeg{color:#b9a08c;font-weight:700;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:18px;margin-top:34px;justify-items:center}
+.appbtn{display:flex;flex-direction:column;align-items:center;width:100%;max-width:132px}
+.icon{width:108px;height:108px;border-radius:32px;display:flex;align-items:center;justify-content:center;background:#fff;border:2.5px solid #f3dcea;box-shadow:0 5px 0 rgba(200,150,175,.15);position:relative;transition:transform .15s}
+.appbtn:active .icon{transform:scale(.94)}
+.lbl{font-size:calc(18px*var(--s));font-weight:800;margin-top:8px;text-align:center;line-height:1.15}
+.badge{position:absolute;top:-10px;right:-10px;background:#f08fa8;color:#fff;font-weight:800;font-size:15px;border-radius:14px;padding:2px 9px;border:2.5px solid #fff}
+.dockwrap{margin-top:auto;padding-top:24px;display:flex;justify-content:center}
+.dock{display:flex;gap:14px;align-items:center;background:var(--card);border:2px solid var(--line);border-radius:48px;padding:12px 16px;flex-wrap:wrap;justify-content:center}
+.sep{width:2px;height:44px;background:var(--line);border-radius:2px}
+.cam{height:66px;padding:0 26px;border-radius:34px;background:#c9b3ea;border:3px solid #a991d6;color:#3f2f63;display:flex;align-items:center;gap:10px;font-size:calc(21px*var(--s));font-weight:800;box-shadow:0 4px 0 #a991d6;cursor:pointer}
+.face{width:64px;height:64px;border-radius:50%;border:2.5px solid;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+.face.gekozen{transform:scale(1.12);box-shadow:0 0 0 4px #fff,0 0 0 7px #f08fa8}
+.bb{height:62px;padding:0 26px;border-radius:32px;display:flex;align-items:center;gap:10px;font-size:calc(20px*var(--s));font-weight:800;border:2.5px solid}
+.lees{background:#eef4fc;border-color:#c9dbf1;color:#3d5f8f}
+.help{background:#fde8f0;border-color:#f4b9cf;color:#a2405f}
+.schat{position:absolute;font-size:22px;opacity:.55;animation:twinkle 2.4s infinite;z-index:3;padding:8px}
+@keyframes twinkle{50%{opacity:.95;transform:scale(1.15)}}
+@media (orientation:portrait){
+ .widgets{grid-template-columns:1fr 1fr;gap:22px}
+ .w-weer{grid-column:1/-1;flex-direction:row;gap:18px;min-height:150px;flex-wrap:wrap}
+ .grid{grid-template-columns:repeat(4,1fr);row-gap:26px}
+ .bb,.cam{flex-direction:column;height:auto;padding:8px 16px;gap:2px;font-size:calc(16px*var(--s));border-radius:24px}
+}
+@media (max-width:700px){
+ .kal{font-size:13px}.kal .vd{width:24px;height:24px}.kalkop{font-size:16px;padding:10px 10px 4px}
+ .app{padding:10px 12px 12px}
+ .widgets{gap:14px}.w{min-height:200px;border-radius:26px}
+ .tijd{font-size:calc(52px*var(--s))}
+ .icon{width:84px;height:84px;border-radius:26px}.appbtn{width:100px}
+ .face{width:52px;height:52px}.face svg{width:38px}
+ .dock{gap:8px;padding:8px}.sep{display:none}
+}
+/* sheets */
+.sheet{position:fixed;inset:0;background:var(--bg);background-image:inherit;display:none;flex-direction:column;z-index:20;padding:14px 20px 18px}
+.sheet.open{display:flex}
+.kop{display:flex;align-items:center;gap:14px}
+.terug{height:56px;padding:0 22px;border-radius:28px;background:var(--card);border:2.5px solid var(--line);font-weight:800;font-size:calc(19px*var(--s))}
+.kop h2{font-size:calc(26px*var(--s));font-weight:800;color:#7a5fae}
+.lilyhoek{display:flex;align-items:flex-end;gap:10px;margin-top:10px}
+.lilyhoek img{width:96px;flex:none}
+.zeg{background:var(--card);border:2.5px solid #f4b9cf;border-radius:22px 22px 22px 6px;padding:10px 16px;font-weight:700;font-size:calc(19px*var(--s));line-height:1.35;max-width:640px}
+.inhoud{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;overflow:auto;padding:10px 0}
+.groot{min-height:64px;padding:0 30px;border-radius:32px;font-weight:800;font-size:calc(21px*var(--s));border:3px solid;display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer}
+.g-paars{background:#c9b3ea;border-color:#a991d6;color:#3f2f63;box-shadow:0 4px 0 #a991d6}
+.g-roze{background:#fde4ee;border-color:#f4b9cf;color:#a2405f;box-shadow:0 4px 0 #f4b9cf}
+.g-mint{background:#e3f5ee;border-color:#b6e2d0;color:#2f6b55;box-shadow:0 4px 0 #b6e2d0}
+.g-geel{background:#fff4d6;border-color:#f3dc9c;color:#8a6a1e;box-shadow:0 4px 0 #f3dc9c}
+.rij{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+/* blokjes */
+.woordplaat{font-size:calc(30px*var(--s));font-weight:800;letter-spacing:2px}
+.blokken{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.blok{display:flex;border:3px solid #4a3f4f;border-radius:8px;overflow:hidden;background:#fff;min-height:84px;transition:transform .2s}
+.blok span{min-width:56px;padding:0 6px;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:#1f2a44;border-right:2px solid rgba(74,63,79,.35)}
+.blok span:last-child{border-right:none}
+.blok::after{content:"";width:8px;background:rgba(74,63,79,.25)}
+.wiebel{animation:wiebel .35s}
+@keyframes wiebel{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.verf{width:76px;height:76px;border-radius:50%;border:4px solid #4a3f4f;box-shadow:0 4px 0 rgba(0,0,0,.15)}
+.verf.aan{outline:5px solid #f08fa8;outline-offset:4px}
+/* tekenen */
+.tekenvak{flex:1;min-height:0;height:0;width:100%;background:#fff;border-radius:24px;border:3px solid #f3dcea;touch-action:none;display:block}
+.kleur{width:50px;height:50px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #e6cfe0}
+.kleur.aan{box-shadow:0 0 0 4px #f08fa8}
+.dikte{width:54px;height:54px;border-radius:50%;background:#fff;border:2.5px solid #f3dcea;display:flex;align-items:center;justify-content:center}
+.dikte.aan{border-color:#f08fa8;border-width:4px}
+.tekenbalk{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:center;margin:10px 0}
+.studio{flex:1;min-height:0;display:flex;gap:10px}
+.gereedschap{display:flex;flex-direction:column;gap:8px;overflow:auto}
+.kwast{width:74px;min-height:64px;border-radius:18px;background:#fff;border:2.5px solid #f3dcea;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:24px;font-weight:800;padding:4px}
+.kwast span{font-size:12px;font-weight:800}
+.kwast.aan{border-color:#f08fa8;border-width:4px;background:#fdeef8}
+.doekvak{flex:1;position:relative;background:#fff;border-radius:24px;border:3px solid #f3dcea;overflow:hidden;touch-action:none}
+.doekvak canvas{position:absolute;left:0;top:0;touch-action:none}
+.volknop{margin-left:auto;height:56px;padding:0 20px;border-radius:28px;background:var(--card);border:2.5px solid var(--line);font-weight:800;font-size:calc(18px*var(--s));color:#7a5fae}
+#volUit{display:none;position:fixed;top:calc(8px + env(safe-area-inset-top));right:12px;z-index:60;height:50px;padding:0 20px;border-radius:25px;background:#fff;border:2.5px solid #c9b3ea;font-weight:800;font-size:17px;color:#4b3878;box-shadow:0 3px 0 #c9b3ea}
+body.vol #volUit{display:block}
+body.vol .sheet.open .kop{display:none}
+body.vol .sheet{padding:8px 10px 10px}
+.alleenVol{display:none!important}body.vol .alleenVol{display:inline-flex!important}
+body.vol #tekenbalk{margin:2px 0 6px;gap:6px;padding-right:170px;justify-content:flex-start}
+body.vol #s-teken .kleur{width:40px;height:40px}
+body.vol #s-teken .tekenbalk .groot{min-height:50px;padding:0 18px;font-size:17px}
+body.vol #s-teken .tekenbalk:last-child{margin:6px 0 0}
+body.vol .studio{gap:8px}
+body.vol .kwast{width:62px;min-height:56px;font-size:21px}
+body.vol .paneel{display:none}
+body.vol.paneelOpen .paneel{display:flex;flex-direction:column;flex-wrap:nowrap;position:absolute;right:18px;top:64px;bottom:76px;width:220px;z-index:30;background:var(--card);border:2.5px solid #c9b3ea;border-radius:22px;padding:12px;box-shadow:0 8px 24px rgba(75,56,120,.18)}
+body.vol.paneelOpen .paneel .stickerbak{grid-template-columns:repeat(3,1fr)}
+body.vol.paneelOpen .paneel #lagen{flex-direction:column}
+.kleurenSet{display:contents}.kleurKnop{display:none}.volKort{display:none}
+.gereedschap{scrollbar-width:none}.gereedschap::-webkit-scrollbar{display:none}
+@media (max-width:700px){
+ body.vol #tekenbalk{flex-wrap:nowrap;padding-right:118px;gap:10px}
+ body.vol .kleurKnop{display:inline-flex;flex:none;align-items:center;gap:8px;height:52px;padding:0 14px 0 6px;border-radius:26px;background:#fff;border:2.5px solid #f3dcea;font-weight:800;font-size:17px;color:var(--ink)}
+ body.vol .kleurKnop i{width:40px;height:40px;border-radius:50%;display:block;border:3px solid #fff;box-shadow:0 0 0 2px #e6cfe0}
+ body.vol .kleurenSet{display:none}
+ body.vol.kleurOpen .kleurenSet{display:grid;grid-template-columns:repeat(4,54px);gap:12px;position:absolute;top:70px;left:10px;z-index:35;background:var(--card);border:2.5px solid #c9b3ea;border-radius:22px;padding:14px;box-shadow:0 8px 24px rgba(75,56,120,.18)}
+ body.vol.kleurOpen .kleurenSet .kleur{width:54px;height:54px}
+ body.vol .dikteschuif{width:auto;flex:1;min-width:70px}
+ body.vol #volUit{height:46px;padding:0 14px;font-size:16px}
+ body.vol .volLang{display:none}body.vol .volKort{display:inline}
+ body.vol #s-teken .tekenbalk:last-child{gap:8px}
+ body.vol #s-teken .tekenbalk:last-child{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ body.vol #s-teken .tekenbalk .groot{min-height:48px;padding:4px 8px;font-size:16px;border-width:2.5px;line-height:1.1;text-align:center}
+}
+.paneel{width:170px;display:flex;flex-direction:column;gap:6px;overflow:auto}
+.ptitel{font-weight:800;color:#a2405f;font-size:15px;margin-top:4px}
+.laag{display:flex;align-items:center;gap:6px;background:#fff;border:2.5px solid #f3dcea;border-radius:14px;padding:6px 8px;font-weight:800;font-size:15px;width:100%}
+.laag.aan{border-color:#c9b3ea;background:#f3edfc}
+.laag .oog{margin-left:auto;font-size:18px}
+.laag.verborgen{opacity:.5}
+.stickerbak{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.stickerbak button{font-size:30px;height:48px;border-radius:12px;background:#fff;border:2px solid #f3dcea}
+.stickerbak button.aan{border-color:#f08fa8;border-width:3px}
+.maat{height:40px;padding:0 10px;border-radius:12px;background:#fff;border:2px solid #f3dcea;font-weight:800}
+.maat.aan{border-color:#f08fa8}
+.dikteschuif{width:160px;accent-color:#c9b3ea}
+@media (orientation:portrait){.studio{flex-direction:column}.gereedschap{flex-direction:row;overflow-x:auto}.kwast{min-width:64px}.paneel{width:100%;flex-direction:row;flex-wrap:wrap;align-items:flex-start}.paneel .ptitel{width:100%}#lagen{display:flex;gap:6px;width:100%}.stickerbak{grid-template-columns:repeat(6,1fr);width:100%}.doekvak{min-height:45vh}}
+/* stickers */
+.stickerboek{display:grid;grid-template-columns:repeat(4,110px);gap:18px}
+.sticker{width:110px;height:110px;border-radius:50%;background:#fff;border:3px dashed #f4b9cf;display:flex;align-items:center;justify-content:center;font-size:58px}
+.sticker.dicht{font-size:34px;color:#e2c8d6;background:#fdf3f6}
+.hartjes{position:fixed;pointer-events:none;font-size:34px;animation:op 1.4s forwards;z-index:50}
+@keyframes op{to{transform:translateY(-160px) scale(1.4);opacity:0}}
+.hup{animation:hup .5s 2}
+@keyframes hup{50%{transform:translateY(-24px)}}
+/* tafels */
+.tafelrij{display:grid;grid-template-columns:repeat(5,92px);gap:14px}
+.tafelknop{width:92px;height:92px;border-radius:50%;border:3px solid #efc3e0;background:#fff;font-size:34px;font-weight:800;color:#7a5fae;position:relative}
+.tafelknop.kan{background:#fbd96b;border-color:#e8b93a;color:#6a4b00}
+.tafelknop .ster{position:absolute;bottom:-4px;right:-4px;font-size:22px}
+.tafelknop .vul{position:absolute;left:8px;right:8px;bottom:10px;height:8px;border-radius:4px;background:#f6dbe6;overflow:hidden}
+.tafelknop .vul i{display:block;height:100%;background:#f08fa8}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.tab{min-height:54px;padding:0 22px;border-radius:28px;border:2.5px solid #efc3e0;background:#fff;font-weight:800;font-size:calc(19px*var(--s))}
+.tab.aan{background:#c9b3ea;border-color:#a991d6;color:#3f2f63}
+.sommen{display:grid;grid-template-columns:repeat(2,minmax(180px,1fr));gap:10px;width:min(480px,100%)}
+.som{display:flex;justify-content:space-between;align-items:center;background:#fff;border:2.5px solid #f3dcea;border-radius:18px;padding:10px 16px;font-size:calc(24px*var(--s));font-weight:800}
+.som small{font-size:calc(14px*var(--s));color:#b98aa8;font-weight:700}
+.som.geleerd{border-color:#fbd96b;background:#fffaf0}
+.somgroot{font-size:calc(64px*var(--s));font-weight:800;color:#4b3878;letter-spacing:2px}
+.antw{width:120px;height:96px;border-radius:28px;font-size:44px;font-weight:800;border:3px solid #c9b3ea;background:#fff;color:#4b3878;box-shadow:0 4px 0 #c9b3ea}
+.antw.goed{background:#e3f5ee;border-color:#8fd3b6}
+.groepjes{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:720px}
+.groepje{display:grid;grid-template-columns:repeat(5,16px);gap:5px;padding:9px;border-radius:14px;background:#fff;border:2.5px solid #efc3e0}
+.groepje i{width:16px;height:16px;border-radius:50%;background:#f08fa8;display:block}
+.staafjes{display:flex;flex-direction:column;gap:6px;align-items:center}
+.staafje{display:flex;gap:2px;padding:3px 6px;border-radius:12px;position:relative;background:linear-gradient(#b9aa9a,#b9aa9a) center/100% 2px no-repeat}
+.staafje .hk{width:24px;height:22px;display:block}
+.voortgang{display:flex;gap:6px}
+.voortgang span{width:22px;height:22px;border-radius:50%;background:#fff;border:2.5px solid #efc3e0}
+.voortgang span.vol{background:#fbd96b}
+.memory{display:grid;grid-template-columns:repeat(var(--mkol,4),120px);gap:14px}
+.mkaart{width:120px;height:120px;border-radius:24px;border:3px solid #efc3e0;background:#fdeef8;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#4b3878;transition:transform .25s}
+.mkaart.open{background:#fff;transform:rotateY(0)}
+.mkaart.gevonden{background:#fffaf0;border-color:#fbd96b}
+.mkaart .rug{font-size:44px}
+
+/* rekenverhaal */
+.rvkop{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;width:100%}
+.rvrol{font-weight:800;color:#a2405f;font-size:calc(17px*var(--s))}
+.rvbol{display:flex;gap:6px}
+.rvbol span{width:18px;height:18px;border-radius:50%;background:#fff;border:2.5px solid #efc3e0}
+.rvbol span.vol{background:#fbd96b;border-color:#e8b93a}
+.rvbol span.nu{background:#c9b3ea;border-color:#a991d6}
+.rvstappen{display:flex;gap:8px}
+.rvstappen span{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;border:2.5px solid #efc3e0;font-size:19px;opacity:.55}
+.rvstappen span.nu{opacity:1;border-color:#a991d6;background:#f3edfc;transform:scale(1.12)}
+.rvstappen span.af{opacity:1;background:#fffaf0;border-color:#fbd96b}
+.rvtekst{background:var(--card);border:2.5px solid var(--line);border-radius:26px;padding:18px 22px;font-size:calc(28px*var(--s));font-weight:700;line-height:1.7;max-width:900px;width:100%}
+.rvtekst.klein{font-size:calc(21px*var(--s));line-height:1.55;padding:12px 16px}
+.rvtekst .wd{border-radius:8px;padding:0 2px;transition:background .15s}
+.rvtekst .wd.nu{background:#fff1a8;box-shadow:0 0 0 3px #fff1a8}
+.rvtekst .wd.vraag{background:#f3edfc;box-shadow:0 0 0 3px #f3edfc}
+.getal{font:inherit;font-weight:800;color:#4b3878;background:#f3edfc;border:2.5px dashed #a991d6;border-radius:12px;padding:0 10px;margin:0 2px;min-height:44px}
+.getal.gepakt{background:#fff;border-style:solid;border-color:#efc3e0;color:#d7bfd0}
+.rvweet{font-size:calc(26px*var(--s));font-weight:800;color:#4b3878;text-align:center;line-height:1.4}
+.rvweet b{color:#a2405f;border-bottom:3px dotted #f4b9cf}
+.rvkeus{display:flex;flex-direction:column;gap:12px;width:min(620px,100%)}
+.rvkeus .regel{display:flex;gap:10px;align-items:stretch}
+.rvkeus .groot{flex:1;justify-content:flex-start;text-align:left;line-height:1.25;padding:10px 22px}
+.rvkeus .groot.weg{opacity:.35;box-shadow:none}
+.rvhoor{width:64px;flex:none;border-radius:22px;background:#eef4fc;border:2.5px solid #c9dbf1;font-size:24px}
+.tasje{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;min-height:92px;min-width:min(420px,100%);background:#fff6ec;border:3px solid #f6d9bd;border-radius:30px 30px 40px 40px;padding:12px 18px;position:relative}
+.tasje::before{content:"";position:absolute;left:50%;top:-22px;transform:translateX(-50%);width:90px;height:34px;border:4px solid #f6d9bd;border-bottom:none;border-radius:40px 40px 0 0}
+.tasje .leegtekst{color:#c9a98a;font-weight:700}
+.tasje .getal{background:#fff;border-style:solid;font-size:calc(28px*var(--s))}
+.rvmodellen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;width:min(720px,100%)}
+.rvmodel{position:relative;background:#fff;border:3px solid #efc3e0;border-radius:24px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:4px;font-weight:800;font-size:calc(17px*var(--s))}
+.rvmodel.tip{border-color:#fbd96b;background:#fffaf0}
+.rvmodel.aan{border-color:#a991d6;background:#f3edfc;border-width:4px}
+.rvmodel .tiplabel{position:absolute;top:-14px;background:#fbd96b;color:#6a4b00;border-radius:12px;padding:1px 10px;font-size:14px}
+.rvplaatjes{display:flex;flex-direction:column;gap:14px;align-items:center;width:100%;max-width:820px}
+.rvplaatje{background:var(--card);border:2.5px solid var(--line);border-radius:24px;padding:12px 16px;width:100%;display:flex;flex-direction:column;align-items:center;gap:8px}
+.rvplaatje h4{align-self:flex-start;color:#a2405f;font-size:calc(18px*var(--s))}
+.vk{display:inline-flex;align-items:center;justify-content:center;min-width:46px;padding:0 8px;height:40px;border-radius:12px;background:#f3edfc;color:#4b3878;font-weight:800;font-size:calc(22px*var(--s))}
+.vk.vraag{background:#fde4ee;color:#a2405f}
+.strook{width:100%;max-width:640px;display:flex;flex-direction:column;gap:6px}
+.strook .boven{display:flex;flex-direction:column;align-items:center}
+.strook .boog{width:100%;height:14px;border:3px solid #b98aa8;border-bottom:none;border-radius:12px 12px 0 0}
+.strook .balk{display:flex;height:66px;border:3px solid #5a4a4a;border-radius:14px;overflow:hidden}
+.strook .deel{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:calc(24px*var(--s));min-width:64px;background:#fde4ee;border-right:3px solid #5a4a4a}
+.strook .deel:last-child{border-right:none}
+.strook .deel.b{background:#e3f5ee}
+.strook .deel.weg{background:repeating-linear-gradient(45deg,#fff 0 8px,#f3dcea 8px 14px);color:#a2405f}
+.rvlijn{width:100%;max-width:680px;height:auto}
+.rvgroepen{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center}
+.rvgroep{min-width:70px;min-height:70px;border-radius:50%;border:3px solid #efc3e0;background:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;padding:8px;gap:3px;max-width:96px;font-weight:800;font-size:calc(22px*var(--s));color:#4b3878}
+.rvgroep i{width:11px;height:11px;border-radius:50%;background:#f08fa8;display:block}
+.rvsamen{font-weight:800;font-size:calc(20px*var(--s));display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
+.rvtabel{border-collapse:separate;border-spacing:0;width:auto;font-size:calc(22px*var(--s));font-weight:800}
+.rvtabel td{border:2.5px solid #c9b3ea;padding:8px 18px;text-align:center;background:#fff}
+.rvtabel td:first-child{background:#f3edfc;color:#4b3878;text-align:left}
+.rvsom{font-size:calc(44px*var(--s));font-weight:800;color:#4b3878;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
+.rvvak{min-width:150px;height:78px;border-radius:22px;border:3px solid #c9b3ea;background:#fff;display:inline-flex;align-items:center;justify-content:center;padding:0 12px}
+.rvvak.goed{background:#e3f5ee;border-color:#8fd3b6}
+.numpad{display:grid;grid-template-columns:repeat(3,92px);gap:10px}
+.numpad button{height:74px;border-radius:22px;background:#fff;border:3px solid #efc3e0;font-size:34px;font-weight:800;color:#4b3878;box-shadow:0 4px 0 #efc3e0}
+.numpad .ok{background:#c9b3ea;border-color:#a991d6;color:#3f2f63;box-shadow:0 4px 0 #a991d6;font-size:24px}
+.numpad .wis{font-size:26px}
+.rvreken{display:flex;gap:22px;align-items:flex-start;justify-content:center;flex-wrap:wrap;width:100%}
+.rvlinks{display:flex;flex-direction:column;align-items:center;gap:14px;flex:1;min-width:280px;max-width:640px}
+.kralen{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;background:#fffaf0;border:2.5px dashed #f3dc9c;border-radius:22px;padding:12px}
+.kralenGetal{display:flex;flex-direction:column;align-items:center;gap:6px}
+.kralenGetal .rijk{display:flex;gap:4px;align-items:flex-end;flex-wrap:wrap;justify-content:center;max-width:360px}
+.k1{width:12px;height:12px;border-radius:50%;background:#e8b93a;border:1.5px solid #a87c12}
+.k1s{display:grid;grid-template-columns:repeat(3,12px);gap:3px}
+.k10{width:12px;height:118px;border-radius:6px;background:repeating-linear-gradient(#e8b93a 0 10px,#a87c12 10px 12px);border:1.5px solid #a87c12}
+.k100{width:72px;height:72px;border-radius:6px;background:repeating-linear-gradient(90deg,transparent 0 6px,#a87c12 6px 7.2px),repeating-linear-gradient(#e8b93a 0 6px,#a87c12 6px 7.2px);border:2px solid #a87c12}
+.k1000{width:72px;height:72px;border-radius:8px;background:#e8b93a;border:3px solid #a87c12;box-shadow:6px -6px 0 #d4a017,6px -6px 0 3px #a87c12;display:flex;align-items:center;justify-content:center;font-weight:800;color:#6a4b00;font-size:16px}
+.rvdus{font-size:calc(32px*var(--s));font-weight:800;color:#4b3878;text-align:center;line-height:1.4;max-width:820px}
+/* de trap */
+.trap{display:flex;flex-direction:column-reverse;gap:8px;width:min(720px,100%)}
+.trede{display:flex;align-items:center;gap:10px;min-height:62px;border-radius:20px;background:#fff;border:3px solid #efc3e0;padding:6px 14px;font-weight:800;font-size:calc(19px*var(--s));box-shadow:0 4px 0 rgba(200,150,175,.2);position:relative}
+.trede .sterren{margin-left:auto;font-size:24px}
+.trede.ster{background:#fffaf0;border-color:#fbd96b}
+.trede.nu{border-color:#a991d6;background:#f3edfc;border-width:4px}
+.trede.dicht{opacity:.5;border-style:dashed;box-shadow:none}
+.trede .lilytje{width:58px;margin:-16px 0 -8px -6px}
+.trede .nr{width:34px;height:34px;flex:none;border-radius:50%;background:#fde4ee;color:#a2405f;display:flex;align-items:center;justify-content:center;font-size:17px}
+@media (max-width:700px){
+ .rvtekst{font-size:calc(22px*var(--s));padding:12px 14px}
+ .rvtekst.klein{font-size:calc(18px*var(--s))}
+ .rvweet{font-size:calc(21px*var(--s))}
+ .rvmodellen{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rvsom{font-size:calc(34px*var(--s))}
+ .rvvak{min-width:110px;height:64px}
+ .numpad{grid-template-columns:repeat(3,minmax(0,1fr));width:100%;max-width:330px}
+ .numpad button{height:62px;font-size:28px}
+ .rvstappen span{width:34px;height:34px;font-size:16px}
+ .trede{min-height:54px;font-size:calc(17px*var(--s))}
+ .rvdus{font-size:calc(25px*var(--s))}
+ .k10{height:90px;background:repeating-linear-gradient(#e8b93a 0 7px,#a87c12 7px 9px)}
+ .k100,.k1000{width:56px;height:56px}
+}
+
 /* mama */
 table{border-collapse:collapse;width:100%;font-size:calc(16px*var(--s))}
 th,td{border-bottom:1.5px solid #f3dcea;padding:7px 8px;text-align:left}
