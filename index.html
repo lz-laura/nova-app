@@ -59,8 +59,8 @@ body.donker .w-van{background:#4d3a33}
 .taak.af .c{background:#f6c79a}.taak.af span{color:#b9a08c}
 .seizoen{position:absolute;right:12px;top:-18px;font-size:34px}
 .leeg{color:#b9a08c;font-weight:700;margin-top:10px}
-.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:18px;margin-top:34px;justify-items:center}
-.appbtn{display:flex;flex-direction:column;align-items:center;width:132px}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:18px;margin-top:34px;justify-items:center}
+.appbtn{display:flex;flex-direction:column;align-items:center;width:100%;max-width:132px}
 .icon{width:108px;height:108px;border-radius:32px;display:flex;align-items:center;justify-content:center;background:#fff;border:2.5px solid #f3dcea;box-shadow:0 5px 0 rgba(200,150,175,.15);position:relative;transition:transform .15s}
 .appbtn:active .icon{transform:scale(.94)}
 .lbl{font-size:calc(18px*var(--s));font-weight:800;margin-top:8px;text-align:center;line-height:1.15}
@@ -211,12 +211,12 @@ body.vol.paneelOpen .paneel #lagen{flex-direction:column}
 .voortgang{display:flex;gap:6px}
 .voortgang span{width:22px;height:22px;border-radius:50%;background:#fff;border:2.5px solid #efc3e0}
 .voortgang span.vol{background:#fbd96b}
-.memory{display:grid;grid-template-columns:repeat(4,120px);gap:14px}
+.memory{display:grid;grid-template-columns:repeat(var(--mkol,4),120px);gap:14px}
 .mkaart{width:120px;height:120px;border-radius:24px;border:3px solid #efc3e0;background:#fdeef8;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#4b3878;transition:transform .25s}
 .mkaart.open{background:#fff;transform:rotateY(0)}
 .mkaart.gevonden{background:#fffaf0;border-color:#fbd96b}
 .mkaart .rug{font-size:44px}
-@media (max-width:700px){.memory{grid-template-columns:repeat(3,96px)}.mkaart{width:96px;height:96px;font-size:24px}}
+
 /* mama */
 table{border-collapse:collapse;width:100%;font-size:calc(16px*var(--s))}
 th,td{border-bottom:1.5px solid #f3dcea;padding:7px 8px;text-align:left}
@@ -226,6 +226,74 @@ th,td{border-bottom:1.5px solid #f3dcea;padding:7px 8px;text-align:left}
 .werkjes{display:flex;gap:10px;flex-wrap:wrap}
 .werkjes img{width:120px;height:90px;object-fit:cover;border-radius:12px;border:2px solid #f3dcea}
 .melding{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:#fff;border:2.5px solid #f4b9cf;border-radius:22px;padding:12px 20px;font-weight:800;z-index:60;display:none;max-width:90vw;text-align:center}
+
+/* ===== telefoon ===== */
+@media (max-width:700px){
+ .sheet{padding:10px 12px 12px}
+ .kop{gap:8px;flex-wrap:nowrap}
+ .terug,.volknop{height:48px;padding:0 14px;font-size:calc(16px*var(--s));white-space:nowrap;flex:none;border-radius:24px}
+ .kop h2{flex:1;min-width:0;font-size:calc(20px*var(--s));line-height:1.1;overflow-wrap:anywhere}
+ .volLang{display:none}
+ .lilyhoek img{width:70px}.zeg{font-size:calc(17px*var(--s));padding:8px 12px}
+ .groot{min-height:54px;padding:0 18px;font-size:calc(18px*var(--s))}
+ /* startscherm */
+ .widgets{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+ .w{min-height:0;padding:12px}.w-kal{padding:0}.kalbody{padding:4px 4px 8px}.kal{font-size:13px}.kalkop{font-size:15px;padding:10px 10px 4px}
+ .w-lily{justify-content:flex-start;padding-top:0}
+ .w-lily img{position:relative;left:auto;top:auto;transform:none;width:70%;max-width:150px;margin:-26px auto 0;display:block}
+ .w-lily .hoi{font-size:calc(21px*var(--s))}
+ .lilybubble{font-size:calc(15px*var(--s));padding:6px 8px}
+ .tijd{font-size:calc(42px*var(--s))}.dag{font-size:calc(19px*var(--s))}.nog{font-size:calc(15px*var(--s))}
+ .w-weer{flex-direction:row;flex-wrap:wrap;gap:10px}
+ .w-van h3{font-size:calc(19px*var(--s))}.taak{font-size:calc(16px*var(--s))}
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+ .appbtn{width:auto;max-width:100%}
+ .icon{width:76px;height:76px;border-radius:24px}
+ .icon svg{width:56px;height:56px}
+ .lbl{font-size:calc(16px*var(--s))}
+ /* tekenen: telefoonindeling ook zonder groot scherm */
+ #tekenbalk{flex-wrap:nowrap;gap:10px;justify-content:flex-start;margin:8px 0}
+ .kleurKnop{display:inline-flex;flex:none;align-items:center;gap:8px;height:52px;padding:0 14px 0 6px;border-radius:26px;background:#fff;border:2.5px solid #f3dcea;font-weight:800;font-size:17px;color:#4a3f4f}
+ .kleurKnop i{width:40px;height:40px;border-radius:50%;display:block;border:3px solid #fff;box-shadow:0 0 0 2px #e6cfe0}
+ .kleurenSet{display:none}
+ body.kleurOpen .kleurenSet{display:grid;grid-template-columns:repeat(4,54px);gap:12px;position:absolute;top:130px;left:12px;z-index:35;background:var(--card);border:2.5px solid #c9b3ea;border-radius:22px;padding:14px;box-shadow:0 8px 24px rgba(75,56,120,.18)}
+ body.vol.kleurOpen .kleurenSet{top:70px}
+ body.kleurOpen .kleurenSet .kleur{width:54px;height:54px}
+ .dikteschuif{width:auto;flex:1;min-width:70px}
+ .studio{flex-direction:column;gap:8px}
+ .gereedschap{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;overflow:visible;flex:none}
+ .kwast{min-width:0;width:auto;min-height:56px;font-size:22px;padding:2px;border-radius:14px}
+ .kwast span{font-size:10px;letter-spacing:-.2px}
+ .doekvak{min-height:0;flex:1}
+ .paneel{display:none}
+ #paneelKnop{display:inline-flex!important}
+ body.paneelOpen .paneel{display:flex;flex-direction:column;flex-wrap:nowrap;position:absolute;right:12px;left:12px;top:auto;bottom:140px;max-height:60vh;width:auto;z-index:30;background:var(--card);border:2.5px solid #c9b3ea;border-radius:22px;padding:12px;box-shadow:0 8px 24px rgba(75,56,120,.18);overflow:auto}
+ body.paneelOpen .paneel #lagen{display:flex;flex-direction:column;gap:6px}
+ body.paneelOpen .paneel .stickerbak{grid-template-columns:repeat(5,1fr)}
+ #s-teken .tekenbalk:last-child{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 0}
+ #s-teken .tekenbalk .groot{min-height:48px;padding:4px 8px;font-size:16px;border-width:2.5px;line-height:1.1;text-align:center}
+ /* stickerboek */
+ .stickerboek{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%}
+ .sticker{width:100%;height:auto;aspect-ratio:1;font-size:40px}
+ .sticker.dicht{font-size:26px}
+ /* tafels */
+ .tafelrij{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:100%}
+ .tafelknop{width:100%;height:auto;aspect-ratio:1;font-size:28px}
+ .tabs{gap:6px}.tab{min-height:46px;padding:0 14px;font-size:calc(16px*var(--s))}
+ .sommen{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+ .som{font-size:calc(19px*var(--s));padding:8px 10px}
+ .somgroot{font-size:calc(46px*var(--s))}
+ .antw{width:88px;height:76px;font-size:34px;border-radius:22px}
+ .memory{grid-template-columns:repeat(var(--mkol,4),minmax(0,1fr));gap:8px;width:100%;max-width:420px}
+ .mkaart .rug{font-size:32px}
+ .mama{font-size:calc(15px*var(--s))}
+ .mkaart{width:100%;height:auto;aspect-ratio:1;font-size:20px;border-radius:16px}
+ .groepjes{gap:6px}.groepje{grid-template-columns:repeat(5,12px);gap:4px;padding:6px}.groepje i{width:12px;height:12px}
+ .staafje .hk{width:18px;height:17px}
+ /* blokjes */
+ .blok span{min-width:42px;font-size:32px}.blok{min-height:64px}.verf{width:58px;height:58px}
+ .woordplaat{font-size:calc(24px*var(--s))}
+}
 </style>
 </head>
 <body>
@@ -579,7 +647,7 @@ function zetVol(aan){document.body.classList.toggle("vol",aan);if(!aan)document.
   try{if(aan&&!isVolBrowser()){const f=d.requestFullscreen||d.webkitRequestFullscreen;if(f){const p=f.call(d);p&&p.catch&&p.catch(()=>{})}}
       else if(!aan&&isVolBrowser()){const f=document.exitFullscreen||document.webkitExitFullscreen;if(f){const p=f.call(document);p&&p.catch&&p.catch(()=>{})}}}catch(e){}
   setTimeout(pasDoekAan,350)}
-$$(".sheet .kop").forEach(k=>k.insertAdjacentHTML("beforeend",'<button class="volknop" data-vol>⛶ Groot scherm</button>'));
+$$(".sheet .kop").forEach(k=>k.insertAdjacentHTML("beforeend",'<button class="volknop" data-vol aria-label="Groot scherm">⛶ Groot<span class="volLang"> scherm</span></button>'));
 $$("[data-vol]").forEach(b=>b.onclick=()=>zetVol(true));
 $("#volUit").onclick=()=>zetVol(false);
 ["fullscreenchange","webkitfullscreenchange"].forEach(ev=>document.addEventListener(ev,()=>{if(!isVolBrowser()&&document.body.classList.contains("vol"))zetVol(false)}));
@@ -692,7 +760,7 @@ function startMemory(){const t=T.tafel;let pool=[];for(let i=1;i<=10;i++)pool.pu
   const n=S.rustig?3:4,kies=pool.slice(0,n);let kaarten=[];
   kies.forEach(i=>{kaarten.push({id:i,tekst:`${i} × ${t}`});kaarten.push({id:i,tekst:String(i*t)})});
   kaarten.sort(()=>Math.random()-.5);let open=[],klaar=0,slot=false;
-  $("#tafelInhoud").innerHTML=tabsHTML()+`<div class="memory" style="grid-template-columns:repeat(${n===3?3:4},var(--mk,120px))">${kaarten.map((k,x)=>`<button class="mkaart" data-k="${x}"><span class="rug">💗</span></button>`).join("")}</div><div id="beeld"></div>`;bindTabs();
+  $("#tafelInhoud").innerHTML=tabsHTML()+`<div class="memory" style="--mkol:${n===3?3:4}">${kaarten.map((k,x)=>`<button class="mkaart" data-k="${x}"><span class="rug">💗</span></button>`).join("")}</div><div id="beeld"></div>`;bindTabs();
   zegT("Memory! Zoek een som en het goede antwoord. Draai twee kaartjes om.");
   $$("[data-k]").forEach(b=>b.onclick=e=>{if(slot)return;const x=+b.dataset.k,k=kaarten[x];if(b.classList.contains("open")||b.classList.contains("gevonden"))return;
     b.classList.add("open");b.textContent=k.tekst;open.push([b,k]);
